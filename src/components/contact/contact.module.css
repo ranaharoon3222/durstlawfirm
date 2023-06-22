@@ -1,187 +1,177 @@
-.contactsec{
-    padding: 50px 0px;
+.contactsec {
+  padding-top: 150px;
 }
-.contactgrid{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    padding: 0px 100px;
-    background-position: center top;
-background-image: linear-gradient(64deg,#ffffff 31%,rgba(255,255,255,0) 87%),url('/images/contactbg.jpg') !important;
-padding-top: 8%;
-padding-bottom: 8%;
+.contactgrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 0px 100px;
+  background-position: center top;
+  background-image: linear-gradient(
+      64deg,
+      #ffffff 31%,
+      rgba(255, 255, 255, 0) 87%
+    ),
+    url('/images/contactbg.jpg') !important;
+  padding-top: 8%;
+  padding-bottom: 8%;
 }
-.contacttext h1{
-    line-height: 1em;
-    font-family: calluna,serif;
-font-weight: 600;
-font-style: italic;
-font-size: 25px;
-color: #E54A35 !important;
+.contacttext h1 {
+  line-height: 1em;
+  font-family: calluna, serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 25px;
+  color: #e54a35 !important;
+}
+.contacttext h2 {
+  font-family: calluna, serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 60px;
+  color: #081b33;
+  margin-top: 30px;
+}
+.info {
+  display: flex;
+  align-items: center;
+  margin-top: 45px;
+}
+.info i {
+  color: #e54a35;
+  font-size: 25px;
+}
+.info h4 {
+  margin-left: 20px;
+  color: #081b33;
+  font-size: 24px;
+  font-weight: 600;
+}
+.contacttext p {
+  font-size: 20px;
+  line-height: 1.4em !important;
+  color: #081b33;
+  max-width: 600px;
+  margin-top: 50px;
+}
+.vine {
+  max-width: 250px;
+  font-size: 18px !important;
 
+  font-weight: 400;
 }
-.contacttext h2{
-    font-family: calluna,serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 60px;
-    color: #081b33;
-    padding-bottom: 10px;
-line-height: 1em;
-margin-bottom: 10px;
+.call {
+  color: #e54a35;
+  font-style: italic;
+  text-decoration: underline;
 }
-.info{
-display: flex;
-align-items: center;
-margin-top: -15px;
+.contactform {
+  background-color: rgba(8, 27, 51, 0.71);
+  padding-top: 25px;
+  padding-right: 35px;
+  padding-bottom: 25px;
+  padding-left: 35px;
 }
-.info i{
-color: #E54A35;
-font-size: 25px;
+.contactform h1 {
+  color: #ffffff !important;
+  font-family: calluna, serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 22px;
+  padding-bottom: 10px;
+  line-height: 1em;
 }
-.info h4{
-    margin-left: 20px;
-    color: #081b33;
-    font-size: 24px;
-}
-.contacttext p{
-    font-size: 20px;
-    line-height: 1.4em !important;
-    color: #081b33;
-    max-width: 600px;
-}
-.vine{
-    max-width: 250px;
-    font-size: 16px;
-    margin-top: -20px;
-    font-weight: 400;
-}
-.call{
-    color: #E54A35;
-    font-style: italic;
-    text-decoration: underline;
-}
-.contactform{
-    background-color: rgba(8,27,51,0.71);
-    padding-top: 25px;
-    padding-right: 35px;
-    padding-bottom: 25px;
-    padding-left: 35px;
-}
-.contactform h1{
-    color: #FFFFFF !important;
-    font-family: calluna,serif;
-font-weight: 600;
-font-style: normal;
-font-size: 22px;
-padding-bottom: 10px;
-line-height: 1em;
-}
-.contactform input{
-    padding: 16px !important;
-    border: none;
-    border-radius: 0;
-    color: #6b6b6b;
-    background-color: #eee;
-    margin-top: 0px !important;
-    margin-bottom: 12px;
-    width: 100%;
-    outline: none;
+.contactform input {
+  padding: 16px !important;
+  border: none;
+  border-radius: 0;
+  color: #6b6b6b;
+  background-color: #eee;
+  margin-top: 0px !important;
+  margin-bottom: 12px;
+  width: 100%;
+  outline: none;
 }
 .inputbox {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 30px;
 }
-.contactform textarea{
-    padding: 16px !important;
-    border: none;
-    border-radius: 0;
-    color: #6b6b6b;
-    background-color: #eee;
-    margin-top: 0px !important;
-    margin-bottom: 12px;
-    width: 100%;
-    outline: none;
+.contactform textarea {
+  padding: 16px !important;
+  border: none;
+  border-radius: 0;
+  color: #6b6b6b;
+  background-color: #eee;
+  margin-top: 0px !important;
+  margin-bottom: 12px;
+  width: 100%;
+  outline: none;
 }
-.chek{
-    max-width: 25px;
-    margin-top: 20px;
+.chek {
+  max-width: 25px;
+  margin-top: 20px;
 }
-.contactform p{
-    line-height: 1.6em !important;
-font-size: 12px !important;
-margin-left: 10px;
-margin-top: 10px;
-color: #fff;
+.contactform p {
+  line-height: 1.6em !important;
+  font-size: 12px !important;
+  margin-left: 10px;
+  margin-top: 10px;
+  color: #fff;
 }
-.btn{
-    font-size: 20px;
-font-weight: 500;
-padding: .3em 1em;
-line-height: 1.7em !important;
-background-color: transparent;
-border: 2px solid;
-border-radius: 3px;
-max-width: 110px;
-color: #e54a35;
-margin-top: 60px;
+.btn {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.3em 1em;
+  line-height: 1.7em !important;
+  background-color: transparent;
+  border: 2px solid;
+  border-radius: 3px;
+  max-width: 110px;
+  color: #e54a35;
+  margin-top: 60px;
 }
-.locicon{
-    max-width: 35px;
-margin-top: -50px;
+.locicon {
+  max-width: 35px;
+  margin-top: -50px;
 }
-
-
-
 
 @media (max-width: 768px) {
-    .contactgrid{
-        grid-template-columns: repeat(1, 1fr);
-        padding: 0px;
-        
-    }
-    .inputbox{
-        grid-template-columns: repeat(1, 1fr);
-        gap: 0px;
-    }
-    .contacttext h2{
-        font-size: 35px;
-        margin-top: 0px;
-    }
-    .contacttext h1{
-        font-size: 18px;
-    }
-    .info h4{
-        font-size: 18px;
-        text-align: left;
-    }
-    .info{
-       max-width: 270px;
-       margin: auto;
-        margin-top: -15px;
-    }
-    .contacttext{
-        text-align: center;
-    }
-    .locicon{
-        
-        margin-top: -30px;
-    }
-    .vine{
-        font-weight: 500;
-    }
-    .contactgrid{
-        background-image: none !important;
-    }
+  .contactgrid {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0px;
+  }
+  .inputbox {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0px;
+  }
+  .contacttext h2 {
+    font-size: 35px;
+    margin-top: 0px;
+  }
+  .contacttext h1 {
+    font-size: 18px;
+  }
+  .info h4 {
+    font-size: 18px;
+    text-align: left;
+  }
+  .info {
+    max-width: 270px;
+    margin: auto;
+    margin-top: -15px;
+  }
+  .contacttext {
+    text-align: center;
+  }
+  .locicon {
+    margin-top: -30px;
+  }
+  .vine {
+    font-weight: 500;
+  }
+  .contactgrid {
+    background-image: none !important;
+  }
 }
-  
-
-
-
-
-
-
-
-

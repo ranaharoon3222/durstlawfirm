@@ -5,6 +5,7 @@
     background-image: linear-gradient(64deg,#ffffff 31%,rgba(255,255,255,0.45) 80%),url(/images/inj.jpg)!important;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 150px;
 }
 
 .backGrid{

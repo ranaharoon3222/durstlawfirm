@@ -40,7 +40,18 @@ img {
   max-width: 100%;
 }
 .wrapper {
-  max-width: 1500px;
+  max-width: 1800px;
   margin: auto;
   width: 90%;
+}
+
+.bt_divider {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSI4MHB4IiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTY0MCAxNDBMMTI4MCAwSDB6Ii8+PC9nPjwvc3ZnPg==);
+  background-size: 100% 80px;
+  bottom: 0;
+  height: 80px;
+  z-index: 1;
+  transform: scale(1, -1);
+  position: absolute;
+  width: 100%;
 }
