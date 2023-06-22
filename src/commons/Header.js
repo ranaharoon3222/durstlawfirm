@@ -62,7 +62,7 @@ const Header = () => {
   ];
 
   return (
-    <header className='flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-transparent absolute top-4  left-0 text-sm py-3 sm:py-0'>
+    <header className='flex bg-white flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full md:bg-transparent absolute top-4  left-0 text-sm py-3 sm:py-0'>
       <nav
         className='relative wrapper mx-auto  sm:flex sm:items-center sm:justify-between  '
         aria-label='Global'
@@ -81,7 +81,7 @@ const Header = () => {
           <div className='sm:hidden'>
             <button
               type='button'
-              className='hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800'
+              className='hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm '
               data-hs-collapse='#navbar-collapse-with-animation'
               aria-controls='navbar-collapse-with-animation'
               aria-label='Toggle navigation'
@@ -117,7 +117,7 @@ const Header = () => {
           <div className='flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-center sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:pl-7'>
             {menuLinks.map((item, i) => {
               return (
-                <div key={item.link + i} className='px-4 first-of-type:pl-0'>
+                <div key={item.link + i} className='md:px-4 first-of-type:pl-0'>
                   {item?.sub?.length ? (
                     <div className='hs-dropdown [--strategy:static] sm:[--strategy:fixed] [--adaptive:none] sm:[--trigger:hover] sm:py-4'>
                       <Link
@@ -148,7 +148,7 @@ const Header = () => {
                           return (
                             <Link
                               key={item.link + i}
-                              className='flex items-center  gap-x-3.5 py-2 px-3 rounded-md  text-black hover:bg-gray-100   '
+                              className='flex items-center  gap-x-3.5 py-2 md:px-3 rounded-md  text-black hover:bg-gray-100   '
                               href={sub.link}
                             >
                               {sub.name}
@@ -170,7 +170,7 @@ const Header = () => {
             })}
 
             <Link
-              className='pm-btn  flex items-center gap-x-2 absolute right-0 top-1/2  -translate-y-1/2  '
+              className='pm-btn  flex items-center gap-x-2 mt-6 md:mt-0 md:absolute right-0 top-1/2  -translate-y-1/2  '
               href='#'
             >
               <svg

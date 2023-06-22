@@ -6,6 +6,7 @@ import OurPurpose from '@/components/home/ourPurpose/OurPurpose';
 import OnlyImg from '@/components/onlyImg/OnlyImg';
 import UpperFoot from '@/components/upperFoot/UpperFoot';
 import Transportation from './transportation';
+import Brands from '@/components/brands/Brands';
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
       <Practise />
       <FourBox />
       <OurPurpose />
-      <OnlyImg />
+
+      <Brands />
       <UpperFoot />
     </>
   );

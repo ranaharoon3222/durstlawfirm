@@ -55,3 +55,9 @@ img {
   position: absolute;
   width: 100%;
 }
+
+@media all and (max-width: 980px) {
+  .bt_divider {
+    display: none;
+  }
+}

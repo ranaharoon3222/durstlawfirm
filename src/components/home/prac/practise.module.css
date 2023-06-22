@@ -111,10 +111,11 @@
   .nullimg {
     background-image: url('/images/head-boy-pic.jpg');
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     height: 300px;
     margin-top: 40px;
-    background-position: fixed;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
   }
 
   .backimg {
