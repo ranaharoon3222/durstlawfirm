@@ -1,0 +1,36 @@
+
+.textH{
+    text-align: center;
+    padding-top: 60px;
+}
+.textH h3{
+    padding-top: 15px;
+}
+.textH img{
+    width: 5%;
+    color: #E54A35 !important;
+    
+}
+.textH h1{
+    color: #E54A35;
+    font-size: 40px;
+}
+.textH p{
+    max-width: 700px;
+    font-family: sans-serif;
+    line-height: 1.5;
+    margin: auto;
+    padding-top: 20px;
+}
+.textH a{
+    color: #E54A35;
+    padding-top: 0px;
+    font-family: sans-serif;
+    display: block;
+}
+@media all and (max-width: 768px){
+    .textH img{
+    width: 15%;
+ 
+}
+}

@@ -1,0 +1,17 @@
+.line{
+    text-align: center;
+    padding-top: 80px;
+}
+.line img{
+    width: 6%;
+    
+}
+
+@media all and (max-width:768px){
+    .line img{
+    width: 30%;
+}
+.line{
+    padding-top: 30px;
+}
+}

@@ -1,0 +1,122 @@
+
+.card1{
+    background-color: #f5f5f5;
+    padding: 10px 40px;
+    
+   position: relative;
+}
+.card1 h1{
+    font-family: calluna,serif;
+    color: #081b33;
+    line-height: 1em;
+    font-size: 29px;
+}
+.card1 p{
+    
+    font-size: 1vw;
+    color: #081b33;
+    font-size: 18px;
+line-height: 1.3em;
+}
+.elec{
+    margin-top: 40px !important;
+}
+.card1 h2{
+    font-weight: normal;
+    font-style: italic;
+    color: #E54A35 !important;
+    font-size: 16px;
+}
+.no{
+    font-size: 16px !important;
+    margin-top: -9px !important;
+}
+.card2{
+    margin-left: 35px;
+}
+.btn1{
+    box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.27);
+    transition: color 300ms ease 0ms,background-color 300ms ease 0ms,border 300ms ease 0ms;
+    color: #FFFFFF !important;
+border-width: 0px !important;
+padding: 1px 30px;
+border-radius: 0px;
+
+font-weight: 600 !important;
+background-color: #081B33;
+max-width: 225px;
+}
+.btn2{
+    box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.27);
+    transition: color 300ms ease 0ms,background-color 300ms ease 0ms,border 300ms ease 0ms;
+    color: #FFFFFF !important;
+border-width: 0px !important;
+padding: 1px 20px;
+border-radius: 0px;
+
+font-weight: 600 !important;
+background-color: #081B33;
+margin-top: 20px;
+max-width: 170px;
+}
+.btnb{
+    margin-left: 45px;
+    position: relative;
+}
+.btn1:hover{
+    background-color: #cf2e2e;
+}
+.btn2:hover{
+    background-color: #cf2e2e;
+}
+.comma img{
+    position: absolute;
+width: 40px;
+padding: 15px 0px 15px 15px;
+background-color: #f2f2f2;
+border-radius: 90px 0px 0px 90px;
+margin-left: -60px;
+}
+.twocardsec{
+    padding: 60px 0px;
+}
+.twobtns{
+    position: absolute;
+    top: 150px;
+    display: flex;
+flex-direction: column;
+
+}
+
+@media (max-width: 768px) {
+    .card1 h1{
+        font-size: 27px;
+    }
+    .card1{
+        margin: 25px 15px;
+    }
+    .card2{
+        margin-left: 0px;
+        
+    }
+    .card1 h2{
+        font-size: 16px;
+    }
+    .card1 p{
+        font-size: 16px;
+    }
+    .twobtns{
+        top: 40px;
+    }
+    .btn2{
+        max-width: 145px;
+    }
+    .btnb{
+        margin-left: 20px;
+    }
+    .card1 p{
+        margin-top: -10px;
+        line-height: 1.5em;
+    }
+  }
+  

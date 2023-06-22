@@ -1,0 +1,131 @@
+.newclass{
+    text-align: center;
+}
+.result4 {
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  margin-top: 10px;
+  gap: 45px;
+}
+.result4 h1{
+    font-size: 30px;
+    max-width: 380px;
+}
+.result4 span{
+    color: #E54A35;
+    display: block;
+    padding: 10px 30px;
+}
+.um{
+    margin-top: 50px;
+}
+.um p{
+    color:#E54A35 ;
+    font-family: italic;
+    padding-left: 10px;
+}
+.box3 {
+  display: flex;
+  padding: 10px 0px;
+  /* align-items: center; */
+}
+.box3 h1 {
+  padding-left: 20px;
+}
+.box3 img {
+  /* margin-top: 10px; */
+  width: 10%;
+  padding: 15px 0px 15px 15px;
+  background-color: #f2f2f2;
+  border-radius: 90px 0px 0px 90px;
+  margin-left: -20px;
+  height: 50px;
+}
+
+.Amain {
+  background-color: #f2f2f2;
+    margin-bottom: 130px;
+}
+.Amain p {
+    padding-bottom: 20px;
+  padding: 5px 30px;
+  font-family: sans-serif;
+  line-height: 1.4;
+  max-width: 400px;
+}
+
+.Amain2 {
+  background-color: #f2f2f2;
+    margin-bottom: 120px;
+}
+.Amain2 p {
+  padding: 0px 30px;
+  font-family: sans-serif;
+  line-height: 1.4;
+  max-width: 400px;
+}
+.Amain3 {
+  background-color: #f2f2f2;
+  /* margin-bottom: 190px !important; */
+      margin-bottom: 120px;
+}
+.Amain3 p {
+  padding: 0px 30px;
+  font-family: sans-serif;
+  line-height: 1.4;
+  max-width: 400px;
+}
+.Amain4{
+  background-color: #f2f2f2;
+  margin-bottom: 30px !important;
+  margin-top: -70px;
+  width: 32%;
+}
+.Amain4 span{
+    color: #E54A35;
+    display: block;
+    padding: 0px 30px;
+}
+.Amain4 p{
+  padding: 0px 30px;
+  font-family: sans-serif;
+  line-height: 1.4;
+  max-width: 400px;
+  padding-bottom: 30px;
+}
+.newclass{
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+@media all and (max-width: 768px){
+    .result4 {
+  grid-template-columns: repeat(1, 1fr);
+  padding: 0px 10px;
+  gap: 0px;
+}
+.result4 h1{
+    max-width: 260px;
+    /* font-size: 25px; */
+}
+.Amain4{
+  margin-top: 30px;
+  width: 94%;
+}
+.Amain4 h1{
+   max-width: 260px;
+
+}
+.Amain3{
+    margin-bottom: 0px;
+    padding-bottom: 30px;
+}
+.Amain2{
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+.Amain{
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+}

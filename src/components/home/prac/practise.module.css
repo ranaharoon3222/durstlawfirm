@@ -1,0 +1,143 @@
+
+
+
+
+
+
+.backimg{
+   /* background-image: url(./images/backim.jpg); */
+   /* height: 600px; */
+   background-size: cover;
+   background-position: center top;
+   /* background-image: linear-gradient(64deg,#ffffff 39%,rgba(255,255,255,0) 65%) */
+   background-image: linear-gradient(64deg,#ffffff 39%,rgba(255,255,255,0) 65%),url('/images/backim.jpg')
+   
+}
+/* .hGrid{
+    grid-template-columns: repeat(2,1fr);
+    display: grid;e
+} */
+
+
+.innerText{
+    /* padding: 60px 60px; */
+    font-family: sans-serif;
+ 
+}
+.innerText h3{
+    font-weight: 700;
+    font-style: italic;
+    font-size: 20px;
+    color: #E54A35!important;
+}
+
+.innerText h1{
+    font-family: calluna,serif;
+    font-weight: 600;
+    font-style: normal;
+    padding-top: 30px;
+    font-size: 45px;
+    max-width: 450px;
+}
+
+.innerText p{
+    margin-top: 30px;
+    /* padding-bottom: 20px; */
+    max-width: 700px;
+    line-height: 1.7;
+    /* margin: auto; */
+}
+.btn1{
+    margin-top: 30px;
+    display: flex;
+}
+
+.Practise{
+    height: 55px;
+    padding: 0px 22px;
+   gap: 10px;
+   display: flex;
+   align-items: center;
+   font-size: 20px;
+   cursor: pointer;
+   
+    background-color: transparent;
+    transition: all ease-in .4s;
+    border: 2px solid black;
+    border-radius: 3px;
+   
+    
+}
+.Practise i{
+    border: none;
+}
+.Practise:hover{
+   
+    background-color: transparent;
+   color: #E54A35 !important;
+    border: 2px solid #E54A35;
+    border-radius: 3px;
+}
+.call:hover{
+    border: 2px solid black;
+   color: black!important;
+   cursor: pointer;
+    background-color: transparent;
+    border-radius: 3px;
+    transition-property: all!important
+}
+.call{
+     height: 55px;
+    padding: 0px 22px;
+   gap: 10px;
+   display: flex;
+   align-items: center;
+    color: #E54A35!important;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #E54A35;
+    margin-left: 15px;
+       transition: all ease-in .4s;
+
+}
+
+.parentbox{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 60px;
+}
+
+@media all and (max-width: 768px){
+    
+.parentbox{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 20px;
+}
+.nullimg{
+   background-image: url('/images/head-boy-pic.jpg');
+   background-position: center;
+   background-size: cover;
+   height: 300px;
+   margin-top: 40px;
+   background-position: fixed;
+}
+    
+    .backimg{
+        background-image: none !important;
+        /* display: none !important */
+    }
+    .parentbox{
+        text-align: center;
+    }
+    .btn1{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .btn1 .call{
+        margin-top: 30px;
+        margin-left: 0px;
+    }
+
+}

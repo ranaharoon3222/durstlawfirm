@@ -1,0 +1,105 @@
+.footer{
+    background-color: #081B33!important;
+    padding-top: 60px;
+    border-top: 4px solid #BE4235;
+}
+.footer p{
+    font-family: 'Lato', sans-serif;
+}
+.footer h4{
+    font-family: 'Calluna', sans-serif;
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+
+
+.fLogo img{
+   width: 10%;
+   
+}
+
+.foot{
+    grid-template-columns: repeat(3,1fr);
+    display: grid;
+    margin-top: 20px;
+    color: white;
+    margin-bottom: 80px;
+}
+
+
+.call{
+    display: flex;
+    padding-top: 30px;
+    align-items: center;
+}
+.call i{
+    font-size: 26px;
+}
+.call p{
+    padding-left: 20px;
+    max-width: 200px;
+    line-height: 1.5;
+    
+}
+
+.innerFoot2 p{
+    padding-top: 20px;
+    text-decoration: underline;
+    max-width: 170px;
+    cursor: pointer;
+    transition: all ease-in .3s;
+}
+.innerFoot2 p:hover{
+    color: red;
+}
+.Hflex{
+        display: flex;
+    display: block;
+    margin-left: 180px;
+    /* margin-bottom: -106px; */
+    margin-top: -145px;
+}
+.innerFoot3 p{
+    padding-top: 30px;
+    line-height: 1.5;
+    max-width: 500px;
+}
+
+.last{
+    justify-content: space-between;
+    display: flex;
+    color: white;
+    padding: 30px 40px;
+}
+.last span{
+    text-decoration: underline;
+}
+.border{
+    border-top: 1px solid white;
+    padding-bottom: 10px;
+}
+
+@media all and (max-width: 768px){
+    .fLogo img{
+        width: 50%;
+    }
+    .fLogo{
+        text-align: center;
+    }
+    .foot{
+    grid-template-columns: repeat(1,1fr);
+   margin-top: 40px;
+   row-gap: 40px;
+   padding: 0px 20px !important;
+    margin-bottom: 40px;
+}
+.last{
+    display: block;
+      padding: 10px 10px;
+      text-align: center;
+}
+.last p{
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+}

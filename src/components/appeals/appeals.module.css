@@ -1,0 +1,97 @@
+
+.backGrid{
+    grid-template-columns: 50%  50%;
+    display: grid;
+    padding-top: 50px;
+    gap: 50px;
+   
+}
+
+.clintText h4{
+    font-style: italic;
+    font-size: 16px;
+    color: #E54A35!important;
+}
+.clintText h1{
+    font-weight: 500;
+    padding-top: 20px;
+    font-size: 40px;
+}
+.clintText p{
+    padding-top: 20px;
+    line-height: 1.6;
+    max-width: 640px;
+    /* font-size: 18px; */
+}
+
+.btn1{
+    margin-top: 40px;
+    margin-bottom: 40px;
+   
+}
+
+.btn1 .BTN{
+   color: #E54A35;
+   border:  2px solid #E54A35;
+   width: 26%;
+   background-color: white;
+   height: 45px;
+   font-weight: bolder;
+   cursor: pointer;
+   transition: all ease-in .4s;
+   box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.27);
+
+}
+.btn1 .BTN2{
+    cursor: pointer;
+   color: black;
+   border:  2px solid black;
+   width: 26%;
+   background-color: white;
+   height: 45px;
+   font-weight: bolder;
+   margin-left: 10px;
+   transition: all ease-in .4s;
+   box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.27);
+
+}
+.btn1 .BTN:hover{
+background-color: #081B33;
+border: none;
+}
+.btn1 .BTN2:hover{
+background-color: #081B33;
+color: white;
+border: none;
+}
+
+.appeal img{
+    width: 90%;
+}
+
+@media all and (max-width: 768px) {
+    .backGrid{
+    grid-template-columns: repeat(1,1fr);
+    text-align: center;
+}
+
+
+.clintText .p3{
+    max-width: 300px;
+    margin: auto;
+}
+
+.newclass1{
+    display: flex;
+    justify-content: center;
+}
+.btn1 .BTN{
+    width: 60%;
+}
+.btn1 .BTN2{
+    width: 73%;
+    margin-top: 20px;
+    margin-left: 0px;
+}
+
+}

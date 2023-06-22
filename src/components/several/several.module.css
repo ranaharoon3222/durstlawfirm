@@ -1,0 +1,48 @@
+
+.headBoy{
+    grid-template-columns: repeat(2,1fr);
+    display: grid;
+    margin-top: 70px;
+    align-items: center;
+}
+
+.headimg img{
+    width: 100%;
+    padding: 0px 100px;
+}
+.headText{
+    font-family: sans-serif;
+    padding-top: 40px;
+
+}
+.headText h2{
+    font-family: serif;
+}
+.headText p{
+    padding-top: 30px;
+    line-height: 1.5;
+    max-width: 560px;
+}
+
+@media all and (max-width: 768px){
+    .headBoy{
+    grid-template-columns: repeat(1,1fr);
+    margin-top: 30px;
+}
+.headText p{
+    padding: 15px 25px;
+}
+.headimg img{
+    width: 100%;
+  
+    padding: 40px 40px;
+}
+.headText h2{
+    font-family: serif;
+    max-width: 300px;
+    margin: auto;
+    font-size: 30px;
+    text-align: center ;
+    padding-bottom: 10px;
+}
+}

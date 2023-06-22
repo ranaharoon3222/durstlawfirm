@@ -1,0 +1,174 @@
+/* Commercial sec */
+
+
+.litigation h4{
+    font-weight: 700;
+    font-style: italic;
+    font-size: 20px;
+    color: #E54A35 !important;
+    margin-bottom: -11px;
+  }
+  .litigation h1{
+   
+    font-weight: 600;
+    font-style: normal;
+    color: #081b33;
+    font-size: 50px;
+  }
+  .litigation p{
+    color: #081b33;
+    font-size: 20px;
+    line-height: 1.4em;
+    
+  }
+  .btn1{
+    color: #E54A35 !important;
+    border:1px solid #E54A35 ;
+    border-radius: 6px;
+    font-weight: 600 !important;
+    background-color: #FFFFFF;
+    height: 60px;
+font-size: 18px;
+  padding: 0px 26px;
+  display: flex;
+    align-items: center;
+  }
+  .btn2{
+    color: #081B33 !important;
+  border:1px solid #081B33 ;
+  border-radius: 6px;
+  font-weight: 600 !important;
+  background-color: #FFFFFF;
+  margin-left: 15px;
+  height: 60px;
+font-size: 18px;
+width: 100%;
+max-width: 250px;
+  padding: 0px 26px;
+  display: flex;
+    align-items: center;
+  }
+  .btn1:hover{
+    background-color: #000000;
+    border: none;
+  }
+  .btn2:hover{
+    background-color:#081B33 ;
+    color: white !important;
+    border: none;
+  }
+  .commercialbtns{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    gap: 0px;
+  }
+  .litigation{
+    max-width: 671px;
+  }
+  .additional h2{
+    color: #081b33;
+    font-family: calluna,serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 25px;
+  }
+  .areabox{
+    padding-top: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    background-color: rgba(255,255,255,0.74);
+  }
+  .areaboxtext ul li{
+    color: #081B33 ;
+    font-weight: 600;
+    line-height: 1.4em;
+    padding-bottom: 15px;
+    list-style: none;
+    font-size: 19px;
+  }
+  .areaboxtext ul li::before{
+    content: "\2022";
+    color: #E54A35;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em; 
+    font-size: 22px; 
+  }
+  .commercialsec{
+    padding: 40px 0px;
+    background-position: left 76% top 60%;
+  background-image: linear-gradient(64deg,#ffffff 31%,rgba(255,255,255,0.55) 80%),url('/images/Commercialbg.jpg') !important;
+  }
+.btn1 h3{
+    margin-left: 10px;
+}
+.btn2 h3{
+    margin-left: 5px;
+}
+
+
+.app{
+  color: #E54A35 !important;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.btn2 svg{
+  max-width: 30px;
+}
+.btn2:hover svg{
+  fill: white;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+ .litigation h4{
+  font-size: 18px;
+ }
+ .litigation h1{
+  font-size: 37px;
+ }
+ .commercialbtns{
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+ }
+ .litigation{
+  text-align: center;
+ }
+ .litigation p{
+  font-size: 17px;
+  text-align: left;
+ }
+ .btn2{
+  
+  border: 2px solid #081B33;
+ }
+ .btn1{
+  border: 2px solid #E54A35;
+ }
+ .additional h2{
+  font-size: 24px;
+  text-align: center;
+ }
+ .areabox{
+  background: transparent;
+  margin-top: -15px;
+ }
+ .areaboxtext ul li::before{
+  font-size: 20px;
+ }
+ .areaboxtext ul li{
+  font-size: 16px;
+ }
+ .additional h2{
+  margin-top: 60px;
+ }
+}
+

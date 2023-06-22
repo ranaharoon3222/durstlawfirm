@@ -1,0 +1,103 @@
+
+/* body,html{
+    overflow-x: hidden;
+} */
+.backColor{
+    background-color: rgb(238, 236, 236);
+    margin-top: 60px;
+
+}
+.appeals2{
+    grid-template-columns: repeat(2,1fr);
+    display: grid;
+    padding-top: 60px;
+}
+
+.aInnterText img{
+    width: 12%;
+    transform: rotate(305deg);
+}
+.aInnterText h1{
+    max-width: 520px;
+    
+}
+.aInnterText span{
+    color: #E54A35!important;
+}
+.aInnterText p{
+    padding-top: 30px;
+    max-width: 550px;
+    line-height: 1.6;
+}
+.im{
+    position: relative;
+    top: -28%;
+    transform: rotate(50deg);
+    left: 15%;
+    margin-bottom: 160px;
+}
+.im img{
+    width: 80%;
+    position: absolute;
+}
+.apealText span{
+    display: block;
+    width: 23%;
+    margin-top: 30px;
+    height: 10px;
+    background-color: #E54A35;
+}
+.apealText{
+    background-color: rgb(244, 244, 242);
+    padding: 25px 40px;
+    width: 90%;
+    margin-bottom: 140px;
+    /* height: 480px; */
+}
+.apealText p{
+    padding-top: 30px;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+@media all and (max-width: 768px){
+    .appeals2{
+    grid-template-columns: repeat(1,1fr);
+    display: grid;
+    padding-top: 10px;
+}
+.aInnterText img{
+    width: 20%;
+}
+.aInnterText{
+    padding: 20px 20px;
+    line-height: 1.5;
+}
+.aInnterText h1{
+ font-size: 25px;
+ max-width: 260px !important;
+}
+.backColor{
+    background-color: rgb(238, 236, 236);
+    height: 1550px;
+
+}
+.apealText{
+    background-color: white;
+        width: 100%;
+
+    padding: 25px 30px;
+    /* margin-top: 40px; */
+    z-index: 1;
+    /* height: 480px; */
+}
+.im img{
+    width: 100%;
+    position: absolute;
+}
+.im{ 
+    top: -13%;
+        margin-bottom: 20px;
+
+}
+}

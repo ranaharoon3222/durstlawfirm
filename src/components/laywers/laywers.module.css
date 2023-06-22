@@ -1,0 +1,48 @@
+.p3Section1 {
+  grid-template-columns: 60% 40%;
+  display: grid;
+  margin-top: 100px;
+}
+
+.p3Img img {
+  width: 80%;
+  margin-top: -30px;
+}
+.pinnerText p {
+  max-width: 570px;
+  line-height: 1.5;
+  padding-top: 30px;
+}
+.pinnerText h1 {
+  font-family: "Calluna", sans-serif;
+  max-width: 680px;
+  font-weight: lighter;
+}
+.pinnerText h3 {
+  font-family: "Calluna", sans-serif;
+  color: #e54a35;
+  padding-top: 15px;
+}
+.line3{
+    text-align: center;
+    padding-top: 100px;
+}
+.line3 img{
+    width: 7%;
+}
+
+@media all and (max-width: 768px){
+    .p3Section1 {
+  grid-template-columns: repeat(1,1fr);
+  text-align: center;
+  margin-top: 80px;
+}
+.p3Img img {
+  width: 90%;
+  padding-top: 40px;
+}
+.line3 img{
+    width: 30%;
+    padding-bottom: 30px;
+}
+}

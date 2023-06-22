@@ -1,0 +1,107 @@
+
+.backColor{
+    background-color: rgb(238, 236, 236);
+    /* height: 720px; */
+    margin-top: 100px;
+
+}
+.appeals2{
+    grid-template-columns: repeat(2,1fr);
+    display: grid;
+    padding-top: 60px;
+}
+
+.aInnterText img{
+    width: 12%;
+    transform: rotate(305deg);
+}
+.aInnterText h1{
+    max-width: 520px;
+    
+}
+.aInnterText span{
+    color: #E54A35!important;
+}
+.aInnterText p{
+    padding-top: 20px;
+    max-width: 520px;
+    line-height: 1.6;
+}
+
+.apealText span.lemjom{
+    display: block;
+    width: 23%;
+    margin-top: 30px;
+    height: 10px;
+    background-color: #E54A35;
+}
+.apealText{
+    background-color: white;
+    padding: 25px 80px;
+    /* height: 780px; */
+    margin-bottom: 60px;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+.apealText p{
+    padding-top: 30px;
+    line-height: 1.6;
+    max-width: 500px;
+}
+.apealText ul{
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+.apealText ul span{
+    color:  #081B33;
+    font-weight: bolder;
+}
+.apealText ul li{
+    padding-top: 10px;
+    list-style: none;
+    max-width: 430px;
+}
+.apealText ul li::before{
+    content: "\2022";
+    color: #E54A35;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    font-size: 22px;
+        align-items: center;
+
+}
+@media all and (max-width: 768px){
+    .appeals2{
+    grid-template-columns: repeat(1,1fr);
+    display: grid;
+    padding-top: 30px;
+}
+.aInnterText p{
+    padding: 20px 20px;
+    line-height: 1.8;
+}
+.backColor{
+    background-color: rgb(238, 236, 236);
+    height: 100%;
+
+}
+.apealText{
+    background-color: white;
+    padding: 25px 40px;
+    margin-top: 40px;
+    /* z-index: 1; */
+    /* height: 480px; */
+}
+
+.aInnterText h1{
+    max-width: 420px;
+    padding: 10px 20px;
+    
+}
+.aInnterText img{
+    padding: 10px 20px;
+    width: 30%;
+}
+}

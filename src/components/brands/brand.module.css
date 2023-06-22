@@ -1,0 +1,51 @@
+
+.box1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.img1{
+    max-width: 170px;
+}
+.img2{
+    margin-left: 80px;
+    max-width: 170px;
+}
+.img3{
+    max-width: 250px;
+}
+.img4{
+    margin-left: 110px;
+    max-width: 250px;
+}
+.img5{
+    max-width: 250px;
+    margin-right: 60px;
+}
+.img6{
+    margin-left: 40px;
+    max-width: 250px;
+}
+.brandsec{
+    padding: 50px 0px;
+}
+
+
+
+
+@media (max-width: 768px) {
+   .img2{
+    margin-left: 0px;
+   }
+   .img4{
+    margin-left: 20px;
+   }
+   .img6{
+    margin-left: 0px;
+   }
+  }
+  
+
+
+

@@ -1,0 +1,70 @@
+.lawyersec h1{
+    font-family: calluna,serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #081b33;
+    font-size: 27px;
+    text-align: center;
+}
+.lawyersec{
+    padding: 4% 0;
+    background-color: #F2F2F2 !important;
+}
+.lawyerlist ul li{
+    color: #081B33 !important;
+    
+    line-height: 1.5em;
+    padding-bottom: 15px;
+    list-style: none;
+    font-size: 19px;   
+    
+}
+.lawyerlist ul li::before{
+    content: "\2022";
+    color: #E54A35;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    font-size: 22px;    
+}
+.lawyerlist{
+    margin-top: 40px;
+}
+.redarrow{
+    max-width: 240px;
+}
+.appeal{
+    font-weight: 600;
+font-style: italic;
+color: #e54a35;
+text-decoration: underline;
+}
+
+
+
+@media (max-width: 768px) {
+    .lawyersec h1{
+        font-size: 25px;
+       }
+       .lawyerlist ul li::before{
+        font-size: 20px;
+       }
+       .lawyerlist ul li{
+        font-size: 16px;
+       }
+       .lawyerlist{
+        margin-top: 0px;
+       }
+       .redarrow{
+        max-width: 180px;
+       }
+       .space{
+        margin-top: -15px;
+       }
+
+}
+
+
+
+

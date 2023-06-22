@@ -1,0 +1,86 @@
+
+.goodIcon{
+    padding-top: 90px;
+
+}
+
+.meFlex{
+    display: flex;
+    align-items: center;
+}
+.meFlex img{
+    width: 6%;
+}
+.meFlex h1{
+    max-width: 690px;
+    padding-left: 20px;
+    font-weight: 500;
+    font-family: 'Calluna', sans-serif;
+}
+.checkbox{
+    grid-template-columns: repeat(5,2fr);
+    display: grid;
+}
+.checkIcon{
+    padding-top: 50px;
+    display: flex;
+}
+.checkIcon p{
+    padding-left: 15px;
+    font-family: 'Lato', sans-serif;
+    max-width: 180px;
+    line-height: 1.5;
+}
+.checkIcon i{
+        color: #E54A35;
+        font-size: 25px;
+}
+
+.line3{
+    text-align: center;
+    padding-top: 100px;
+}
+.line3 img{
+    width: 7%;
+}
+
+@media all and (max-width: 768px){
+    .goodIcon{
+        padding-top: 30px;
+    }
+    .checkbox{
+    grid-template-columns: repeat(1,1fr);
+    display: grid;
+    padding: 40px 20px;
+}
+.checkIcon p{
+    max-width: 300px;
+}
+.checkIcon{
+    padding-top: 30px;
+}
+.checkIcon i{
+    font-size: 30px;
+}
+.meFlex{
+    display: block;
+    text-align: center;
+}
+.meFlex h1{
+    font-size: 23px;
+    max-width: 400px;
+        padding-left: 0px;
+        padding-top: 10px;
+
+}
+.meFlex img{
+    width: 30%;
+}
+.line3 img{
+    width: 30%;
+}
+.line3{
+    padding-top: 20px;
+}
+
+}

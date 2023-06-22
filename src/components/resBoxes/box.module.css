@@ -1,0 +1,164 @@
+.result1 {
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  margin-top: 10px;
+  gap: 40px;
+}
+.um{
+    margin-top: 50px;
+}
+.um p{
+    color:#E54A35 ;
+    font-family: italic;
+    padding-left: 10px;
+}
+.box3 {
+  display: flex;
+  padding: 10px 0px;
+  align-items: center;
+}
+.box3 h1 {
+  padding-left: 20px;
+}
+.box3 img {
+  /* margin-top: 10px; */
+  width: 8%;
+  padding: 15px 0px 15px 15px;
+  background-color: #f2f2f2;
+  border-radius: 90px 0px 0px 90px;
+  margin-left: -20px;
+}
+
+.Amain {
+  background-color: #f2f2f2;
+  /* width: 90%; */
+  padding-bottom: 30px;
+}
+.Amain p {
+  padding: 5px 30px;
+  font-family: sans-serif;
+  line-height: 1.4;
+  max-width: 400px;
+}
+
+.Amain2 {
+  background-color: #f2f2f2;
+  /* width: 90%; */
+  margin-bottom: 60px;
+}
+.Amain2 p {
+  padding: 0px 30px;
+  font-family: sans-serif;
+  line-height: 1.4;
+  max-width: 400px;
+}
+.Amain3 {
+  background-color: #f2f2f2;
+  /* width: 90%; */
+  margin-bottom: 190px !important;
+}
+.Amain3 p {
+  padding: 0px 30px;
+  font-family: sans-serif;
+  line-height: 1.4;
+  max-width: 400px;
+}
+.Amain4 {
+  background-color: #f2f2f2;
+  /* width: 90%; */
+  margin-bottom: 85px !important;
+  margin-top: -60px;
+}
+.Amain4 p {
+  padding: 0px 30px;
+  font-family: sans-serif;
+  line-height: 1.4;
+  max-width: 400px;
+}
+.main4 {
+  background-color: #f2f2f2;
+  /* width: 90%; */
+  /* margin-top: 30px; */
+  font-family: sans-serif;
+  margin-bottom: 45px;
+}
+.main4 p {
+  padding: 0px 30px;
+}
+.lmao {
+  background-color: #f2f2f2;
+  /* width: 90%; */
+}
+.lmao p {
+  padding: 0px 30px;
+  line-height: 1.4;
+  max-width: 400px;
+  padding-bottom: 40px;
+  font-family: sans-serif;
+}
+.main6 {
+  background-color: #f2f2f2;
+  /* width: 90%; */
+  margin-top: 30px;
+}
+.main6 p{
+    padding: 0px 30px;
+    padding-bottom: 40px;
+}
+.main7 {
+  margin-top: -190px;
+}
+.line{
+    text-align: center;
+    padding-top: 50px;
+}
+.line img{
+    width: 6%;
+    
+}
+
+
+@media all and (max-width: 768px){
+    .result1 {
+  grid-template-columns: repeat(1, 1fr);
+  padding: 0px 15px;
+  gap: 20px;
+}
+.box3 img{
+    width: 15%;
+}
+.main7 {
+  margin-top: -40px;
+}
+.main6 {
+ 
+  margin-top: 36px;
+}
+.Amain3 {
+  background-color: #f2f2f2;
+  margin-bottom: 10px !important;
+}
+.Amain4{
+    margin-top: -20px;
+}
+.lmao{
+  margin-top: -22px;
+}
+.Amain4 p{
+    padding-bottom: 20px;
+}
+.Amain3 p{
+    padding-bottom: 20px;
+}
+.Amain2{
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    margin-top: 25px;
+}
+.main4 p{
+    padding-bottom: 20px;
+}
+.line img{
+    width: 30%;
+}
+}

@@ -1,0 +1,55 @@
+
+
+.alexinfosec{
+    padding: 50px 0px;
+}
+.alexinfobox{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+.info h1{
+    padding-bottom: 10px;
+    margin-top: 50px;
+    line-height: 1em;
+    color: #081b33;
+    font-family: calluna,serif;
+    font-weight: 700;
+font-size: 27px;
+}
+.redline{
+    border-bottom: 12px solid #e54a35;
+    max-width: 112px;
+    margin-bottom: 35px;
+}
+.info h2{
+    line-height: 1.4em;
+    color: #081B33 !important;
+    padding-bottom: 0.5em;
+    font-size: 20px;
+font-weight: 400;
+font-family: 'Lato', sans-serif !important;
+}
+
+@media (max-width: 768px) {
+    .alexinfobox{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .info h1{
+        font-size: 24px;
+    }
+    .redline{
+        max-width: 50px;
+    }
+    .info h2{
+        font-weight: 500;
+        padding-bottom: 0px;
+        font-size: 17px;
+    }
+  }
+  
+
+
+
+

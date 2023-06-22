@@ -1,0 +1,71 @@
+/* clients sec */
+.clienttext h1{
+    font-family: calluna,serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #081b33;
+    font-size: 26px;  
+    text-align: center;
+}
+.clientsec{
+    padding: 50px 0px;
+}
+.line{
+    border: 6px solid #e54a35;
+    max-width: 211px;
+    margin: auto; 
+    margin-top: 40px; 
+}
+.clientrepresent ul li{
+    color: #081B33 !important;
+    font-weight: 600;
+    line-height: 1.4em;
+    padding-bottom: 15px;
+    list-style: none;
+    font-size: 19px;   
+    text-align: center; 
+}
+.clientrepresent ul li::before{
+    content: "\2022";
+    color: #E54A35;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em; 
+    font-size: 22px;     
+}
+.clientrepresent{
+    margin-top: 70px;
+}
+
+
+
+@media (max-width: 768px) {
+    .line{
+        max-width: 75px;
+        margin-top: 0px;
+    }
+    .clientsec{
+        padding: 0px;
+    }
+    .clientrepresent ul li{
+        font-size: 16px;
+text-align: left;
+padding-bottom: 10px;
+font-weight: 600;
+    }
+    .clientrepresent ul li::before{
+        font-size: 20px;
+    }
+    .clientrepresent{
+        margin-top: 50px;
+    }
+    .space{
+        margin-top: -62px;
+    }
+}
+  
+
+
+
+  

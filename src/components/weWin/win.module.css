@@ -1,0 +1,89 @@
+
+
+.btn2{
+    width: 100%;
+max-width: 230px;
+    color: #081B33 !important;
+    border:1px solid #081B33 ;
+    border-radius: 6px;
+    font-weight: 600 !important;
+    background-color: #FFFFFF;
+    margin-top: 35px;
+    padding: 0px 30px;
+    height: 55px;
+   
+    display: flex;    
+    align-items: center;
+}
+.btn2:hover{
+    color: white !important;
+    background-color: #081b33;
+}
+
+.wintext{
+    max-width: 687px;
+margin: auto;
+}
+
+.wintext h1{
+    font-size: 37px;
+    font-family: calluna,serif;
+font-weight: 600;
+font-style: normal;
+color: #081b33;
+}
+.wintext h2{
+    margin-top: -10px;
+    font-size: 26px;
+    color: #E54A35 !important;
+    font-family: calluna,serif;
+font-weight: 600;
+font-style: normal;    
+}
+.wintext p{
+    color: #081b33;
+    line-height: 1.4em;   
+    font-size: 19px; 
+}
+.wewinsec{
+    padding: 50px 0px;
+}
+.winimg{
+    max-width: 539px;
+margin: auto;
+}
+.btn2 svg{
+    max-width: 30px;
+}
+.btn2:hover svg{
+    fill: white;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .wintext h1{
+        font-size: 30px;
+    }
+    .wintext h2{
+        font-size: 26px;
+    }
+    .winimg{
+        margin-top: 40px;
+        max-width: 264px;
+    }
+    .wintext{
+        text-align: center;
+    }
+    .btn2{
+        margin: auto;
+        margin-top: 30px;
+    }
+  }
+  
+
+
+
+
+

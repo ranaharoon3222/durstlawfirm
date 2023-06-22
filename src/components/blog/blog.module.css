@@ -1,0 +1,149 @@
+.blogsec{
+    padding: 50px 0px;
+}
+
+.bloghead h1{
+    
+    line-height: 1em;
+    font-family: calluna,serif;
+font-weight: 600;
+font-style: italic;
+font-size: 35px;
+color: #E54A35 !important;
+text-align: center;
+}
+.bloghead h2{
+    font-family: calluna,serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+    color: #081b33;
+    padding-bottom: 10px;
+line-height: 1em;
+text-align: center;
+}
+.btnparent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+.version{
+    font-size: 18px;
+    line-height: 1em;
+    display: block;
+    overflow: hidden;
+    height: 100%;
+    margin: -1px -1px 0 0;
+    padding: 1em 1.2em;
+    border: 1px solid #e2e2e2;
+    background-color: #fff;
+    color: #081B33 !important;
+    transition: all .4s ease-in-out;    
+}
+.bloggrid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+.blogbox{
+    border-left: 2px solid #e54a35;
+    padding: 30px;
+    background-color: #f9f9f9;
+}
+.blogbody h1{
+    color: #081b33;
+    font-family: calluna,serif;
+    padding-bottom: 0;
+    font-weight: 700 !important;
+    font-size: 24px;
+    line-height: 1em;
+}
+.blogbody h4{
+    font-weight: 600 !important;
+    font-style: italic !important;
+    color: #081b33;
+}
+.blogbody p{
+    font-size: 18px;
+    line-height: 1.4em !important;
+    color: #081b33;
+}
+.btnbox{
+    color: #FFFFFF !important;
+    border-width: 0px !important;
+    border-radius: 0px;
+    font-size: 14px;
+    background-color: #081B33;
+    max-width: 97px;
+    padding: 8px 15px;
+    margin-top: 25px;
+}
+.blogbody{
+    max-width: 381px;
+}
+.version:hover{
+    background-color: #e2e2e2;
+}
+.box1{
+    display: flex;
+}
+.box2{
+    display: flex;
+}
+.box4{
+    display: flex;
+   
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .bloggrid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .bloghead h1{
+        font-size: 40px;
+    }
+    .bloghead h2{
+        font-size: 27px;
+    }
+    .blogbody h4{
+        font-size: 15px;
+        font-weight: 400 !important;
+        font-style: normal !important;
+    }
+    .blogbody p{
+        font-size: 15px;
+    }
+    .blogbody h1{
+        font-size: 20px;
+    }
+    .version{
+        font-size: 14px;
+    }
+    .btnparent{
+        margin-top: 0px;
+    }
+    .box4{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .box1{
+        display: flex;
+        justify-content: center;
+    }
+    .box2{
+        display: flex;
+    }
+    .box6{
+        display: flex;
+        justify-content: center;
+    }
+}
+  
+

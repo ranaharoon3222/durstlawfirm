@@ -1,0 +1,241 @@
+.backimg2{
+    background-position: left 20% top 20%;
+    background-image: linear-gradient(64deg,#ffffff 31%,rgba(255,255,255,0) 80%),url(/images/herobg.jpg)!important;
+    /* height: 500px; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.backGrid{
+    grid-template-columns: 40% 30% 30%;
+    display: grid;
+    padding-top: 50px;
+}
+
+.clintText h4{
+    font-style: italic;
+    font-size: 16px;
+    color: #E54A35!important;
+}
+.clintText h1{
+    font-weight: 500;
+    padding-top: 10px;
+    font-size: 40px;
+}
+.clintText p{
+    padding-top: 30px;
+    line-height: 1.6;
+    /* font-size: 18px; */
+}
+.clintText .p3{
+    padding-top: 20px;
+    font-family: 'Lato', sans-serif;
+    /* font-size: 18px; */
+    line-height: 1.6;
+
+}
+.clintText span:nth-child(2){
+    color: #E54A35;
+    text-decoration: underline;
+}
+.clintText span{
+    color: #E54A35;
+}
+.btn3 i{
+    color: #E54A35 !important;
+    padding-left: 4px;
+}
+.btn3 .btn7{
+    font-size: 14px;
+    margin-top: 30px;
+    font-family: 'Calluna', sans-serif;
+    width: 70%;
+    height: 45px;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    transition: all ease-in .4s;
+    box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.27);
+}
+.btn3 .btn8{
+    font-size: 14px;
+    margin-top: 20px;
+    font-family: 'Calluna', sans-serif;
+    width: 98%;
+    height: 45px;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+        transition: all ease-in .4s;
+        box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.27);
+
+}
+.btn3 .btn7:hover{
+    background-color: #081B33;
+    border: none;
+    color: #E54A35;
+}
+.btn3 .btn8:hover{
+    background-color: #081B33;
+    border: none;
+    color: #E54A35;
+}
+.btn1{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.btn1 .BTN{
+   color: #E54A35;
+   border:  2px solid #E54A35;
+   width: 32%;
+   background-color: white;
+   height: 45px;
+   font-weight: bolder;
+   cursor: pointer;
+   transition: all ease-in .4s;
+   box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.27);
+
+}
+.btn1 .BTN2{
+    cursor: pointer;
+   color: black;
+   border:  2px solid black;
+   width: 32%;
+   background-color: white;
+   height: 45px;
+   font-weight: bolder;
+   margin-left: 10px;
+   transition: all ease-in .4s;
+   box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.27);
+
+}
+.btn1 .BTN:hover{
+background-color: #081B33;
+border: none;
+}
+.btn1 .BTN2:hover{
+background-color: #081B33;
+color: white;
+border: none;
+}
+.btn4{
+    padding: 20px 70px;
+}
+.btn4 h3{
+    font-size: 13px;
+}
+.btn4 i{
+    color: #E54A35;
+}
+.btn4 .onlyB{
+    margin-top: 20px;
+    width: 100%;
+    height: 45px;
+    background-color: white;
+    border: 2px solid black;
+     cursor: pointer;
+    transition:  all ease-in .4s;
+    box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.27);
+}
+.btn4 .onlyB:hover{
+    background-color: #081B33;
+    color: #E54A35;
+    border: none;
+}
+.btn5{
+    margin-top: 33px;
+}
+
+.btn5 i{
+    color: #E54A35;
+}
+.btn5 .onlyB1{
+    margin-top: 20px;
+    width: 70%;
+    height: 45px;
+    background-color: white;
+    border: 2px solid black;
+    cursor: pointer;
+    transition:  all ease-in .4s;
+    box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.27);
+}
+.btn5 .onlyB1:hover{
+    background-color: #081B33;
+    color: #E54A35;
+    border: none;
+}
+.btn5 .onlyB2{
+    box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.27);
+    opacity: .4;
+    margin-top: 20px;
+    width: 70%;
+    height: 45px;
+    background-color: white;
+    border: 2px solid black;
+}
+
+@media all and (max-width: 768px) {
+    .backGrid{
+    grid-template-columns: repeat(1,1fr);
+   
+    text-align: center;
+}
+.btn4{
+    background-color: white;
+}
+.btn5{
+    background-color: white;
+}
+.backimg2{
+    background-position: center;
+   
+}
+.btn3 .btn7{
+    height: 65px;
+    text-align: center;
+    padding: 0px 15px;
+}
+.btn3 .btn8{
+    width: 70%;
+    text-align: center;
+    height: 80px;
+        padding: 8px 15px;
+        line-height: 1.6;
+
+}
+.clintText .p3{
+    max-width: 300px;
+    margin: auto;
+}
+.btn1{
+    /* text-align: left; */
+}
+.newclass1{
+    display: flex;
+    justify-content: center;
+}
+
+.btn1 .BTN{
+    width: 50%;
+    margin-left: 10px;
+}
+.btn1 .BTN2{
+    width: 60%;
+    margin-top: 20px;
+}
+.btn4{
+    padding: 20px 20px;
+}
+.btn5{
+    margin-top: -15px;
+    margin-bottom: 40px;
+}
+.btn5 .onlyB1{
+    width: 90%;
+}
+.btn5 .onlyB2{
+    display: none;
+}
+}
