@@ -1,6 +1,6 @@
 .backimg {
   padding-top: 150px;
-  padding-bottom: 70px;
+  padding-bottom: 130px;
   background-size: cover;
   background-position: center top;
   background-image: linear-gradient(
@@ -25,11 +25,8 @@
 
 .innerText h1 {
   font-family: calluna, serif;
-  font-weight: 600;
   font-style: normal;
   padding-top: 30px;
-  font-size: 45px;
-  max-width: 450px;
 }
 
 .innerText p {

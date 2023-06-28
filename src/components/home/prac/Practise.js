@@ -9,10 +9,15 @@ const Practise = () => {
       <section className='relative'>
         <div className={`${style.backimg} pt-20`}>
           <div className='container'>
-            <div className={style.parentbox}>
+            <div className=''>
               <div className={style.innerText}>
-                <h3>Cincinnati, Ohio Law Firm</h3>
-                <h1>High Stakes Litigation. High Performance.</h1>
+                <h4 className='italic font-semibold text-primary'>
+                  Cincinnati, Ohio Law Firm
+                </h4>
+                <h1 className='text-[30px] font-semibold md:leading-[4.5vw]  md:text-[4vw]'>
+                  High Stakes Litigation.
+                  <br /> High Performance.
+                </h1>
                 <p>
                   The lawyers at The Durst Law Firm are devoted to the art and
                   craft of trial lawyering.

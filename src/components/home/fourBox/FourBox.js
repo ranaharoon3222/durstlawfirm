@@ -1,34 +1,60 @@
-import React from 'react'
-import style from './four.module.css'
+import React from 'react';
+import style from './four.module.css';
+import Link from 'next/link';
 const FourBox = () => {
+  const data = [
+    {
+      title: 'Commercial Litigation',
+      img: '/images/box-image1.jpg',
+    },
+    {
+      title: 'Transportation Accidents',
+      img: '/images/box-image2.jpg',
+    },
+    {
+      title: 'Personal Injury Cases',
+      img: '/images/inj.jpg',
+    },
+    {
+      title: 'Ohio Local Counsel Services',
+      img: '/images/box-image4.jpg',
+    },
+  ];
+
   return (
     <div>
-      <div className="container">
+      <div className='container'>
         <div className={style.mid}>
-          <h1>Practice Areas</h1>
+          <h2>Practice Areas</h2>
           <p>The Durst Law Firm serves clients in the following areas.</p>
         </div>
         <div className={style.boxes}>
-          <div className={style.box1}>
-            <h3>Commercial Litigation</h3>
-            <h4>Click for more</h4>
-          </div>
-          <div className={style.box2}>
-            <h3>Transportation Accidents</h3>
-            <h4>Click for more</h4>
-          </div>
-          <div className={style.box3}>
-            <h3>Personal Injury Cases</h3>
-            <h4>Click for more</h4>
-          </div>
-          <div className={style.box4}>
-            <h3>Ohio Local Counsel Services</h3>
-            <h4>Click for more</h4>
-          </div>
+          {data.map((item, i) => {
+            return (
+              <Link key={i} href={'#'} className='block '>
+                <div
+                  className={`py-20 transition-all bg-center bg-cover hover:-translate-y-6 min-h-[280px]  flex items-center`}
+                  style={{
+                    backgroundImage: `radial-gradient(circle at center, rgba(8, 27, 51, 0.7) 0%,  rgba(8, 27, 51, 0.84) 100% ), url(${item.img})`,
+                  }}
+                >
+                  <div className='max-w-[200px] mx-auto'>
+                    <h4 className='text-center text-white '> {item.title} </h4>
+                    <span className='bg-white w-[140px] mx-auto block py-[1px] my-4'>
+                      {' '}
+                    </span>
+                    <span className='block text-xs text-center text-primary '>
+                      Click for more
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default FourBox
+export default FourBox;
