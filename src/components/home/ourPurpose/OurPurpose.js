@@ -1,16 +1,17 @@
-import React from 'react'
-import style from './purpose.module.css'
+import React from 'react';
+import style from './purpose.module.css';
+import Button from '@/commons/Button';
 
 const OurPurpose = () => {
   return (
     <div>
-      <div className="container">
+      <div className='container'>
         <div className={style.secfull}>
           <div className={style.box2}>
             <div>
               <div className={style.main}>
                 <div className={style.box3}>
-                  <img src="./images/icons.png" alt="" />
+                  <img src='./images/icons.png' alt='' />
                   <h1>“Top-Shelf Results.”</h1>
                 </div>
                 <p className={style.p3}>
@@ -34,7 +35,7 @@ const OurPurpose = () => {
               </div>
               <div className={style.main}>
                 <div className={style.box3}>
-                  <img src="./images/icon2.png" alt="" />
+                  <img src='./images/icon2.png' alt='' />
                   <h1>Defense Victory</h1>
                 </div>
                 <p className={style.p3}>
@@ -52,7 +53,7 @@ const OurPurpose = () => {
             <div>
               <div className={style.main2}>
                 <div className={style.box3}>
-                  <img src="./images/icons.png" alt="" />
+                  <img src='./images/icons.png' alt='' />
                   <h1>“Justice was done.”</h1>
                 </div>
                 <p className={style.p4}>
@@ -69,7 +70,7 @@ const OurPurpose = () => {
               </div>
               <div className={style.main2}>
                 <div className={style.box3}>
-                  <img src="./images/icon2.png" alt="" />
+                  <img src='./images/icon2.png' alt='' />
                   <h1>$1,000,000 Settlement</h1>
                 </div>
                 <p className={style.p4}>
@@ -80,17 +81,33 @@ const OurPurpose = () => {
                   firm.
                 </p>
               </div>
-              <div className={style.btn2}>
-                <button>more testimonials</button>
-                <button> more results</button>
+              <div className='md:ml-[40px] mt-6'>
+                <Button
+                  text={'More Testimonials'}
+                  variant='primary-bg'
+                  className='inline-block w-auto max-w-full px-4'
+                ></Button>
+                <div>
+                  <Button
+                    text={'More Results'}
+                    variant='primary-bg'
+                    className='inline-block w-auto max-w-full px-4 mt-6'
+                  ></Button>
+                </div>
               </div>
             </div>
           </div>
 
           <div className={style.sec2}>
             <div className={style.innerImg}>
-              <img src="./images/logo_11zon.jpg" alt="" />
-              <h1>Our Purpose, Values & Principles</h1>
+              <img
+                src='./images/logo_11zon.jpg'
+                alt=''
+                className='max-w-[80px]'
+              />
+              <h1 className='text-[32px] font-semibold'>
+                Our Purpose, Values & Principles
+              </h1>
             </div>
             <div className={style.onlyP}>
               <p>
@@ -112,13 +129,13 @@ const OurPurpose = () => {
               </p>
               <h4>Our Values –</h4>
               <p>
-                {" "}
+                {' '}
                 <span>Embracing our professional obligations.</span> We provide
                 zealous advocacy while maintaining uncompromising ethics in all
                 interactions with colleagues, clients, and the courts.
               </p>
               <p>
-                {" "}
+                {' '}
                 <span> Leadership.</span> We are deeply committed to leadership
                 in the Cincinnati legal community. Our lawyers serve in formal
                 leadership roles in which they collaborate with Judges,
@@ -133,17 +150,17 @@ const OurPurpose = () => {
               </p>
               <h4>Our Principles –</h4>
               <p>
-                {" "}
+                {' '}
                 <span> Mastery.</span> We believe it is the responsibility of
                 all of our professionals to continually develop themselves.
               </p>
               <p>
-                {" "}
+                {' '}
                 <span> Innovation.</span> By constantly reflecting, we
                 continually hone our approach to litigation and client service.
               </p>
               <p>
-                {" "}
+                {' '}
                 <span>Client Focus. </span> We recognize the importance of
                 developing a superior understanding of our clients and their
                 needs. We visit personal injury clients at their homes to gain
@@ -157,6 +174,6 @@ const OurPurpose = () => {
       </div>
     </div>
   );
-}
+};
 
-export default OurPurpose
+export default OurPurpose;

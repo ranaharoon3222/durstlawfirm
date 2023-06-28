@@ -19,6 +19,9 @@
   .primary-btn {
     @apply py-3 px-4 pl-2 inline-flex justify-center items-center gap-2  border-transparent font-semibold   focus:outline-none   transition-all uppercase w-full max-w-[220px];
   }
+  .primary-btn-bg {
+    @apply py-3 px-4 pl-2 inline-flex justify-center items-center gap-2 bg-secondry !text-white hover:bg-primary hover:text-white  border-transparent font-semibold   focus:outline-none   transition-all uppercase w-full max-w-[220px] shadow-lg;
+  }
 }
 
 .container {

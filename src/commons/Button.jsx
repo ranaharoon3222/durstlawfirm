@@ -9,8 +9,15 @@ const Button = ({
   className,
   color = 'red',
 }) => {
-  const checkVariant =
-    variant === 'primary' ? 'primary-btn' : 'primary-btn-outline';
+  const checkVariant = () => {
+    if (variant === 'primary') {
+      return 'primary-btn';
+    } else if (variant === 'primary-bg') {
+      return 'primary-btn-bg';
+    } else {
+      return 'primary-btn-outline';
+    }
+  };
 
   const checkColor = () => {
     if (color === 'black') {
@@ -25,7 +32,7 @@ const Button = ({
   return (
     <Link
       href={link}
-      className={`group ${checkVariant} ${checkColor()} ${className} `}
+      className={`group ${checkVariant()} ${checkColor()} ${className} `}
     >
       {children}
       <span> {text} </span>
