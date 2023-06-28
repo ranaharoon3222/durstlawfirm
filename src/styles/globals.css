@@ -12,6 +12,13 @@
   .pm-btn:hover svg {
     fill: #e54a35;
   }
+
+  .primary-btn-outline {
+    @apply py-3 px-4 pl-2 inline-flex justify-center items-center gap-2  border-2  font-semibold bg-transparent   focus:outline-none   transition-all uppercase w-full max-w-[220px];
+  }
+  .primary-btn {
+    @apply py-3 px-4 pl-2 inline-flex justify-center items-center gap-2  border-transparent font-semibold   focus:outline-none   transition-all uppercase w-full max-w-[220px];
+  }
 }
 
 .container {

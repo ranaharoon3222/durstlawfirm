@@ -1,5 +1,8 @@
 import React from 'react';
 import style from './practise.module.css';
+import Button from '@/commons/Button';
+import ArrowDown from '@/icons/arrow-down';
+import Phone from '@/icons/phone';
 const Practise = () => {
   return (
     <>
@@ -29,17 +32,25 @@ const Practise = () => {
                   skills to craft imaginative solutions in and out of the
                   courtroom. Few boutique litigation firms can match our record.
                 </p>
-                <div className={style.btn1}>
-                  <div className={style.Practise}>
-                    {}
-                    <i className='fa fa-caret-down i aria-hidden=true'></i>{' '}
-                    Practice Areas{}
-                  </div>
-                  <div className={style.call}>
-                    {}
-                    <i className='fa fa-phone i aria-hidden=true'></i> Call Us
-                    Today
-                  </div>
+
+                <div className='flex flex-wrap justify-center mt-10 md:justify-normal md:flex-nowrap '>
+                  <Button
+                    text='Practice Areas'
+                    variant='outline'
+                    color={'black'}
+                    className='mb-4 md:mr-6 '
+                  >
+                    <ArrowDown fill='black' />
+                  </Button>
+
+                  <Button
+                    text='Call Us Today'
+                    className='mb-4 '
+                    variant='outline'
+                    color={'red'}
+                  >
+                    <Phone fill='red' />
+                  </Button>
                 </div>
               </div>
             </div>
