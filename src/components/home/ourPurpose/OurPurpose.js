@@ -1,20 +1,22 @@
 import React from 'react';
 import style from './purpose.module.css';
 import Button from '@/commons/Button';
+import Box from '@/commons/Box';
 
 const OurPurpose = () => {
   return (
     <div>
       <div className='container'>
         <div className={style.secfull}>
-          <div className={style.box2}>
+          <div className='grid items-center gap-10 md:grid-cols-2 place-content-center'>
             <div>
-              <div className={style.main}>
-                <div className={style.box3}>
-                  <img src='./images/icons.png' alt='' />
-                  <h1>“Top-Shelf Results.”</h1>
-                </div>
-                <p className={style.p3}>
+              <Box
+                title='“Top-Shelf Results.”'
+                name='- Ben W.'
+                position='CEO, WHAM Properties'
+                icon='./images/icons.png'
+              >
+                <p>
                   With our portfolio of over 200 rental units across multiple
                   states, legal disputes are unavoidable. Over the past five
                   years, The Durst Law Firm has represented us in dozens of
@@ -23,40 +25,36 @@ const OurPurpose = () => {
                   contract, fraud, and quiet title actions, among others, often
                   with significant financial or business implications.
                 </p>
-                <p className={style.p2}>
+                <p className='pt-5'>
                   The Durst Law Firm delivers top-shelf results, both inside and
-                  outside the courtroom. We consider the firm’s attorneys part
+                  outside the courtroom. We consider the firm's attorneys part
                   of our management and leadership team, and they act as such,
                   helping us to work through strategic dialogues. They are
                   outstanding advisors.
                 </p>
-                <span>- Ben W.</span>
-                <p className={style.p1}>CEO, WHAM Properties</p>
-              </div>
-              <div className={style.main}>
-                <div className={style.box3}>
-                  <img src='./images/icon2.png' alt='' />
-                  <h1>Defense Victory</h1>
-                </div>
-                <p className={style.p3}>
+              </Box>
+              <Box title='Defense Victory”' icon='./images/icon2.png'>
+                <p>
                   Successful 12(b)(6) dismissal of lawsuit seeking $10,499,166
                   in damages, obtaining victory on behalf of European business
                   enterprise incorporated in the United States including
                   complete dismissal of all claims adverse company officer.
                 </p>
-                <p className={style.p5}>
-                  Elec. Merch. Sys. LLC v. Gaal, et al., No. 20-CV-1898, 2022 WL
-                  2176537 (N.D. Ohio June 16, 2022).
+                <p className='pt-5 italic'>
+                  <strong>
+                    Elec. Merch. Sys. LLC v. Gaal, et al., No. 20-CV-1898, 2022
+                    WL 2176537 (N.D. Ohio June 16, 2022).
+                  </strong>
                 </p>
-              </div>
+              </Box>
             </div>
             <div>
-              <div className={style.main2}>
-                <div className={style.box3}>
-                  <img src='./images/icons.png' alt='' />
-                  <h1>“Justice was done.”</h1>
-                </div>
-                <p className={style.p4}>
+              <Box
+                title='“Justice was done.”'
+                name='- Gaby M.'
+                icon='./images/icons.png'
+              >
+                <p>
                   The trucking company fought [my] case hard and tried to blame
                   ME for the accident. [The firm’s] lawyers were not going to
                   let that happen. They used private investigators to track down
@@ -66,34 +64,31 @@ const OurPurpose = () => {
                   proved the truck driver was not telling the truth. In the end,
                   I got a GREAT settlement.
                 </p>
-                <h4>- Gaby M.</h4>
-              </div>
-              <div className={style.main2}>
-                <div className={style.box3}>
-                  <img src='./images/icon2.png' alt='' />
-                  <h1>$1,000,000 Settlement</h1>
-                </div>
-                <p className={style.p4}>
+              </Box>
+              <Box title='$1,000,000 Settlement”' icon='./images/icon2.png'>
+                <p>
                   Personal injury settlement in case where, due to landlord’s
                   grossly negligent maintenance of property, woman and children
                   were forced to jump from third floor apartment building to
                   escape a fire. The client and her family remain friends of the
                   firm.
                 </p>
-              </div>
-              <div className='md:ml-[40px] mt-6'>
-                <Button
-                  text={'More Testimonials'}
-                  variant='primary-bg'
-                  className='inline-block w-auto max-w-full px-4'
-                ></Button>
+              </Box>
+
+              <div>
                 <div>
                   <Button
-                    text={'More Results'}
                     variant='primary-bg'
-                    className='inline-block w-auto max-w-full px-4 mt-6'
-                  ></Button>
+                    text='More Testimonials'
+                    className='inline-block w-auto px-5 mb-5 text-center '
+                  />
                 </div>
+
+                <Button
+                  variant='primary-bg'
+                  text='More Results'
+                  className='inline-block w-auto px-5 text-center'
+                />
               </div>
             </div>
           </div>
