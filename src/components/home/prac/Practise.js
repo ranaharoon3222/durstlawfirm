@@ -7,14 +7,14 @@ const Practise = () => {
   return (
     <>
       <section className='relative'>
-        <div className={`${style.backimg} pt-20`}>
+        <div className={`${style.backimg} !pt-36`}>
           <div className='container'>
             <div className=''>
               <div className={style.innerText}>
                 <h4 className='italic font-semibold text-primary'>
                   Cincinnati, Ohio Law Firm
                 </h4>
-                <h1 className='text-[30px] font-semibold md:leading-[4.5vw]  md:text-[4vw]'>
+                <h1 className='text-[2rem] font-medium md:leading-[4.5vw]  md:text-[4vw]'>
                   High Stakes Litigation.
                   <br /> High Performance.
                 </h1>
@@ -61,7 +61,9 @@ const Practise = () => {
             </div>
           </div>
         </div>
+        <div className='mb-divider-top md:hidden'> </div>
         <div className={style.nullimg}></div>
+        <div className='mb-divider md:hidden'> </div>
         <div className='bt_divider'></div>
       </section>
     </>

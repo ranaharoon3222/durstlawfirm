@@ -33,7 +33,7 @@ const FourBox = () => {
             return (
               <Link key={i} href={'#'} className='block '>
                 <div
-                  className={`py-20 transition-all bg-center bg-cover hover:-translate-y-6 min-h-[280px]  flex items-center`}
+                  className={`py-20  bg-center bg-cover hover:-translate-y-6 min-h-[17rem]  hover:after:four-box-hover transition-all   flex items-center`}
                   style={{
                     backgroundImage: `radial-gradient(circle at center, rgba(8, 27, 51, 0.7) 0%,  rgba(8, 27, 51, 0.84) 100% ), url(${item.img})`,
                   }}

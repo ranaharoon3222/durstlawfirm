@@ -1,4 +1,5 @@
 // import Clients from '@/components/Clients'
+import BannerV2 from '@/commons/BannerV2';
 import Brands from '@/components/brands/Brands';
 import Clients from '@/components/clients/Clients';
 import Commercial from '@/components/commercial/Commercial';
@@ -11,7 +12,9 @@ import Head from 'next/head';
 export default function Home() {
   return (
     <>
-      <Commercial />
+      <BannerV2 />
+
+      {/* <Commercial /> */}
       <Clients />
       <Divider />
       <WeWin />

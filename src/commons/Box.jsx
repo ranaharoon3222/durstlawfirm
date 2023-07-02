@@ -16,7 +16,7 @@ const Box = ({
         <h5 className='!font-lato text-lg '> {position} </h5>
 
         <div className='bg-[#f5f5f5] w-10 h-10 rounded-full shadow-md absolute top-3 -left-5 flex items-center justify-center'>
-          <img src={icon} className='max-w-[16px]' alt='' />
+          <img src={icon} className='max-w-[20px]' alt='' />
         </div>
       </div>
     </section>
