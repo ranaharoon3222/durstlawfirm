@@ -62,9 +62,9 @@ const Header = () => {
   ];
 
   return (
-    <header className='flex bg-white flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full md:bg-transparent absolute top-4  left-0 text-sm py-3 sm:py-0'>
+    <header className='absolute left-0 z-50 flex flex-wrap w-full py-3 text-sm bg-white md:justify-start md:flex-nowrap md:bg-transparent md:top-4 md:py-0'>
       <nav
-        className='relative wrapper mx-auto  sm:flex sm:items-center sm:justify-between  '
+        className='relative mx-auto wrapper md:flex md:items-center md:justify-between '
         aria-label='Global'
       >
         <div className='flex items-center justify-between'>
@@ -78,16 +78,16 @@ const Header = () => {
               src='https://durstlawfirm.com/wp-content/uploads/2022/06/durst-main.svg'
             />
           </Link>
-          <div className='sm:hidden'>
+          <div className='md:hidden'>
             <button
               type='button'
-              className='hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm '
+              className='inline-flex items-center justify-center gap-2 p-2 text-sm font-medium text-gray-700 align-middle transition-all bg-white border rounded-md shadow-sm hs-collapse-toggle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 '
               data-hs-collapse='#navbar-collapse-with-animation'
               aria-controls='navbar-collapse-with-animation'
               aria-label='Toggle navigation'
             >
               <svg
-                className='hs-collapse-open:hidden w-4 h-4'
+                className='w-4 h-4 hs-collapse-open:hidden'
                 width='16'
                 height='16'
                 fill='currentColor'
@@ -99,7 +99,7 @@ const Header = () => {
                 />
               </svg>
               <svg
-                className='hs-collapse-open:block hidden w-4 h-4'
+                className='hidden w-4 h-4 hs-collapse-open:block'
                 width='16'
                 height='16'
                 fill='currentColor'
@@ -112,14 +112,14 @@ const Header = () => {
         </div>
         <div
           id='navbar-collapse-with-animation'
-          className='hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block'
+          className='hidden overflow-hidden transition-all duration-300 hs-collapse basis-full grow md:block'
         >
-          <div className='flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-center sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:pl-7'>
+          <div className='flex flex-col mt-5 gap-y-4 gap-x-0 md:flex-row md:items-center md:justify-center md:gap-y-0 md:gap-x-2 md:mt-0 md:pl-7'>
             {menuLinks.map((item, i) => {
               return (
                 <div key={item.link + i} className='md:px-4 first-of-type:pl-0'>
                   {item?.sub?.length ? (
-                    <div className='hs-dropdown [--strategy:static] sm:[--strategy:fixed] [--adaptive:none] sm:[--trigger:hover] sm:py-4'>
+                    <div className='hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] md:[--trigger:hover] md:py-4'>
                       <Link
                         href={item.link}
                         className='flex items-center w-full text-base text-[#000] hover:text-gray-400 font-medium  '
@@ -143,7 +143,7 @@ const Header = () => {
                         </svg>
                       </Link>
 
-                      <div className='hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 hidden z-10 bg-white sm:shadow-md rounded-lg p-2  before:absolute top-full sm:border before:-top-5 before:left-0 before:w-full before:h-5'>
+                      <div className='hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 bg-white md:shadow-md rounded-lg p-2  before:absolute top-full md:border before:-top-5 before:left-0 before:w-full before:h-5'>
                         {item.sub.map((sub, i) => {
                           return (
                             <Link
@@ -160,7 +160,7 @@ const Header = () => {
                   ) : (
                     <Link
                       href={item.link}
-                      className='flex items-center text-base w-full text-black hover:text-gray-400 font-medium  '
+                      className='flex items-center w-full text-base font-medium text-black hover:text-gray-400 '
                     >
                       {item.name}
                     </Link>
@@ -170,7 +170,7 @@ const Header = () => {
             })}
 
             <Link
-              className='pm-btn  flex items-center gap-x-2 mt-6 md:mt-0 md:absolute right-0 top-1/2  -translate-y-1/2  '
+              className='right-0 flex items-center mt-6 -translate-y-1/2 pm-btn gap-x-2 md:mt-0 md:absolute top-1/2 '
               href='#'
             >
               <svg

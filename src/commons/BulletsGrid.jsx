@@ -24,7 +24,7 @@ const BulletsGrid = () => {
       <div className='container'>
         <h2 className='mb-8'>Our lawyers have represented: </h2>
       </div>
-      <div className='container grid gap-10 px-5 md:grid-cols-3'>
+      <div className='container grid gap-5 px-5 md:gap-16 md:grid-cols-3'>
         <div>
           <ul className='listing'>
             {bullets.map((item) => (

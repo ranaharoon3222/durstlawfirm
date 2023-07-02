@@ -1,6 +1,6 @@
 // import Clients from '@/components/Clients'
 import BulletsGrid from '@/commons/BulletsGrid';
-import CommercialLitigation from '@/commons/Commercial-Litigation';
+import Banner from '@/commons/pages/commercial-litigation/Banner';
 import ColWithImage from '@/commons/col-with-image';
 import Brands from '@/components/brands/Brands';
 import Clients from '@/components/clients/Clients';
@@ -9,11 +9,12 @@ import OurLawyer from '@/components/ourLawyer/OurLawyer';
 import TwoCard from '@/components/twoCard/TwoCard';
 import WeWin from '@/components/weWin/WeWin';
 import Head from 'next/head';
+import ThreeBoxes from '@/commons/pages/commercial-litigation/ThreeBoxes';
 
 export default function Home() {
   return (
     <>
-      <CommercialLitigation />
+      <Banner />
 
       <Clients />
       <Divider />
@@ -24,7 +25,7 @@ export default function Home() {
       <Divider />
       <Brands />
       <Divider />
-      <TwoCard />
+      <ThreeBoxes />
     </>
   );
 }

@@ -8,11 +8,12 @@ import UpperFoot from '@/components/upperFoot/UpperFoot';
 import Line from '@/components/line/Line';
 import Brands from '@/components/brands/Brands';
 import Divider from '@/components/divider/Divider';
+import TransportBanner from '@/commons/pages/transportation/TransportBanner';
 
 const Transportation = () => {
   return (
     <>
-      <Hero />
+      <TransportBanner />
       <Icons />
       <Brands />
       <Divider />

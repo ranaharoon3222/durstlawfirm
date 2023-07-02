@@ -22,6 +22,10 @@
   .primary-btn-bg {
     @apply py-3 px-4 pl-2 inline-flex text-base justify-center items-center gap-2 bg-secondry !text-white hover:bg-primary hover:text-white  border-transparent font-semibold   focus:outline-none   transition-all uppercase w-full max-w-[245px] shadow-lg;
   }
+  .big-btn {
+    @apply py-3 px-4 pl-2 inline-flex text-base justify-center items-center gap-2 bg-white !text-secondry hover:bg-secondry hover:!text-primary  border-[3px] border-secondry  font-semibold   focus:outline-none   transition-all  w-auto  shadow-lg;
+  }
+
   .four-box-hover {
     content: '';
     background: radial-gradient(

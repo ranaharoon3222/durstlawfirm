@@ -1,10 +1,10 @@
 import React from 'react';
-import Button from './Button';
+import Button from '../../Button';
 import ArrowDown from '@/icons/arrow-down';
 import Phone from '@/icons/phone';
 import Link from 'next/link';
 
-const CommercialLitigation = () => {
+const Banner = () => {
   const features = [
     {
       title: 'Partnership and Joint Venture Dispute Litigation',
@@ -116,4 +116,4 @@ const CommercialLitigation = () => {
   );
 };
 
-export default CommercialLitigation;
+export default Banner;
