@@ -4,7 +4,7 @@ import ArrowDown from '@/icons/arrow-down';
 import Phone from '@/icons/phone';
 import Link from 'next/link';
 
-const BannerV2 = () => {
+const CommercialLitigation = () => {
   const features = [
     {
       title: 'Partnership and Joint Venture Dispute Litigation',
@@ -116,4 +116,4 @@ const BannerV2 = () => {
   );
 };
 
-export default BannerV2;
+export default CommercialLitigation;

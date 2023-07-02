@@ -1,8 +1,9 @@
 // import Clients from '@/components/Clients'
-import BannerV2 from '@/commons/BannerV2';
+import BulletsGrid from '@/commons/BulletsGrid';
+import CommercialLitigation from '@/commons/Commercial-Litigation';
+import ColWithImage from '@/commons/col-with-image';
 import Brands from '@/components/brands/Brands';
 import Clients from '@/components/clients/Clients';
-import Commercial from '@/components/commercial/Commercial';
 import Divider from '@/components/divider/Divider';
 import OurLawyer from '@/components/ourLawyer/OurLawyer';
 import TwoCard from '@/components/twoCard/TwoCard';
@@ -12,13 +13,14 @@ import Head from 'next/head';
 export default function Home() {
   return (
     <>
-      <BannerV2 />
+      <CommercialLitigation />
 
-      {/* <Commercial /> */}
       <Clients />
       <Divider />
-      <WeWin />
-      <OurLawyer />
+      <ColWithImage />
+      {/* <WeWin /> */}
+      {/* <OurLawyer /> */}
+      <BulletsGrid />
       <Divider />
       <Brands />
       <Divider />
