@@ -10,7 +10,7 @@ const FooterCta = ({ image, children }) => {
         backgroundImage: `linear-gradient( 180deg, rgba(8,27,51,0.76) 0%, rgba(8,27,51,0.9) 100% ),url(${image})`,
       }}
     >
-      <div className='container relative py-20 md:py-40'>
+      <div className='container relative py-20 md:py-32'>
         <img
           src='./images/logo_11zon.jpg'
           className='absolute md:left-2 md:-top-10 max-w-[80px]  left-1/2 -top-10 shadow translate-x-[-50%]'
