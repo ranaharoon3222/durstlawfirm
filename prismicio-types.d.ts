@@ -80,6 +80,49 @@ type PagesDocumentDataSlicesSlice = never;
 export type PagesDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PagesDocumentData>, "pages", Lang>;
 export type AllDocumentTypes = PagesDocument;
+/**
+ * Primary content in Banner → Primary
+ *
+ */
+interface BannerSliceDefaultPrimary {
+  /**
+   * title field in *Banner → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: banner.primary.title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismic.KeyTextField;
+}
+/**
+ * Default variation for Banner Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type BannerSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<BannerSliceDefaultPrimary>,
+  never
+>;
+/**
+ * Slice variation for *Banner*
+ *
+ */
+type BannerSliceVariation = BannerSliceDefault;
+/**
+ * Banner Shared Slice
+ *
+ * - **API ID**: `banner`
+ * - **Description**: `Banner`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type BannerSlice = prismic.SharedSlice<"banner", BannerSliceVariation>;
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -93,6 +136,10 @@ declare module "@prismicio/client" {
       PagesDocumentDataSlicesSlice,
       PagesDocument,
       AllDocumentTypes,
+      BannerSliceDefaultPrimary,
+      BannerSliceDefault,
+      BannerSliceVariation,
+      BannerSlice,
     };
   }
 }
