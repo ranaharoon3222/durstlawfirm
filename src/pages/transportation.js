@@ -9,12 +9,14 @@ import Line from '@/components/line/Line';
 import Brands from '@/components/brands/Brands';
 import Divider from '@/components/divider/Divider';
 import TransportBanner from '@/commons/pages/transportation/TransportBanner';
+import TickList from '@/commons/pages/transportation/TickList';
 
 const Transportation = () => {
   return (
     <>
       <TransportBanner />
-      <Icons />
+      {/* <Icons /> */}
+      <TickList />
       <Brands />
       <Divider />
       <Repu />

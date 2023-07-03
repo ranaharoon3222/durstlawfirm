@@ -138,4 +138,8 @@ img {
   .bt_divider {
     display: none;
   }
+  h1 {
+    font-size: 2rem;
+    line-height: 1em !important;
+  }
 }
