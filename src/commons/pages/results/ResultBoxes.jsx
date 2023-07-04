@@ -118,7 +118,7 @@ const ResultBoxes = () => {
             <h3 className='text-primary' id={item.title}>
               #{item.title}
             </h3>
-            <div className='grid grid-cols-3 gap-10 gap-y-3'>
+            <div className='grid md:grid-cols-3 df gap-10 gap-y-3'>
               {item.boxes.map((box, index) => (
                 <Box key={index} title={box.title} icon='./images/icon2.png'>
                   <Paragraph

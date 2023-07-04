@@ -141,6 +141,11 @@ img {
   width: 1em;
   margin-left: -1em;
 }
+
+.df p {
+  font-size: 1rem;
+}
+
 @media all and (max-width: 980px) {
   .bt_divider {
     display: none;
