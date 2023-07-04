@@ -49,7 +49,7 @@ html {
 
 .container {
   max-width: 1800px;
-  width: 90%;
+  width: 85%;
   margin: auto;
 }
 
@@ -69,6 +69,7 @@ ul li {
 
 h1 {
   font-size: 50px;
+  line-height: 1.2em;
 }
 
 h2 {
@@ -84,6 +85,7 @@ h4 {
 }
 p {
   font-size: 1.2rem;
+  /* margin-top: 20px; */
 }
 img {
   max-width: 100%;
@@ -103,6 +105,10 @@ img {
   transform: scale(1, -1);
   position: absolute;
   width: 100%;
+}
+
+.bt_divider.gray {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSI1MHB4IiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI0YyRjJGMiI+PHBhdGggZD0iTTY0MCAxNDBMMTI4MCAwSDB6Ii8+PC9nPjwvc3ZnPg==);
 }
 
 .mb-divider-top {
@@ -141,5 +147,9 @@ img {
   h1 {
     font-size: 2rem;
     line-height: 1em !important;
+  }
+
+  p {
+    font-size: 1rem;
   }
 }

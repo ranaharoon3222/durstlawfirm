@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CustomImg = () => {
+const CustomImg = ({ img = './images/wewin.jpg' }) => {
   return (
     <div className='relative'>
       <img
@@ -8,7 +8,7 @@ const CustomImg = () => {
         src='./images/orng-triangle.svg'
         alt=''
       />
-      <img src='./images/wewin.jpg' className='' alt='' />
+      <img src={img} className='' alt='' />
     </div>
   );
 };

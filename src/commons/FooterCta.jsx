@@ -2,7 +2,7 @@ import Button from '@/commons/Button';
 import ArrowDown from '@/icons/arrow-down';
 import Phone from '@/icons/phone';
 
-const FooterCta = ({ image, children }) => {
+const FooterCta = ({ image = './images/last-back-img.jpg', children }) => {
   return (
     <div
       className='relative bg-fixed bg-center bg-cover'
