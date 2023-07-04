@@ -6,16 +6,25 @@ import Box2Res from '@/components/boxes2/Box2Res';
 import ResEnd from '@/components/resEnd/ResEnd';
 import OnlyImg from '@/components/onlyImg/OnlyImg';
 import UpperFoot from '@/components/upperFoot/UpperFoot';
+import ResultPageHeading from '@/commons/pages/results/ResultPageHeading';
+import ResultBoxes from '@/commons/pages/results/ResultBoxes';
+import Brands from '@/components/brands/Brands';
+import FooterCta from '@/commons/FooterCta';
 
 const result = () => {
   return (
     <>
-      <Result />
-      <ResBox />
-      <Box2Res />
-      <ResEnd />
-      <UpperFoot />
-      <OnlyImg />
+      <ResultPageHeading />
+      <ResultBoxes />
+
+      <FooterCta image={'/images/last-back-img.jpg'}>
+        <h1 className='font-medium text-center text-white md:text-left md:text-[3rem] '>
+          Contact The Durst Law Firm{' '}
+          <span className='text-primary'> Today</span>.
+        </h1>
+      </FooterCta>
+
+      <Brands />
     </>
   );
 };
