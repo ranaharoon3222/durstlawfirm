@@ -1,5 +1,4 @@
 import React from 'react';
-import style from './four.module.css';
 import Link from 'next/link';
 const FourBox = () => {
   const data = [
@@ -15,20 +14,16 @@ const FourBox = () => {
       title: 'Personal Injury Cases',
       img: '/images/inj.jpg',
     },
-    {
-      title: 'Ohio Local Counsel Services',
-      img: '/images/box-image4.jpg',
-    },
   ];
 
   return (
     <div>
       <div className='container'>
-        <div className={style.mid}>
+        <div className='py-10 text-center'>
           <h2>Practice Areas</h2>
           <p>The Durst Law Firm serves clients in the following areas.</p>
         </div>
-        <div className={style.boxes}>
+        <div className='grid grid-cols-3 gap-10 pb-10'>
           {data.map((item, i) => {
             return (
               <Link key={i} href={'#'} className='block '>

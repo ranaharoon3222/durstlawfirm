@@ -1,0 +1,44 @@
+{
+  "id": "home_baneer",
+  "type": "SharedSlice",
+  "name": "HomeBaneer",
+  "description": "HomeBaneer",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "image": {
+          "type": "Image",
+          "config": { "label": "image", "constraint": {}, "thumbnails": [] }
+        },
+        "mbimage": {
+          "type": "Image",
+          "config": { "label": "mbImage", "constraint": {}, "thumbnails": [] }
+        },
+        "subtitle": {
+          "type": "Text",
+          "config": { "label": "subtitle", "placeholder": "" }
+        },
+        "title": {
+          "type": "Text",
+          "config": { "label": "title", "placeholder": "" }
+        },
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,hyperlink,embed,list-item,o-list-item"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

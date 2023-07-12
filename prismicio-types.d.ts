@@ -5,124 +5,249 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
   [KeyType in keyof T]: T[KeyType];
 };
-/** Content for pages documents */
-interface PagesDocumentData {
+/** Content for page documents */
+interface PageDocumentData {
   /**
-   * title field in *pages*
+   * title field in *page*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: pages.title
+   * - **API ID Path**: page.title
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
    *
    */
   title: prismic.KeyTextField;
   /**
-   * Slice Zone field in *pages*
+   * Slice Zone field in *page*
    *
    * - **Field Type**: Slice Zone
    * - **Placeholder**: *None*
-   * - **API ID Path**: pages.slices[]
+   * - **API ID Path**: page.slices[]
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/core-concepts/slices
    *
    */
-  slices: prismic.SliceZone<PagesDocumentDataSlicesSlice>;
+  slices: prismic.SliceZone<PageDocumentDataSlicesSlice>;
   /**
-   * Meta Description field in *pages*
+   * Meta Title field in *page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: page.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  meta_title: prismic.KeyTextField;
+  /**
+   * Meta Description field in *page*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: pages.meta_description
+   * - **API ID Path**: page.meta_description
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
    *
    */
   meta_description: prismic.KeyTextField;
   /**
-   * Meta Image field in *pages*
+   * Meta Image field in *page*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: pages.meta_image
+   * - **API ID Path**: page.meta_image
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/core-concepts/image
    *
    */
   meta_image: prismic.ImageField<never>;
-  /**
-   * Meta Title field in *pages*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: pages.meta_title
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-   *
-   */
-  meta_title: prismic.KeyTextField;
 }
 /**
- * Slice for *pages → Slice Zone*
+ * Slice for *page → Slice Zone*
  *
  */
-type PagesDocumentDataSlicesSlice = never;
+type PageDocumentDataSlicesSlice = HomeBaneerSlice | PractiseAreaSlice;
 /**
- * pages document from Prismic
+ * page document from Prismic
  *
- * - **API ID**: `pages`
+ * - **API ID**: `page`
  * - **Repeatable**: `true`
  * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type PagesDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<Simplify<PagesDocumentData>, "pages", Lang>;
-export type AllDocumentTypes = PagesDocument;
+export type PageDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
+export type AllDocumentTypes = PageDocument;
 /**
- * Primary content in Banner → Primary
+ * Primary content in HomeBaneer → Primary
  *
  */
-interface BannerSliceDefaultPrimary {
+interface HomeBaneerSliceDefaultPrimary {
   /**
-   * title field in *Banner → Primary*
+   * image field in *HomeBaneer → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home_baneer.primary.image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image: prismic.ImageField<never>;
+  /**
+   * mbImage field in *HomeBaneer → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home_baneer.primary.mbimage
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  mbimage: prismic.ImageField<never>;
+  /**
+   * subtitle field in *HomeBaneer → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: banner.primary.title
+   * - **API ID Path**: home_baneer.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  subtitle: prismic.KeyTextField;
+  /**
+   * title field in *HomeBaneer → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home_baneer.primary.title
    * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
    *
    */
   title: prismic.KeyTextField;
+  /**
+   * text field in *HomeBaneer → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home_baneer.primary.text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  text: prismic.RichTextField;
 }
 /**
- * Default variation for Banner Slice
+ * Default variation for HomeBaneer Slice
  *
  * - **API ID**: `default`
  * - **Description**: `Default`
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type BannerSliceDefault = prismic.SharedSliceVariation<
+export type HomeBaneerSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Simplify<BannerSliceDefaultPrimary>,
+  Simplify<HomeBaneerSliceDefaultPrimary>,
   never
 >;
 /**
- * Slice variation for *Banner*
+ * Slice variation for *HomeBaneer*
  *
  */
-type BannerSliceVariation = BannerSliceDefault;
+type HomeBaneerSliceVariation = HomeBaneerSliceDefault;
 /**
- * Banner Shared Slice
+ * HomeBaneer Shared Slice
  *
- * - **API ID**: `banner`
- * - **Description**: `Banner`
+ * - **API ID**: `home_baneer`
+ * - **Description**: `HomeBaneer`
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type BannerSlice = prismic.SharedSlice<"banner", BannerSliceVariation>;
+export type HomeBaneerSlice = prismic.SharedSlice<
+  "home_baneer",
+  HomeBaneerSliceVariation
+>;
+/**
+ * Primary content in PractiseArea → Primary
+ *
+ */
+interface PractiseAreaSliceDefaultPrimary {
+  /**
+   * topBar field in *PractiseArea → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: practise_area.primary.topbar
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  topbar: prismic.RichTextField;
+}
+/**
+ * Item in PractiseArea → Items
+ *
+ */
+export interface PractiseAreaSliceDefaultItem {
+  /**
+   * image field in *PractiseArea → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: practise_area.items[].image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image: prismic.ImageField<never>;
+  /**
+   * title field in *PractiseArea → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: practise_area.items[].title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismic.KeyTextField;
+  /**
+   * link field in *PractiseArea → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: practise_area.items[].link
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  link: prismic.LinkField;
+}
+/**
+ * Default variation for PractiseArea Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type PractiseAreaSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<PractiseAreaSliceDefaultPrimary>,
+  Simplify<PractiseAreaSliceDefaultItem>
+>;
+/**
+ * Slice variation for *PractiseArea*
+ *
+ */
+type PractiseAreaSliceVariation = PractiseAreaSliceDefault;
+/**
+ * PractiseArea Shared Slice
+ *
+ * - **API ID**: `practise_area`
+ * - **Description**: `PractiseArea`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type PractiseAreaSlice = prismic.SharedSlice<
+  "practise_area",
+  PractiseAreaSliceVariation
+>;
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -132,14 +257,19 @@ declare module "@prismicio/client" {
   }
   namespace Content {
     export type {
-      PagesDocumentData,
-      PagesDocumentDataSlicesSlice,
-      PagesDocument,
+      PageDocumentData,
+      PageDocumentDataSlicesSlice,
+      PageDocument,
       AllDocumentTypes,
-      BannerSliceDefaultPrimary,
-      BannerSliceDefault,
-      BannerSliceVariation,
-      BannerSlice,
+      HomeBaneerSliceDefaultPrimary,
+      HomeBaneerSliceDefault,
+      HomeBaneerSliceVariation,
+      HomeBaneerSlice,
+      PractiseAreaSliceDefaultPrimary,
+      PractiseAreaSliceDefaultItem,
+      PractiseAreaSliceDefault,
+      PractiseAreaSliceVariation,
+      PractiseAreaSlice,
     };
   }
 }

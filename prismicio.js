@@ -1,6 +1,6 @@
-import * as prismic from "@prismicio/client";
-import * as prismicNext from "@prismicio/next";
-import config from "./slicemachine.config.json";
+import * as prismic from '@prismicio/client';
+import * as prismicNext from '@prismicio/next';
+import config from './slicemachine.config.json';
 
 /**
  * The project's Prismic repository name.
@@ -18,14 +18,22 @@ export const repositoryName = config.repositoryName;
 // TODO: Update the routes array to match your project's route structure.
 const routes = [
   {
-    type: "homepage",
-    path: "/",
-  },
-  {
-    type: "page",
-    path: "/:uid",
+    type: 'page',
+    path: '/:uid',
   },
 ];
+
+// Update the Link Resolver to match your project's route structure
+export function linkResolver(doc) {
+  switch (doc.type) {
+    case 'homepage':
+      return '/';
+    case 'page':
+      return `/${doc.uid}`;
+    default:
+      return null;
+  }
+}
 
 /**
  * Creates a Prismic client for the project's repository. The client is used to

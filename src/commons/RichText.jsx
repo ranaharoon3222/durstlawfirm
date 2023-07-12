@@ -1,14 +1,14 @@
 import { PrismicRichText } from '@prismicio/react';
 import React from 'react';
 
-const Paragraph = ({ field, className, ...props }) => {
+const RichText = ({ field, paragraphClassName = '', ...props }) => {
   return (
     <div>
       <PrismicRichText
         field={field}
         components={{
           paragraph: ({ children }) => (
-            <p className={`mt-5 ${className}`}>{children}</p>
+            <p className={`mt-5 ${paragraphClassName}`}>{children}</p>
           ),
         }}
       />
@@ -16,4 +16,4 @@ const Paragraph = ({ field, className, ...props }) => {
   );
 };
 
-export default Paragraph;
+export default RichText;

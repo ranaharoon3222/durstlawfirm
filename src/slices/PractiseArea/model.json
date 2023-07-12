@@ -1,0 +1,41 @@
+{
+  "id": "practise_area",
+  "type": "SharedSlice",
+  "name": "PractiseArea",
+  "description": "PractiseArea",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "topbar": {
+          "type": "StructuredText",
+          "config": {
+            "label": "topBar",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,heading1,heading2,heading3,heading4,strong,em,hyperlink,embed"
+          }
+        }
+      },
+      "items": {
+        "image": {
+          "type": "Image",
+          "config": { "label": "image", "constraint": {}, "thumbnails": [] }
+        },
+        "title": {
+          "type": "Text",
+          "config": { "label": "title", "placeholder": "" }
+        },
+        "link": {
+          "type": "Link",
+          "config": { "label": "link", "placeholder": "", "select": null }
+        }
+      }
+    }
+  ]
+}
