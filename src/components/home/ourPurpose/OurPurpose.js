@@ -2,12 +2,13 @@ import React from 'react';
 import style from './purpose.module.css';
 import Button from '@/commons/Button';
 import Box from '@/commons/Box';
+import Paragraph from '@/commons/Paragraph';
 
 const OurPurpose = () => {
   return (
     <div>
       <div className='container'>
-        <div className={style.secfull}>
+        <div className='grid md:grid-cols-2 mt-[100px] gap-12'>
           <div className='grid items-center gap-10 md:grid-cols-2 place-content-center'>
             <div>
               <Box
@@ -93,8 +94,8 @@ const OurPurpose = () => {
             </div>
           </div>
 
-          <div className={style.sec2}>
-            <div className={style.innerImg}>
+          <div className=''>
+            <div className='flex items-center '>
               <img
                 src='./images/logo_11zon.jpg'
                 alt=''
@@ -104,11 +105,7 @@ const OurPurpose = () => {
                 Our Purpose, Values & Principles
               </h1>
             </div>
-            <div className={style.onlyP}>
-              <p>
-                Taken together, our purpose, values and principles are central
-                to the character of The Durst Law Firm.
-              </p>
+            <div className=''>
               <p>
                 Our purpose unifies us in a common cause to win clients’ cases.
                 Our values shape the tone of how we interact with clients,

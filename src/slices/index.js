@@ -4,5 +4,6 @@ import dynamic from "next/dynamic";
 
 export const components = {
   home_baneer: dynamic(() => import("./HomeBaneer")),
+  home_values: dynamic(() => import("./HomeValues")),
   practise_area: dynamic(() => import("./PractiseArea")),
 };

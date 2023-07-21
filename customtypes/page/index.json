@@ -17,7 +17,8 @@
         "config": {
           "choices": {
             "home_baneer": { "type": "SharedSlice" },
-            "practise_area": { "type": "SharedSlice" }
+            "practise_area": { "type": "SharedSlice" },
+            "home_values": { "type": "SharedSlice" }
           }
         }
       }

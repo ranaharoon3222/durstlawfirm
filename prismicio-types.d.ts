@@ -67,7 +67,10 @@ interface PageDocumentData {
  * Slice for *page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = HomeBaneerSlice | PractiseAreaSlice;
+type PageDocumentDataSlicesSlice =
+  | HomeBaneerSlice
+  | PractiseAreaSlice
+  | HomeValuesSlice;
 /**
  * page document from Prismic
  *
@@ -165,6 +168,128 @@ type HomeBaneerSliceVariation = HomeBaneerSliceDefault;
 export type HomeBaneerSlice = prismic.SharedSlice<
   "home_baneer",
   HomeBaneerSliceVariation
+>;
+/**
+ * Primary content in HomeValues → Primary
+ *
+ */
+interface HomeValuesSliceDefaultPrimary {
+  /**
+   * logo field in *HomeValues → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home_values.primary.logo
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  logo: prismic.ImageField<never>;
+  /**
+   * title field in *HomeValues → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home_values.primary.title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismic.KeyTextField;
+  /**
+   * text field in *HomeValues → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home_values.primary.text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  text: prismic.RichTextField;
+}
+/**
+ * Item in HomeValues → Items
+ *
+ */
+export interface HomeValuesSliceDefaultItem {
+  /**
+   * title field in *HomeValues → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home_values.items[].title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismic.KeyTextField;
+  /**
+   * name field in *HomeValues → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home_values.items[].name
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  name: prismic.KeyTextField;
+  /**
+   * position field in *HomeValues → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home_values.items[].position
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  position: prismic.KeyTextField;
+  /**
+   * text field in *HomeValues → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home_values.items[].text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  text: prismic.RichTextField;
+  /**
+   * icon field in *HomeValues → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home_values.items[].icon
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  icon: prismic.ImageField<never>;
+}
+/**
+ * Default variation for HomeValues Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HomeValuesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<HomeValuesSliceDefaultPrimary>,
+  Simplify<HomeValuesSliceDefaultItem>
+>;
+/**
+ * Slice variation for *HomeValues*
+ *
+ */
+type HomeValuesSliceVariation = HomeValuesSliceDefault;
+/**
+ * HomeValues Shared Slice
+ *
+ * - **API ID**: `home_values`
+ * - **Description**: `HomeValues`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HomeValuesSlice = prismic.SharedSlice<
+  "home_values",
+  HomeValuesSliceVariation
 >;
 /**
  * Primary content in PractiseArea → Primary
@@ -265,6 +390,11 @@ declare module "@prismicio/client" {
       HomeBaneerSliceDefault,
       HomeBaneerSliceVariation,
       HomeBaneerSlice,
+      HomeValuesSliceDefaultPrimary,
+      HomeValuesSliceDefaultItem,
+      HomeValuesSliceDefault,
+      HomeValuesSliceVariation,
+      HomeValuesSlice,
       PractiseAreaSliceDefaultPrimary,
       PractiseAreaSliceDefaultItem,
       PractiseAreaSliceDefault,
