@@ -24,7 +24,7 @@
     "@slicemachine/adapter-next": "^0.3.4",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.24",
-    "slice-machine-ui": "^1.5.1",
+    "slice-machine-ui": "^1.5.3",
     "tailwindcss": "^3.3.2"
   }
 }

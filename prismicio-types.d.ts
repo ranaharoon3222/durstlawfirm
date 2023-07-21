@@ -70,7 +70,8 @@ interface PageDocumentData {
 type PageDocumentDataSlicesSlice =
   | HomeBaneerSlice
   | PractiseAreaSlice
-  | HomeValuesSlice;
+  | HomeValuesSlice
+  | CtaSlice;
 /**
  * page document from Prismic
  *
@@ -82,7 +83,125 @@ type PageDocumentDataSlicesSlice =
  */
 export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
-export type AllDocumentTypes = PageDocument;
+/** Content for repeated-component documents */
+type RpComponentDocumentData = Record<string, never>;
+/**
+ * repeated-component document from Prismic
+ *
+ * - **API ID**: `rp_component`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type RpComponentDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<RpComponentDocumentData>,
+    "rp_component",
+    Lang
+  >;
+/** Content for settings documents */
+interface SettingsDocumentData {
+  /**
+   * logo field in *settings*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.logo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  logo: prismic.ImageField<never>;
+  /**
+   * Slice Zone field in *settings*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+   *
+   */
+  slices: prismic.SliceZone<SettingsDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *settings → Slice Zone*
+ *
+ */
+type SettingsDocumentDataSlicesSlice = never;
+/**
+ * settings document from Prismic
+ *
+ * - **API ID**: `settings`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type SettingsDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<SettingsDocumentData>,
+    "settings",
+    Lang
+  >;
+export type AllDocumentTypes =
+  | PageDocument
+  | RpComponentDocument
+  | SettingsDocument;
+/**
+ * Primary content in Cta → Primary
+ *
+ */
+interface CtaSliceDefaultPrimary {
+  /**
+   * title field in *Cta → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cta.primary.title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  title: prismic.RichTextField;
+  /**
+   * image field in *Cta → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cta.primary.image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image: prismic.ImageField<never>;
+}
+/**
+ * Default variation for Cta Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CtaSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CtaSliceDefaultPrimary>,
+  never
+>;
+/**
+ * Slice variation for *Cta*
+ *
+ */
+type CtaSliceVariation = CtaSliceDefault;
+/**
+ * Cta Shared Slice
+ *
+ * - **API ID**: `cta`
+ * - **Description**: `Cta`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CtaSlice = prismic.SharedSlice<"cta", CtaSliceVariation>;
 /**
  * Primary content in HomeBaneer → Primary
  *
@@ -385,7 +504,16 @@ declare module "@prismicio/client" {
       PageDocumentData,
       PageDocumentDataSlicesSlice,
       PageDocument,
+      RpComponentDocumentData,
+      RpComponentDocument,
+      SettingsDocumentData,
+      SettingsDocumentDataSlicesSlice,
+      SettingsDocument,
       AllDocumentTypes,
+      CtaSliceDefaultPrimary,
+      CtaSliceDefault,
+      CtaSliceVariation,
+      CtaSlice,
       HomeBaneerSliceDefaultPrimary,
       HomeBaneerSliceDefault,
       HomeBaneerSliceVariation,
