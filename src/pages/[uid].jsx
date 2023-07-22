@@ -6,7 +6,7 @@ import Head from 'next/head';
 import { isFilled } from '@prismicio/client';
 
 const Page = ({ page, navigation, settings }) => {
-  console.log(page.data);
+  console.log(page.data, settings.data);
 
   return (
     <>
@@ -16,7 +16,11 @@ const Page = ({ page, navigation, settings }) => {
           <meta name='description' content={page.data.meta_description} />
         ) : null}
       </Head>
-      <SliceZone slices={page.data.slices} components={components} />;
+      <SliceZone
+        slices={page.data.slices}
+        components={components}
+        context={settings.data}
+      />
     </>
   );
 };
@@ -26,9 +30,11 @@ export default Page;
 export async function getServerSideProps({ params, previewData }) {
   const client = createClient({ previewData });
   const page = await client.getByUID('page', params.uid);
+  const settings = await client.getByUID('settings', 'settings');
   return {
     props: {
       page,
+      settings,
     },
   };
 }

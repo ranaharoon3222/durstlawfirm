@@ -9,13 +9,12 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Ea esse anim in cillum ad."
+							"text": "Eu non Lorem dolor proident esse cupidatat voluptate pariatur. Dolore fugiat laboris voluptate. Cupidatat eu ipsum est."
 						}
 					}
 				]
 			},
 			"image": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
@@ -33,6 +32,9 @@
 					},
 					"background": "transparent"
 				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			}
 		},

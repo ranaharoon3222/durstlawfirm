@@ -11,6 +11,14 @@
         "type": "Image",
         "config": { "label": "logo", "constraint": {}, "thumbnails": [] }
       },
+      "full_logo": {
+        "type": "Image",
+        "config": { "label": "full logo", "constraint": {}, "thumbnails": [] }
+      },
+      "fav": {
+        "type": "Image",
+        "config": { "label": "fav", "constraint": {}, "thumbnails": [] }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

@@ -17,13 +17,11 @@ const Home = ({ page, navigation, settings }) => {
           <meta name='description' content={page.data.meta_description} />
         ) : null}
       </Head>
-      <SliceZone slices={page.data.slices} components={components} />;
-      <FooterCta image={'/images/last-back-img.jpg'}>
-        <h1 className='font-medium text-center md:text-left text-white md:text-[3vw]'>
-          Contact The Durst Law Firm
-          <span className='text-primary'> Today. </span>
-        </h1>
-      </FooterCta>
+      <SliceZone
+        slices={page.data.slices}
+        components={components}
+        context={settings.data}
+      />
     </>
   );
 };
@@ -33,9 +31,11 @@ export default Home;
 export async function getServerSideProps({ params, previewData }) {
   const client = createClient({ previewData });
   const page = await client.getByUID('page', 'home');
+  const settings = await client.getByUID('settings', 'settings');
   return {
     props: {
       page,
+      settings,
     },
   };
 }

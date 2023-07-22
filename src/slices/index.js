@@ -6,9 +6,11 @@ export const components = {
   clients_represent: dynamic(() => import("./ClientsRepresent")),
   commercial_banner: dynamic(() => import("./CommercialBanner")),
   cta: dynamic(() => import("./Cta")),
+  header_with_buttons: dynamic(() => import("./HeaderWithButtons")),
   home_baneer: dynamic(() => import("./HomeBaneer")),
   home_values: dynamic(() => import("./HomeValues")),
   practise_area: dynamic(() => import("./PractiseArea")),
   pre_footer: dynamic(() => import("./PreFooter")),
+  tick_list: dynamic(() => import("./TickList")),
   two_col_with_image: dynamic(() => import("./TwoColWithImage")),
 };

@@ -11,6 +11,14 @@
         "type": "Text",
         "config": { "label": "title", "placeholder": "" }
       },
+      "global": {
+        "type": "Link",
+        "config": {
+          "label": "global",
+          "select": "document",
+          "customtypes": ["settings"]
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
@@ -23,7 +31,9 @@
             "commercial_banner": { "type": "SharedSlice" },
             "clients_represent": { "type": "SharedSlice" },
             "two_col_with_image": { "type": "SharedSlice" },
-            "pre_footer": { "type": "SharedSlice" }
+            "pre_footer": { "type": "SharedSlice" },
+            "header_with_buttons": { "type": "SharedSlice" },
+            "tick_list": { "type": "SharedSlice" }
           }
         }
       }

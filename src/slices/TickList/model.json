@@ -1,8 +1,8 @@
 {
-  "id": "cta",
+  "id": "tick_list",
   "type": "SharedSlice",
-  "name": "Cta",
-  "description": "Cta",
+  "name": "TickList",
+  "description": "TickList",
   "variations": [
     {
       "id": "default",
@@ -13,20 +13,21 @@
       "imageUrl": "",
       "primary": {
         "title": {
-          "type": "StructuredText",
-          "config": {
-            "label": "title",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,heading2,strong,em,hyperlink,heading1"
-          }
-        },
-        "image": {
-          "type": "Image",
-          "config": { "label": "image", "constraint": {}, "thumbnails": [] }
+          "type": "Text",
+          "config": { "label": "title", "placeholder": "" }
         }
       },
-      "items": {}
+      "items": {
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink"
+          }
+        }
+      }
     }
   ]
 }

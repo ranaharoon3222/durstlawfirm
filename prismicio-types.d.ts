@@ -19,6 +19,17 @@ interface PageDocumentData {
    */
   title: prismic.KeyTextField;
   /**
+   * global field in *page*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.global
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  global: prismic.ContentRelationshipField<"settings">;
+  /**
    * Slice Zone field in *page*
    *
    * - **Field Type**: Slice Zone
@@ -75,7 +86,9 @@ type PageDocumentDataSlicesSlice =
   | CommercialBannerSlice
   | ClientsRepresentSlice
   | TwoColWithImageSlice
-  | PreFooterSlice;
+  | PreFooterSlice
+  | HeaderWithButtonsSlice
+  | TickListSlice;
 /**
  * page document from Prismic
  *
@@ -117,6 +130,28 @@ interface SettingsDocumentData {
    *
    */
   logo: prismic.ImageField<never>;
+  /**
+   * full logo field in *settings*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.full_logo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  full_logo: prismic.ImageField<never>;
+  /**
+   * fav field in *settings*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.fav
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  fav: prismic.ImageField<never>;
   /**
    * Slice Zone field in *settings*
    *
@@ -428,6 +463,194 @@ type CtaSliceVariation = CtaSliceDefault;
  *
  */
 export type CtaSlice = prismic.SharedSlice<"cta", CtaSliceVariation>;
+/**
+ * Primary content in HeaderWithButtons → Primary
+ *
+ */
+interface HeaderWithButtonsSliceDefaultPrimary {
+  /**
+   * background image field in *HeaderWithButtons → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header_with_buttons.primary.background_image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  background_image: prismic.ImageField<never>;
+  /**
+   * gradient field in *HeaderWithButtons → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: linear-gradient(64deg, #ffffff 31%, rgba(255, 255, 255, 0) 80% )
+   * - **API ID Path**: header_with_buttons.primary.gradient
+   * - **Documentation**: https://prismic.io/docs/core-concepts/select
+   *
+   */
+  gradient: prismic.SelectField<
+    | "linear-gradient(64deg, #ffffff 31%, rgba(255, 255, 255, 0) 80% )"
+    | "linear-gradient(64deg, #ffffff 31%, rgba(255, 255, 255, 0) 80% )",
+    "filled"
+  >;
+  /**
+   * subtitle field in *HeaderWithButtons → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header_with_buttons.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  subtitle: prismic.KeyTextField;
+  /**
+   * title field in *HeaderWithButtons → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header_with_buttons.primary.title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  title: prismic.RichTextField;
+  /**
+   * small text field in *HeaderWithButtons → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header_with_buttons.primary.small_text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  small_text: prismic.RichTextField;
+  /**
+   * button text 1 field in *HeaderWithButtons → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header_with_buttons.primary.button_text_1
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  button_text_1: prismic.KeyTextField;
+  /**
+   * button link 1 field in *HeaderWithButtons → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header_with_buttons.primary.button_link_1
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  button_link_1: prismic.LinkField;
+  /**
+   * button text 2 field in *HeaderWithButtons → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header_with_buttons.primary.button_text_2
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  button_text_2: prismic.KeyTextField;
+  /**
+   * button link 2 field in *HeaderWithButtons → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header_with_buttons.primary.button_link_2
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  button_link_2: prismic.LinkField;
+  /**
+   * text field in *HeaderWithButtons → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header_with_buttons.primary.text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  text: prismic.RichTextField;
+  /**
+   * second col title field in *HeaderWithButtons → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header_with_buttons.primary.second_col_title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  second_col_title: prismic.KeyTextField;
+}
+/**
+ * Item in HeaderWithButtons → Items
+ *
+ */
+export interface HeaderWithButtonsSliceDefaultItem {
+  /**
+   * button title field in *HeaderWithButtons → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header_with_buttons.items[].button_title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  button_title: prismic.KeyTextField;
+  /**
+   * button link field in *HeaderWithButtons → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header_with_buttons.items[].button_link
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  button_link: prismic.LinkField;
+  /**
+   * disabled field in *HeaderWithButtons → Items*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: header_with_buttons.items[].disabled
+   * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+   *
+   */
+  disabled: prismic.BooleanField;
+}
+/**
+ * Default variation for HeaderWithButtons Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeaderWithButtonsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<HeaderWithButtonsSliceDefaultPrimary>,
+  Simplify<HeaderWithButtonsSliceDefaultItem>
+>;
+/**
+ * Slice variation for *HeaderWithButtons*
+ *
+ */
+type HeaderWithButtonsSliceVariation = HeaderWithButtonsSliceDefault;
+/**
+ * HeaderWithButtons Shared Slice
+ *
+ * - **API ID**: `header_with_buttons`
+ * - **Description**: `HeaderWithButtons`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeaderWithButtonsSlice = prismic.SharedSlice<
+  "header_with_buttons",
+  HeaderWithButtonsSliceVariation
+>;
 /**
  * Primary content in HomeBaneer → Primary
  *
@@ -851,6 +1074,68 @@ export type PreFooterSlice = prismic.SharedSlice<
   PreFooterSliceVariation
 >;
 /**
+ * Primary content in TickList → Primary
+ *
+ */
+interface TickListSliceDefaultPrimary {
+  /**
+   * title field in *TickList → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: tick_list.primary.title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismic.KeyTextField;
+}
+/**
+ * Item in TickList → Items
+ *
+ */
+export interface TickListSliceDefaultItem {
+  /**
+   * text field in *TickList → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: tick_list.items[].text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  text: prismic.RichTextField;
+}
+/**
+ * Default variation for TickList Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TickListSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TickListSliceDefaultPrimary>,
+  Simplify<TickListSliceDefaultItem>
+>;
+/**
+ * Slice variation for *TickList*
+ *
+ */
+type TickListSliceVariation = TickListSliceDefault;
+/**
+ * TickList Shared Slice
+ *
+ * - **API ID**: `tick_list`
+ * - **Description**: `TickList`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TickListSlice = prismic.SharedSlice<
+  "tick_list",
+  TickListSliceVariation
+>;
+/**
  * Primary content in TwoColWithImage → Primary
  *
  */
@@ -981,6 +1266,11 @@ declare module "@prismicio/client" {
       CtaSliceDefault,
       CtaSliceVariation,
       CtaSlice,
+      HeaderWithButtonsSliceDefaultPrimary,
+      HeaderWithButtonsSliceDefaultItem,
+      HeaderWithButtonsSliceDefault,
+      HeaderWithButtonsSliceVariation,
+      HeaderWithButtonsSlice,
       HomeBaneerSliceDefaultPrimary,
       HomeBaneerSliceDefault,
       HomeBaneerSliceVariation,
@@ -1000,6 +1290,11 @@ declare module "@prismicio/client" {
       PreFooterSliceDefault,
       PreFooterSliceVariation,
       PreFooterSlice,
+      TickListSliceDefaultPrimary,
+      TickListSliceDefaultItem,
+      TickListSliceDefault,
+      TickListSliceVariation,
+      TickListSlice,
       TwoColWithImageSliceDefaultPrimary,
       TwoColWithImageSliceDefault,
       TwoColWithImageSliceVariation,

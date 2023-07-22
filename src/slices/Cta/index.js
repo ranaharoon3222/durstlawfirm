@@ -13,9 +13,17 @@ const Cta = ({ slice }) => {
       data-slice-variation={slice.variation}
     >
       <FooterCta image={slice.primary.image.url}>
-        <h1 className='font-medium text-center md:text-left text-white md:text-[3vw]'>
-          <RichText field={slice.primary.title} />
-        </h1>
+        <RichText
+          field={slice.primary.title}
+          heading1={
+            'font-medium text-center md:text-left text-white md:text-[3vw]'
+          }
+          heading3={`${
+            slice.primary.title[0].type === 'heading3' &&
+            'text-left md:text-left font-normal text-white md:text-[2vw] '
+          }   `}
+          strong={'text-primary'}
+        />
       </FooterCta>{' '}
     </section>
   );
