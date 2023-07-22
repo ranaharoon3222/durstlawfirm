@@ -1,0 +1,52 @@
+{
+  "id": "two_col_with_image",
+  "type": "SharedSlice",
+  "name": "TwoColWithImage",
+  "description": "TwoColWithImage",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": { "label": "title", "placeholder": "" }
+        },
+        "subtitle": {
+          "type": "Text",
+          "config": { "label": "subtitle", "placeholder": "" }
+        },
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": { "label": "image", "constraint": {}, "thumbnails": [] }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": { "label": "button text", "placeholder": "" }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "button link",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

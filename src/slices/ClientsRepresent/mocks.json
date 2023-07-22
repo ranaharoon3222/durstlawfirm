@@ -1,0 +1,254 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "shorter",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"text",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "list-item",
+									"content": {
+										"text": "Merchant cash advance (MCA) companies",
+										"spans": [
+											{
+												"type": "strong",
+												"start": 0,
+												"end": 37
+											}
+										]
+									},
+									"direction": "ltr"
+								},
+								{
+									"type": "list-item",
+									"content": {
+										"text": "E-Commerce companies",
+										"spans": [
+											{
+												"type": "strong",
+												"start": 0,
+												"end": 20
+											}
+										]
+									},
+									"direction": "ltr"
+								},
+								{
+									"type": "list-item",
+									"content": {
+										"text": "Financial institutions",
+										"spans": [
+											{
+												"type": "strong",
+												"start": 0,
+												"end": 22
+											}
+										]
+									},
+									"direction": "ltr"
+								},
+								{
+									"type": "list-item",
+									"content": {
+										"text": "Investment funds",
+										"spans": [
+											{
+												"type": "strong",
+												"start": 0,
+												"end": 16
+											}
+										]
+									},
+									"direction": "ltr"
+								}
+							]
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"text",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "list-item",
+									"content": {
+										"text": "Merchant cash advance (MCA) companies",
+										"spans": [
+											{
+												"type": "strong",
+												"start": 0,
+												"end": 37
+											}
+										]
+									},
+									"direction": "rtl"
+								},
+								{
+									"type": "list-item",
+									"content": {
+										"text": "E-Commerce companies",
+										"spans": [
+											{
+												"type": "strong",
+												"start": 0,
+												"end": 20
+											}
+										]
+									},
+									"direction": "rtl"
+								},
+								{
+									"type": "list-item",
+									"content": {
+										"text": "Financial institutions",
+										"spans": [
+											{
+												"type": "strong",
+												"start": 0,
+												"end": 22
+											}
+										]
+									},
+									"direction": "rtl"
+								},
+								{
+									"type": "list-item",
+									"content": {
+										"text": "Investment funds",
+										"spans": [
+											{
+												"type": "strong",
+												"start": 0,
+												"end": 16
+											}
+										]
+									},
+									"direction": "rtl"
+								}
+							]
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"text",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "list-item",
+									"content": {
+										"text": "Merchant cash advance (MCA) companies",
+										"spans": [
+											{
+												"type": "strong",
+												"start": 0,
+												"end": 37
+											}
+										]
+									},
+									"direction": "rtl"
+								},
+								{
+									"type": "list-item",
+									"content": {
+										"text": "E-Commerce companies",
+										"spans": [
+											{
+												"type": "strong",
+												"start": 0,
+												"end": 20
+											}
+										]
+									},
+									"direction": "rtl"
+								},
+								{
+									"type": "list-item",
+									"content": {
+										"text": "Financial institutions",
+										"spans": [
+											{
+												"type": "strong",
+												"start": 0,
+												"end": 22
+											}
+										]
+									},
+									"direction": "rtl"
+								},
+								{
+									"type": "list-item",
+									"content": {
+										"text": "Investment funds",
+										"spans": [
+											{
+												"type": "strong",
+												"start": 0,
+												"end": 16
+											}
+										]
+									},
+									"direction": "rtl"
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "listLeftAlign",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "sheet",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"text",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Culpa eu laboris eiusmod commodo magna pariatur ut voluptate consectetur cupidatat anim. Aute irure eu duis veniam eu anim nostrud magna ex elit ut."
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	}
+]

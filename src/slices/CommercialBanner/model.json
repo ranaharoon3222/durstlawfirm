@@ -1,0 +1,63 @@
+{
+  "id": "commercial_banner",
+  "type": "SharedSlice",
+  "name": "CommercialBanner",
+  "description": "CommercialBanner",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "subtitle": {
+          "type": "Text",
+          "config": { "label": "subtitle", "placeholder": "" }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "strong,em,heading1"
+          }
+        },
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "em,strong,paragraph,o-list-item,list-item,hyperlink"
+          }
+        },
+        "second_title": {
+          "type": "Text",
+          "config": { "label": "second column title", "placeholder": "" }
+        }
+      },
+      "items": {
+        "title": {
+          "type": "Text",
+          "config": { "label": "title", "placeholder": "" }
+        },
+        "link": {
+          "type": "Link",
+          "config": { "label": "link", "placeholder": "", "select": null }
+        },
+        "disabled": {
+          "type": "Boolean",
+          "config": {
+            "label": "disabled",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          }
+        }
+      }
+    }
+  ]
+}

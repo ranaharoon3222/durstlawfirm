@@ -1,0 +1,74 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Ohio Commercial Litigaton Lawyer"
+			},
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Class"
+						}
+					}
+				]
+			},
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Esse labore quis id. Excepteur ut pariatur elit ad nostrud ollit ex qui sit nisi consectetur ad laborum sunt eiusmod. Velit aliquip labore duis ea culpa ea ea sint sit reprehenderit.",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"second_title": {
+				"__TYPE__": "FieldContent",
+				"value": "noon",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"link",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "https://prismic.io"
+							}
+						}
+					],
+					[
+						"disabled",
+						{
+							"__TYPE__": "BooleanContent",
+							"value": true
+						}
+					],
+					[
+						"title",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "fallen",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]

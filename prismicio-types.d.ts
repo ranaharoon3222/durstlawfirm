@@ -71,7 +71,11 @@ type PageDocumentDataSlicesSlice =
   | HomeBaneerSlice
   | PractiseAreaSlice
   | HomeValuesSlice
-  | CtaSlice;
+  | CtaSlice
+  | CommercialBannerSlice
+  | ClientsRepresentSlice
+  | TwoColWithImageSlice
+  | PreFooterSlice;
 /**
  * page document from Prismic
  *
@@ -149,6 +153,228 @@ export type AllDocumentTypes =
   | PageDocument
   | RpComponentDocument
   | SettingsDocument;
+/**
+ * Primary content in ClientsRepresent → Primary
+ *
+ */
+interface ClientsRepresentSliceDefaultPrimary {
+  /**
+   * title field in *ClientsRepresent → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: clients_represent.primary.title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismic.KeyTextField;
+}
+/**
+ * Item in ClientsRepresent → Items
+ *
+ */
+export interface ClientsRepresentSliceDefaultItem {
+  /**
+   * text field in *ClientsRepresent → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: clients_represent.items[].text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  text: prismic.RichTextField;
+}
+/**
+ * Default variation for ClientsRepresent Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ClientsRepresentSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ClientsRepresentSliceDefaultPrimary>,
+  Simplify<ClientsRepresentSliceDefaultItem>
+>;
+/**
+ * Primary content in ClientsRepresent → Primary
+ *
+ */
+interface ClientsRepresentSliceListLeftAlignPrimary {
+  /**
+   * title field in *ClientsRepresent → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: clients_represent.primary.title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismic.KeyTextField;
+}
+/**
+ * Item in ClientsRepresent → Items
+ *
+ */
+export interface ClientsRepresentSliceListLeftAlignItem {
+  /**
+   * text field in *ClientsRepresent → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: clients_represent.items[].text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  text: prismic.RichTextField;
+}
+/**
+ * List Left Align variation for ClientsRepresent Slice
+ *
+ * - **API ID**: `listLeftAlign`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ClientsRepresentSliceListLeftAlign = prismic.SharedSliceVariation<
+  "listLeftAlign",
+  Simplify<ClientsRepresentSliceListLeftAlignPrimary>,
+  Simplify<ClientsRepresentSliceListLeftAlignItem>
+>;
+/**
+ * Slice variation for *ClientsRepresent*
+ *
+ */
+type ClientsRepresentSliceVariation =
+  | ClientsRepresentSliceDefault
+  | ClientsRepresentSliceListLeftAlign;
+/**
+ * ClientsRepresent Shared Slice
+ *
+ * - **API ID**: `clients_represent`
+ * - **Description**: `ClientsRepresent`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ClientsRepresentSlice = prismic.SharedSlice<
+  "clients_represent",
+  ClientsRepresentSliceVariation
+>;
+/**
+ * Primary content in CommercialBanner → Primary
+ *
+ */
+interface CommercialBannerSliceDefaultPrimary {
+  /**
+   * subtitle field in *CommercialBanner → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: commercial_banner.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  subtitle: prismic.KeyTextField;
+  /**
+   * title field in *CommercialBanner → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: commercial_banner.primary.title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  title: prismic.RichTextField;
+  /**
+   * text field in *CommercialBanner → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: commercial_banner.primary.text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  text: prismic.RichTextField;
+  /**
+   * second column title field in *CommercialBanner → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: commercial_banner.primary.second_title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  second_title: prismic.KeyTextField;
+}
+/**
+ * Item in CommercialBanner → Items
+ *
+ */
+export interface CommercialBannerSliceDefaultItem {
+  /**
+   * title field in *CommercialBanner → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: commercial_banner.items[].title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismic.KeyTextField;
+  /**
+   * link field in *CommercialBanner → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: commercial_banner.items[].link
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  link: prismic.LinkField;
+  /**
+   * disabled field in *CommercialBanner → Items*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: commercial_banner.items[].disabled
+   * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+   *
+   */
+  disabled: prismic.BooleanField;
+}
+/**
+ * Default variation for CommercialBanner Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CommercialBannerSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CommercialBannerSliceDefaultPrimary>,
+  Simplify<CommercialBannerSliceDefaultItem>
+>;
+/**
+ * Slice variation for *CommercialBanner*
+ *
+ */
+type CommercialBannerSliceVariation = CommercialBannerSliceDefault;
+/**
+ * CommercialBanner Shared Slice
+ *
+ * - **API ID**: `commercial_banner`
+ * - **Description**: `CommercialBanner`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CommercialBannerSlice = prismic.SharedSlice<
+  "commercial_banner",
+  CommercialBannerSliceVariation
+>;
 /**
  * Primary content in Cta → Primary
  *
@@ -492,6 +718,234 @@ export type PractiseAreaSlice = prismic.SharedSlice<
   "practise_area",
   PractiseAreaSliceVariation
 >;
+/**
+ * Primary content in PreFooter → Primary
+ *
+ */
+interface PreFooterSliceDefaultPrimary {
+  /**
+   * button text field in *PreFooter → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pre_footer.primary.button_text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  button_text: prismic.KeyTextField;
+  /**
+   * button link field in *PreFooter → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pre_footer.primary.button_link
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  button_link: prismic.LinkField;
+  /**
+   * button 2 text field in *PreFooter → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pre_footer.primary.button_2_text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  button_2_text: prismic.KeyTextField;
+  /**
+   * button 2 link field in *PreFooter → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pre_footer.primary.button_2_link
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  button_2_link: prismic.LinkField;
+}
+/**
+ * Item in PreFooter → Items
+ *
+ */
+export interface PreFooterSliceDefaultItem {
+  /**
+   * title field in *PreFooter → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pre_footer.items[].title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismic.KeyTextField;
+  /**
+   * icon field in *PreFooter → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pre_footer.items[].icon
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  icon: prismic.ImageField<never>;
+  /**
+   * text field in *PreFooter → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pre_footer.items[].text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  text: prismic.RichTextField;
+  /**
+   * name field in *PreFooter → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pre_footer.items[].name
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  name: prismic.KeyTextField;
+  /**
+   * position field in *PreFooter → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pre_footer.items[].position
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  position: prismic.KeyTextField;
+}
+/**
+ * Default variation for PreFooter Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type PreFooterSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<PreFooterSliceDefaultPrimary>,
+  Simplify<PreFooterSliceDefaultItem>
+>;
+/**
+ * Slice variation for *PreFooter*
+ *
+ */
+type PreFooterSliceVariation = PreFooterSliceDefault;
+/**
+ * PreFooter Shared Slice
+ *
+ * - **API ID**: `pre_footer`
+ * - **Description**: `PreFooter`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type PreFooterSlice = prismic.SharedSlice<
+  "pre_footer",
+  PreFooterSliceVariation
+>;
+/**
+ * Primary content in TwoColWithImage → Primary
+ *
+ */
+interface TwoColWithImageSliceDefaultPrimary {
+  /**
+   * title field in *TwoColWithImage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: two_col_with_image.primary.title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismic.KeyTextField;
+  /**
+   * subtitle field in *TwoColWithImage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: two_col_with_image.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  subtitle: prismic.KeyTextField;
+  /**
+   * text field in *TwoColWithImage → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: two_col_with_image.primary.text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  text: prismic.RichTextField;
+  /**
+   * image field in *TwoColWithImage → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: two_col_with_image.primary.image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image: prismic.ImageField<never>;
+  /**
+   * button text field in *TwoColWithImage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: two_col_with_image.primary.button_text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  button_text: prismic.KeyTextField;
+  /**
+   * button link field in *TwoColWithImage → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: two_col_with_image.primary.button_link
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  button_link: prismic.LinkField;
+}
+/**
+ * Default variation for TwoColWithImage Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TwoColWithImageSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TwoColWithImageSliceDefaultPrimary>,
+  never
+>;
+/**
+ * Slice variation for *TwoColWithImage*
+ *
+ */
+type TwoColWithImageSliceVariation = TwoColWithImageSliceDefault;
+/**
+ * TwoColWithImage Shared Slice
+ *
+ * - **API ID**: `two_col_with_image`
+ * - **Description**: `TwoColWithImage`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TwoColWithImageSlice = prismic.SharedSlice<
+  "two_col_with_image",
+  TwoColWithImageSliceVariation
+>;
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -510,6 +964,19 @@ declare module "@prismicio/client" {
       SettingsDocumentDataSlicesSlice,
       SettingsDocument,
       AllDocumentTypes,
+      ClientsRepresentSliceDefaultPrimary,
+      ClientsRepresentSliceDefaultItem,
+      ClientsRepresentSliceDefault,
+      ClientsRepresentSliceListLeftAlignPrimary,
+      ClientsRepresentSliceListLeftAlignItem,
+      ClientsRepresentSliceListLeftAlign,
+      ClientsRepresentSliceVariation,
+      ClientsRepresentSlice,
+      CommercialBannerSliceDefaultPrimary,
+      CommercialBannerSliceDefaultItem,
+      CommercialBannerSliceDefault,
+      CommercialBannerSliceVariation,
+      CommercialBannerSlice,
       CtaSliceDefaultPrimary,
       CtaSliceDefault,
       CtaSliceVariation,
@@ -528,6 +995,15 @@ declare module "@prismicio/client" {
       PractiseAreaSliceDefault,
       PractiseAreaSliceVariation,
       PractiseAreaSlice,
+      PreFooterSliceDefaultPrimary,
+      PreFooterSliceDefaultItem,
+      PreFooterSliceDefault,
+      PreFooterSliceVariation,
+      PreFooterSlice,
+      TwoColWithImageSliceDefaultPrimary,
+      TwoColWithImageSliceDefault,
+      TwoColWithImageSliceVariation,
+      TwoColWithImageSlice,
     };
   }
 }

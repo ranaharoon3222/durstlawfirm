@@ -1,4 +1,5 @@
 import FooterCta from '@/commons/FooterCta';
+import RichText from '@/commons/RichText';
 
 /**
  * @typedef {import("@prismicio/client").Content.CtaSlice} CtaSlice
@@ -11,10 +12,9 @@ const Cta = ({ slice }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <FooterCta image={'/images/last-back-img.jpg'}>
+      <FooterCta image={slice.primary.image.url}>
         <h1 className='font-medium text-center md:text-left text-white md:text-[3vw]'>
-          Contact The Durst Law Firm
-          <span className='text-primary'> Today. </span>
+          <RichText field={slice.primary.title} />
         </h1>
       </FooterCta>{' '}
     </section>

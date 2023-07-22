@@ -19,7 +19,11 @@
             "home_baneer": { "type": "SharedSlice" },
             "practise_area": { "type": "SharedSlice" },
             "home_values": { "type": "SharedSlice" },
-            "cta": { "type": "SharedSlice" }
+            "cta": { "type": "SharedSlice" },
+            "commercial_banner": { "type": "SharedSlice" },
+            "clients_represent": { "type": "SharedSlice" },
+            "two_col_with_image": { "type": "SharedSlice" },
+            "pre_footer": { "type": "SharedSlice" }
           }
         }
       }

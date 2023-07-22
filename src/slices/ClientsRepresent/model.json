@@ -1,0 +1,58 @@
+{
+  "id": "clients_represent",
+  "type": "SharedSlice",
+  "name": "ClientsRepresent",
+  "description": "ClientsRepresent",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": { "label": "title", "placeholder": "" }
+        }
+      },
+      "items": {
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "strong,em,list-item"
+          }
+        }
+      }
+    },
+    {
+      "id": "listLeftAlign",
+      "name": "List Left Align",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": { "label": "title", "placeholder": "" }
+        }
+      },
+      "items": {
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "strong,em,list-item"
+          }
+        }
+      }
+    }
+  ]
+}
