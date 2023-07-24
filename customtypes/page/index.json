@@ -33,7 +33,8 @@
             "two_col_with_image": { "type": "SharedSlice" },
             "pre_footer": { "type": "SharedSlice" },
             "header_with_buttons": { "type": "SharedSlice" },
-            "tick_list": { "type": "SharedSlice" }
+            "tick_list": { "type": "SharedSlice" },
+            "repu_tation_block": { "type": "SharedSlice" }
           }
         }
       }

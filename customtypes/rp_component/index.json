@@ -1,8 +1,0 @@
-{
-  "id": "rp_component",
-  "label": "repeated-component",
-  "format": "custom",
-  "repeatable": true,
-  "status": true,
-  "json": { "Main": { "uid": { "config": { "label": "UID" }, "type": "UID" } } }
-}

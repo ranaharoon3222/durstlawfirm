@@ -20,14 +20,16 @@ const TwoColWithImage = ({ slice }) => {
         subTItle={slice.primary.subtitle}
       >
         <RichText field={slice.primary.text} />
-        <Button
-          text={slice.primary.button_text}
-          link={slice.primary.button_link?.url}
-          color='black'
-          className={'mt-10'}
-        >
-          <ArrowDown fill='black' />
-        </Button>
+        {slice.primary.button_text && (
+          <Button
+            text={slice.primary.button_text}
+            link={slice.primary.button_link?.url}
+            color='black'
+            className={'mt-10'}
+          >
+            <ArrowDown fill='black' />
+          </Button>
+        )}
       </ColWithImage>
     </section>
   );

@@ -21,7 +21,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@slicemachine/adapter-next": "^0.3.4",
+    "@slicemachine/adapter-next": "^0.3.6",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.24",
     "slice-machine-ui": "^1.5.3",

@@ -11,6 +11,7 @@ export const components = {
   home_values: dynamic(() => import("./HomeValues")),
   practise_area: dynamic(() => import("./PractiseArea")),
   pre_footer: dynamic(() => import("./PreFooter")),
+  repu_tation_block: dynamic(() => import("./RepuTationBlock")),
   tick_list: dynamic(() => import("./TickList")),
   two_col_with_image: dynamic(() => import("./TwoColWithImage")),
 };

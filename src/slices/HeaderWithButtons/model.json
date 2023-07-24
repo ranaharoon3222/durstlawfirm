@@ -27,7 +27,7 @@
             "placeholder": "",
             "options": [
               "linear-gradient(64deg, #ffffff 31%, rgba(255, 255, 255, 0) 80% )",
-              "linear-gradient(64deg, #ffffff 31%, rgba(255, 255, 255, 0) 80% )"
+              "linear-gradient(64deg, rgb(255, 255, 255) 31%, rgba(255, 255, 255, 0.45) 80%)"
             ],
             "default_value": "linear-gradient(64deg, #ffffff 31%, rgba(255, 255, 255, 0) 80% )"
           }

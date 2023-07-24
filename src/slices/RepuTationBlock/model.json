@@ -1,0 +1,88 @@
+{
+  "id": "repu_tation_block",
+  "type": "SharedSlice",
+  "name": "RepuTationBlock",
+  "description": "RepuTationBlock",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading1,heading2,strong,em"
+          }
+        },
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,em,strong,hyperlink"
+          }
+        },
+        "button_text_1": {
+          "type": "Text",
+          "config": { "label": "button text 1", "placeholder": "" }
+        },
+        "button_link_1": {
+          "type": "Link",
+          "config": {
+            "label": "button link 1",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "button_text_2": {
+          "type": "Text",
+          "config": { "label": "button text 2", "placeholder": "" }
+        },
+        "button_link_2": {
+          "type": "Text",
+          "config": { "label": "button link 2", "placeholder": "" }
+        }
+      },
+      "items": {
+        "icon": {
+          "type": "Image",
+          "config": { "label": "icon", "constraint": {}, "thumbnails": [] }
+        },
+        "title": {
+          "type": "Text",
+          "config": { "label": "title", "placeholder": "" }
+        },
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,em,strong,hyperlink"
+          }
+        },
+        "name": {
+          "type": "Text",
+          "config": { "label": "name", "placeholder": "" }
+        },
+        "position": {
+          "type": "StructuredText",
+          "config": {
+            "label": "position",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -62,24 +62,26 @@ const HeaderWithButtons = ({ slice }) => {
 
               <RichText field={slice.primary.small_text} />
 
-              <div className='mt-8'>
-                <BigButton
-                  variant='primary'
-                  text={slice.primary.button_text_1}
-                  link={slice.primary.button_link_1.url}
-                >
-                  <PlainArrow />
-                </BigButton>
+              {slice.primary.button_text_1 && (
+                <div className='mt-8'>
+                  <BigButton
+                    variant='primary'
+                    text={slice.primary.button_text_1}
+                    link={slice.primary.button_link_1.url}
+                  >
+                    <PlainArrow />
+                  </BigButton>
 
-                <BigButton
-                  variant='primary'
-                  text={slice.primary.button_text_2}
-                  link={slice.primary.button_link_2.url}
-                  className='mt-5'
-                >
-                  <PlainArrow />
-                </BigButton>
-              </div>
+                  <BigButton
+                    variant='primary'
+                    text={slice.primary.button_text_2}
+                    link={slice.primary.button_link_2.url}
+                    className='mt-5'
+                  >
+                    <PlainArrow />
+                  </BigButton>
+                </div>
+              )}
 
               <RichText field={slice.primary.text} em={'text-primary'} />
 
