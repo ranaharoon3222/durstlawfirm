@@ -18,10 +18,7 @@ const Cta = ({ slice }) => {
           heading1={
             'font-medium text-center md:text-left text-white md:text-[3vw]'
           }
-          heading3={`${
-            slice.primary.title[0].type === 'heading3' &&
-            'text-left md:text-left font-normal text-white md:text-[2vw] '
-          }   `}
+          heading2={`${'text-left md:text-left font-normal text-white md:text-[2vw] '}   `}
           strong={'text-primary'}
         />
       </FooterCta>{' '}

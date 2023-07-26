@@ -34,7 +34,10 @@
             "pre_footer": { "type": "SharedSlice" },
             "header_with_buttons": { "type": "SharedSlice" },
             "tick_list": { "type": "SharedSlice" },
-            "repu_tation_block": { "type": "SharedSlice" }
+            "repu_tation_block": { "type": "SharedSlice" },
+            "simple_two_column": { "type": "SharedSlice" },
+            "faq": { "type": "SharedSlice" },
+            "column_with_faq": { "type": "SharedSlice" }
           }
         }
       }

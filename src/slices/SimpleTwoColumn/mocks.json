@@ -1,0 +1,122 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "How Personal Injury Law Works"
+			},
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "The vast majority of personal injury cases are based on the concept of “negligence.” In order to win a personal injury case, the person injured (the “plaintiff”) must prove four “elements” to establish that the person allegedly at fault (the “defendant”) acted negligently:",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "list-item",
+						"content": {
+							"text": "Duty – The defendant owed a legal duty to the plaintiff under the circumstances;",
+							"spans": [
+								{
+									"type": "strong",
+									"start": 0,
+									"end": 4
+								}
+							]
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "list-item",
+						"content": {
+							"text": "Breach of Duty – The defendant breached that legal duty by acting or failing to act in a certain way;",
+							"spans": [
+								{
+									"type": "strong",
+									"start": 0,
+									"end": 14
+								}
+							]
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "list-item",
+						"content": {
+							"text": "Causation – The defendant’s actions (or inaction) caused the plaintiff’s injury; and",
+							"spans": [
+								{
+									"type": "strong",
+									"start": 0,
+									"end": 9
+								}
+							]
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "list-item",
+						"content": {
+							"text": "Damages – The plaintiff was harmed or injured as a result of the defendant’s actions.",
+							"spans": [
+								{
+									"type": "strong",
+									"start": 0,
+									"end": 7
+								}
+							]
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Once these elements are proven, the defendant (or its insurance company) must compensate the plaintiff for his or her damages. In personal injury cases such as rear-end car accidents, the first three elements are usually not seriously at issue, since it is obvious who was at fault for the accident. Usually, the dispute in these cases has to do with how much money the injured party should be awarded.",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db",
+					"width": 4380,
+					"height": 2895
+				},
+				"url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db",
+				"width": 4380,
+				"height": 2895,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			}
+		},
+		"items": []
+	}
+]

@@ -2,11 +2,11 @@ import React from 'react';
 
 const Faq = ({ title, children }) => {
   return (
-    <div className='hs-accordion transition-all my-5 hs-accordion-active:bg-gray-100 rounded-xl  '>
-      <button className='hs-accordion-toggle hs-accordion-active:text-primary hs-accordion-active:pb-0 bg-gray-100 p-5 rounded-md group inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-left text-gray-800 transition hover:text-gray-500 '>
-        {title}
+    <div className='my-5 transition-all hs-accordion hs-accordion-active:bg-gray-100 rounded-xl '>
+      <button className='inline-flex items-center justify-between w-full p-5 font-semibold text-left text-gray-800 transition bg-gray-100 rounded-md hs-accordion-toggle hs-accordion-active:text-primary hs-accordion-active:pb-0 group gap-x-3 md:text-lg hover:text-gray-500 '>
+        <div>{title} </div>
         <svg
-          className='hs-accordion-active:hidden block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400'
+          className='block w-4 h-4 text-gray-600 hs-accordion-active:hidden group-hover:text-gray-500 dark:text-gray-400'
           width={16}
           height={16}
           viewBox='0 0 16 16'
@@ -21,7 +21,7 @@ const Faq = ({ title, children }) => {
           />
         </svg>
         <svg
-          className='hs-accordion-active:block hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400'
+          className='hidden w-4 h-4 text-gray-600 hs-accordion-active:block group-hover:text-gray-500 dark:text-gray-400'
           width={16}
           height={16}
           viewBox='0 0 16 16'
@@ -36,7 +36,7 @@ const Faq = ({ title, children }) => {
           />
         </svg>
       </button>
-      <div className='hs-accordion-content pb-5 px-5 w-full transition-all overflow-hidden   hidden'>
+      <div className='hidden w-full px-5 pb-5 overflow-hidden transition-all hs-accordion-content'>
         {children}
       </div>
     </div>
