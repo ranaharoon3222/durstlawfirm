@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 
 export const components = {
+  appeal_section: dynamic(() => import("./AppealSection")),
   banner_with_background_image: dynamic(() =>
     import("./BannerWithBackgroundImage")
   ),
@@ -15,11 +16,13 @@ export const components = {
   header_with_buttons: dynamic(() => import("./HeaderWithButtons")),
   home_baneer: dynamic(() => import("./HomeBaneer")),
   home_values: dynamic(() => import("./HomeValues")),
+  icon_box: dynamic(() => import("./IconBox")),
   practise_area: dynamic(() => import("./PractiseArea")),
   pre_footer: dynamic(() => import("./PreFooter")),
   representative_column: dynamic(() => import("./RepresentativeColumn")),
   repu_tation_block: dynamic(() => import("./RepuTationBlock")),
   resources: dynamic(() => import("./Resources")),
+  results: dynamic(() => import("./Results")),
   rich_text_with_button: dynamic(() => import("./RichTextWithButton")),
   simple_two_column: dynamic(() => import("./SimpleTwoColumn")),
   tick_list: dynamic(() => import("./TickList")),

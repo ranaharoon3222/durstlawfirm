@@ -7,6 +7,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "fewer",
 				"type": "Text"
+			},
+			"columns": {
+				"__TYPE__": "FieldContent",
+				"value": "3",
+				"type": "Select"
 			}
 		},
 		"items": [

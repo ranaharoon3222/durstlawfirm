@@ -22,7 +22,11 @@ const TickList = ({ slice, context }) => {
           </div>
         </div>
 
-        <section className='container grid gap-8 md:grid-cols-5 '>
+        <section
+          className={`container grid gap-8  ${
+            slice.primary.columns == 5 ? 'md:grid-cols-5' : 'md:grid-cols-3'
+          }  `}
+        >
           {slice.items.map((item, i) => (
             <TickBox
               key={i}

@@ -41,7 +41,10 @@
             "representative_column": { "type": "SharedSlice" },
             "banner_with_background_image": { "type": "SharedSlice" },
             "faq_w_ith_title": { "type": "SharedSlice" },
-            "rich_text_with_button": { "type": "SharedSlice" }
+            "rich_text_with_button": { "type": "SharedSlice" },
+            "appeal_section": { "type": "SharedSlice" },
+            "icon_box": { "type": "SharedSlice" },
+            "results": { "type": "SharedSlice" }
           }
         }
       }

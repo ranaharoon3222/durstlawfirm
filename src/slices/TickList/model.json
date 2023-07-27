@@ -15,6 +15,15 @@
         "title": {
           "type": "Text",
           "config": { "label": "title", "placeholder": "" }
+        },
+        "columns": {
+          "type": "Select",
+          "config": {
+            "label": "columns",
+            "placeholder": "",
+            "options": ["5", "3"],
+            "default_value": "5"
+          }
         }
       },
       "items": {

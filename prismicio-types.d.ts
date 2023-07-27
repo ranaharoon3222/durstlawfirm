@@ -22,7 +22,10 @@ type PageDocumentDataSlicesSlice =
   | RepresentativeColumnSlice
   | BannerWithBackgroundImageSlice
   | FaqWIthTitleSlice
-  | RichTextWithButtonSlice;
+  | RichTextWithButtonSlice
+  | AppealSectionSlice
+  | IconBoxSlice
+  | ResultsSlice;
 
 /**
  * Content for page documents
@@ -174,6 +177,81 @@ export type SettingsDocument<Lang extends string = string> =
   >;
 
 export type AllDocumentTypes = PageDocument | SettingsDocument;
+
+/**
+ * Primary content in *AppealSection → Primary*
+ */
+export interface AppealSectionSliceDefaultPrimary {
+  /**
+   * subtitle field in *AppealSection → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: appeal_section.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitle: prismic.KeyTextField;
+
+  /**
+   * title field in *AppealSection → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: appeal_section.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * text field in *AppealSection → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: appeal_section.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+
+  /**
+   * image field in *AppealSection → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: appeal_section.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for AppealSection Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AppealSectionSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<AppealSectionSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *AppealSection*
+ */
+type AppealSectionSliceVariation = AppealSectionSliceDefault;
+
+/**
+ * AppealSection Shared Slice
+ *
+ * - **API ID**: `appeal_section`
+ * - **Description**: AppealSection
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AppealSectionSlice = prismic.SharedSlice<
+  "appeal_section",
+  AppealSectionSliceVariation
+>;
 
 /**
  * Primary content in *BannerWithBackgroundImage → Primary*
@@ -1169,6 +1247,36 @@ export type HomeValuesSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Default variation for IconBox Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type IconBoxSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *IconBox*
+ */
+type IconBoxSliceVariation = IconBoxSliceDefault;
+
+/**
+ * IconBox Shared Slice
+ *
+ * - **API ID**: `icon_box`
+ * - **Description**: IconBox
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type IconBoxSlice = prismic.SharedSlice<
+  "icon_box",
+  IconBoxSliceVariation
+>;
+
+/**
  * Primary content in *PractiseArea → Primary*
  */
 export interface PractiseAreaSliceDefaultPrimary {
@@ -1729,6 +1837,96 @@ export type ResourcesSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *Results → Primary*
+ */
+export interface ResultsSliceDefaultPrimary {
+  /**
+   * icon field in *Results → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: results.primary.icon
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  icon: prismic.ImageField<never>;
+
+  /**
+   * title field in *Results → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: results.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * text field in *Results → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: results.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *Results → Items*
+ */
+export interface ResultsSliceDefaultItem {
+  /**
+   * filter title field in *Results → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: results.items[].filter_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  filter_title: prismic.KeyTextField;
+
+  /**
+   * filter link field in *Results → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: results.items[].filter_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  filter_link: prismic.LinkField;
+}
+
+/**
+ * Default variation for Results Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ResultsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ResultsSliceDefaultPrimary>,
+  Simplify<ResultsSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Results*
+ */
+type ResultsSliceVariation = ResultsSliceDefault;
+
+/**
+ * Results Shared Slice
+ *
+ * - **API ID**: `results`
+ * - **Description**: Results
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ResultsSlice = prismic.SharedSlice<
+  "results",
+  ResultsSliceVariation
+>;
+
+/**
  * Primary content in *RichTextWithButton → Primary*
  */
 export interface RichTextWithButtonSliceDefaultPrimary {
@@ -1892,6 +2090,17 @@ export interface TickListSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   title: prismic.KeyTextField;
+
+  /**
+   * columns field in *TickList → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: 5
+   * - **API ID Path**: tick_list.primary.columns
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  columns: prismic.SelectField<"5" | "3", "filled">;
 }
 
 /**
@@ -2049,6 +2258,9 @@ declare module "@prismicio/client" {
       SettingsDocument,
       SettingsDocumentData,
       AllDocumentTypes,
+      AppealSectionSlice,
+      AppealSectionSliceVariation,
+      AppealSectionSliceDefault,
       BannerWithBackgroundImageSlice,
       BannerWithBackgroundImageSliceVariation,
       BannerWithBackgroundImageSliceDefault,
@@ -2080,6 +2292,9 @@ declare module "@prismicio/client" {
       HomeValuesSlice,
       HomeValuesSliceVariation,
       HomeValuesSliceDefault,
+      IconBoxSlice,
+      IconBoxSliceVariation,
+      IconBoxSliceDefault,
       PractiseAreaSlice,
       PractiseAreaSliceVariation,
       PractiseAreaSliceDefault,
@@ -2095,6 +2310,9 @@ declare module "@prismicio/client" {
       ResourcesSlice,
       ResourcesSliceVariation,
       ResourcesSliceDefault,
+      ResultsSlice,
+      ResultsSliceVariation,
+      ResultsSliceDefault,
       RichTextWithButtonSlice,
       RichTextWithButtonSliceVariation,
       RichTextWithButtonSliceDefault,

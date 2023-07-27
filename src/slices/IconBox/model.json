@@ -1,0 +1,16 @@
+{
+  "id": "icon_box",
+  "type": "SharedSlice",
+  "name": "IconBox",
+  "description": "IconBox",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": ""
+    }
+  ]
+}
