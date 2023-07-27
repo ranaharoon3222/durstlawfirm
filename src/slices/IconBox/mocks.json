@@ -2,7 +2,89 @@
 	{
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
-		"primary": {},
-		"items": []
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "alone",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"column",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "2",
+							"type": "Select"
+						}
+					],
+					[
+						"icon",
+						{
+							"__TYPE__": "ImageContent",
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72",
+								"width": 4010,
+								"height": 4010
+							},
+							"url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72",
+							"width": 4010,
+							"height": 4010,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"thumbnails": {}
+						}
+					],
+					[
+						"title",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "mass",
+							"type": "Text"
+						}
+					],
+					[
+						"text",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Ipsum consequat ad velit consequat duis et sint. Ipsum enim nostrud esse et. Deserunt sint duis duis pariatur sint esse elit ex sit sit voluptate enim."
+									}
+								}
+							]
+						}
+					],
+					[
+						"name",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "grandmother",
+							"type": "Text"
+						}
+					],
+					[
+						"position",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "quick",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
 	}
 ]

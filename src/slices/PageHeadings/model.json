@@ -1,7 +1,7 @@
 {
   "id": "results",
   "type": "SharedSlice",
-  "name": "Results",
+  "name": "PageHeadings",
   "description": "Results",
   "variations": [
     {
@@ -36,6 +36,10 @@
         }
       },
       "items": {
+        "ids": {
+          "type": "Text",
+          "config": { "label": "ids", "placeholder": "" }
+        },
         "filter_title": {
           "type": "Text",
           "config": { "label": "filter title", "placeholder": "" }

@@ -4,6 +4,68 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
+type BlogDocumentDataSlicesSlice = never;
+
+/**
+ * Content for blog documents
+ */
+interface BlogDocumentData {
+  /**
+   * Slice Zone field in *blog*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<BlogDocumentDataSlicesSlice>
+  /**
+   * Meta Description field in *blog*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: blog.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *blog*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+
+  /**
+   * Meta Title field in *blog*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: blog.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_title: prismic.KeyTextField;
+}
+
+/**
+ * blog document from Prismic
+ *
+ * - **API ID**: `blog`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type BlogDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<BlogDocumentData>, "blog", Lang>;
+
 type PageDocumentDataSlicesSlice =
   | HomeBaneerSlice
   | PractiseAreaSlice
@@ -176,7 +238,7 @@ export type SettingsDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = PageDocument | SettingsDocument;
+export type AllDocumentTypes = BlogDocument | PageDocument | SettingsDocument;
 
 /**
  * Primary content in *AppealSection → Primary*
@@ -1247,6 +1309,87 @@ export type HomeValuesSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *IconBox → Primary*
+ */
+export interface IconBoxSliceDefaultPrimary {
+  /**
+   * title field in *IconBox → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: icon_box.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *IconBox → Items*
+ */
+export interface IconBoxSliceDefaultItem {
+  /**
+   * column field in *IconBox → Items*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: 1
+   * - **API ID Path**: icon_box.items[].column
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  column: prismic.SelectField<"1" | "2" | "3", "filled">;
+
+  /**
+   * icon field in *IconBox → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: icon_box.items[].icon
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  icon: prismic.ImageField<never>;
+
+  /**
+   * title field in *IconBox → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: icon_box.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * text field in *IconBox → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: icon_box.items[].text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+
+  /**
+   * name field in *IconBox → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: icon_box.items[].name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * position field in *IconBox → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: icon_box.items[].position
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  position: prismic.KeyTextField;
+}
+
+/**
  * Default variation for IconBox Slice
  *
  * - **API ID**: `default`
@@ -1255,8 +1398,8 @@ export type HomeValuesSlice = prismic.SharedSlice<
  */
 export type IconBoxSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
-  never
+  Simplify<IconBoxSliceDefaultPrimary>,
+  Simplify<IconBoxSliceDefaultItem>
 >;
 
 /**
@@ -1837,11 +1980,11 @@ export type ResourcesSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *Results → Primary*
+ * Primary content in *PageHeadings → Primary*
  */
 export interface ResultsSliceDefaultPrimary {
   /**
-   * icon field in *Results → Primary*
+   * icon field in *PageHeadings → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -1851,7 +1994,7 @@ export interface ResultsSliceDefaultPrimary {
   icon: prismic.ImageField<never>;
 
   /**
-   * title field in *Results → Primary*
+   * title field in *PageHeadings → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -1861,7 +2004,7 @@ export interface ResultsSliceDefaultPrimary {
   title: prismic.RichTextField;
 
   /**
-   * text field in *Results → Primary*
+   * text field in *PageHeadings → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -1872,11 +2015,21 @@ export interface ResultsSliceDefaultPrimary {
 }
 
 /**
- * Primary content in *Results → Items*
+ * Primary content in *PageHeadings → Items*
  */
 export interface ResultsSliceDefaultItem {
   /**
-   * filter title field in *Results → Items*
+   * ids field in *PageHeadings → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: results.items[].ids
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  ids: prismic.KeyTextField;
+
+  /**
+   * filter title field in *PageHeadings → Items*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -1886,7 +2039,7 @@ export interface ResultsSliceDefaultItem {
   filter_title: prismic.KeyTextField;
 
   /**
-   * filter link field in *Results → Items*
+   * filter link field in *PageHeadings → Items*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -1897,7 +2050,7 @@ export interface ResultsSliceDefaultItem {
 }
 
 /**
- * Default variation for Results Slice
+ * Default variation for PageHeadings Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -1910,12 +2063,12 @@ export type ResultsSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Slice variation for *Results*
+ * Slice variation for *PageHeadings*
  */
 type ResultsSliceVariation = ResultsSliceDefault;
 
 /**
- * Results Shared Slice
+ * PageHeadings Shared Slice
  *
  * - **API ID**: `results`
  * - **Description**: Results
@@ -2253,6 +2406,8 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      BlogDocument,
+      BlogDocumentData,
       PageDocument,
       PageDocumentData,
       SettingsDocument,
