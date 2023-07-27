@@ -31,10 +31,10 @@ const ColumnWithFaq = ({ slice }) => {
                 <Faq
                   key={i}
                   title={
-                    <RichText field={item.title} paragraphClassName='!mt-0' />
+                    <RichText field={item.title} paragraphClassName='!mt-0 ' />
                   }
                 >
-                  <RichText field={item.text} />
+                  <RichText field={item.text} paragraphClassName='text-base' />
                 </Faq>
               ))}
             </div>

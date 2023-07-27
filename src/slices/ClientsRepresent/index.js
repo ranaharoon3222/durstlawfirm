@@ -13,9 +13,45 @@ const ClientsRepresent = ({ slice }) => {
           <div className='my-10'>
             <h2>{slice.primary.title}</h2>
             <ul className='grid gap-10 mt-10 md:grid-cols-3 listing'>
-              {slice.items.map((item, index) => (
-                <RichText key={index} listItem={'mb-3'} field={item.text} />
-              ))}
+              <div>
+                {slice.items
+                  .slice(0, slice.items.length / 3)
+                  .map((item, index) => (
+                    <RichText key={index} listItem={'mb-3'} field={item.text} />
+                  ))}
+              </div>
+              <div>
+                {slice.items
+                  .slice(
+                    Math.ceil(slice.items.length / 3),
+                    Math.ceil(slice.items.length / 3) +
+                      Math.ceil(slice.items.length / 3)
+                  )
+                  .map((item, index) => {
+                    console.log(Math.ceil(slice.items.length / 3));
+                    return (
+                      <RichText
+                        key={index}
+                        listItem={'mb-3'}
+                        field={item.text}
+                      />
+                    );
+                  })}
+              </div>
+
+              <div>
+                {slice.items
+                  .slice(
+                    Math.ceil(slice.items.length / 3) +
+                      Math.ceil(slice.items.length / 3),
+                    Math.ceil(slice.items.length / 3) +
+                      Math.ceil(slice.items.length / 3) +
+                      Math.ceil(slice.items.length / 3)
+                  )
+                  .map((item, index) => (
+                    <RichText key={index} listItem={'mb-3'} field={item.text} />
+                  ))}
+              </div>
             </ul>
           </div>
         </div>

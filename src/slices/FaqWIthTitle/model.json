@@ -1,8 +1,8 @@
 {
-  "id": "faq",
+  "id": "faq_w_ith_title",
   "type": "SharedSlice",
-  "name": "Faq",
-  "description": "Faq",
+  "name": "FaqWIthTitle",
+  "description": "FaqWIthTitle",
   "variations": [
     {
       "id": "default",
@@ -22,7 +22,7 @@
             "label": "text",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "paragraph,strong,em,list-item"
+            "multi": "paragraph,strong,em,hyperlink,list-item"
           }
         }
       },
@@ -42,7 +42,7 @@
             "label": "text",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "paragraph,strong,em,list-item,hyperlink"
+            "multi": "paragraph,em,strong,hyperlink,list-item"
           }
         }
       }

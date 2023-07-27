@@ -20,6 +20,7 @@ const Cta = ({ slice }) => {
           }
           heading2={`${'text-left md:text-left font-normal text-white md:text-[2vw] '}   `}
           strong={'text-primary'}
+          paragraphClassName='text-white'
         />
       </FooterCta>{' '}
     </section>

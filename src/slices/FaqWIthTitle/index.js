@@ -1,13 +1,12 @@
 import Faq from '@/commons/Faq';
-import Paragraph from '@/commons/Paragraph';
 import RichText from '@/commons/RichText';
 
 /**
- * @typedef {import("@prismicio/client").Content.FaqSlice} FaqSlice
- * @typedef {import("@prismicio/react").SliceComponentProps<FaqSlice>} FaqProps
- * @param {FaqProps}
+ * @typedef {import("@prismicio/client").Content.FaqWIthTitleSlice} FaqWIthTitleSlice
+ * @typedef {import("@prismicio/react").SliceComponentProps<FaqWIthTitleSlice>} FaqWIthTitleProps
+ * @param {FaqWIthTitleProps}
  */
-const Faqs = ({ slice }) => {
+const FaqWIthTitle = ({ slice }) => {
   return (
     <section
       data-slice-type={slice.slice_type}
@@ -15,13 +14,11 @@ const Faqs = ({ slice }) => {
     >
       <div className='my-10 md:my-24'>
         <div className='container'>
-          <h1 className='text-center'>{slice.primary.title}</h1>
-          <RichText
-            field={slice.primary.text}
-            paragraphClassName='text-center'
-          />
-
-          <div className='hs-accordion-group mt-16 max-w-[1000px] mx-auto'>
+          <div className=' mt-16 max-w-[1000px] mx-auto'>
+            <h2> {slice.primary.title} </h2>
+            <RichText field={slice.primary.text} />
+          </div>
+          <div className='hs-accordion-group mt-8 max-w-[1000px] mx-auto'>
             {slice.items.map((item, i) => (
               <Faq
                 key={i}
@@ -39,4 +36,4 @@ const Faqs = ({ slice }) => {
   );
 };
 
-export default Faqs;
+export default FaqWIthTitle;

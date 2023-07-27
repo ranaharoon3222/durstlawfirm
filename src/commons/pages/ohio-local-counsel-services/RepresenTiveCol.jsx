@@ -3,15 +3,15 @@ import React from 'react';
 
 const RepresenTiveCol = () => {
   return (
-    <section className='my-28'>
+    <div className='my-28'>
       <div className='container'>
-        <div className='grid md:grid-cols-2 gap-10 md:gap-16'>
+        <div className='grid gap-10 md:grid-cols-2 md:gap-16'>
           <div className='max-w-[700px]'>
             <h1>
               <span className='text-primary'> Representative </span> Ohio Local
               Counsel Matters
             </h1>
-            <ul className='listing mt-5'>
+            <ul className='mt-5 listing'>
               <li className='mb-5'>
                 Represented publicly traded Korean pharmaceutical company in
                 civil action removed to the Southern District of Ohio, Western
@@ -45,7 +45,7 @@ const RepresenTiveCol = () => {
 
           <div>
             <CustomImg img='./images/representativeimg.jpg' />
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-10 my-10'>
+            <div className='grid grid-cols-1 gap-10 my-10 md:grid-cols-2'>
               <div>
                 <h1>Ohio State & Federal Courts</h1>
                 <p>
@@ -75,7 +75,7 @@ const RepresenTiveCol = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

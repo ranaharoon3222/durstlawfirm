@@ -12,41 +12,6 @@ import Link from 'next/link';
 import RichText from '@/commons/RichText';
 
 const CommercialBanner = ({ slice }) => {
-  const features = [
-    {
-      title: 'Partnership and Joint Venture Dispute Litigation',
-    },
-    {
-      title: 'Financial Services Litigation',
-    },
-    {
-      title: 'E-Commerce Litigation',
-    },
-    {
-      title: 'Noncompete Litigation',
-    },
-    {
-      title: 'Trade Secret Litigation',
-    },
-    {
-      title: 'Uniform Commercial Code (UCC) Litigation',
-    },
-    {
-      title: 'Employment Defense Litigation',
-      href: '#',
-    },
-    {
-      title: 'Real Estate Litigation',
-    },
-    {
-      title: 'Corporate Governance Litigation',
-    },
-    {
-      title: 'Appeals',
-      href: '#',
-    },
-  ];
-
   return (
     <section
       data-slice-type={slice.slice_type}

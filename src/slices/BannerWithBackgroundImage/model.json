@@ -1,8 +1,8 @@
 {
-  "id": "faq",
+  "id": "banner_with_background_image",
   "type": "SharedSlice",
-  "name": "Faq",
-  "description": "Faq",
+  "name": "BannerWithBackgroundImage",
+  "description": "BannerWithBackgroundImage",
   "variations": [
     {
       "id": "default",
@@ -12,9 +12,26 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "title": {
+        "bg_image": {
+          "type": "Image",
+          "config": {
+            "label": "background imge",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "subtitle": {
           "type": "Text",
-          "config": { "label": "title", "placeholder": "" }
+          "config": { "label": "subtitle", "placeholder": "" }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading1,strong,em"
+          }
         },
         "text": {
           "type": "StructuredText",
@@ -24,28 +41,13 @@
             "allowTargetBlank": true,
             "multi": "paragraph,strong,em,list-item"
           }
+        },
+        "image": {
+          "type": "Image",
+          "config": { "label": "image", "constraint": {}, "thumbnails": [] }
         }
       },
-      "items": {
-        "title": {
-          "type": "StructuredText",
-          "config": {
-            "label": "title",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,strong,em"
-          }
-        },
-        "text": {
-          "type": "StructuredText",
-          "config": {
-            "label": "text",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,strong,em,list-item,hyperlink"
-          }
-        }
-      }
+      "items": {}
     }
   ]
 }

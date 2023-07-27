@@ -18,7 +18,11 @@ type PageDocumentDataSlicesSlice =
   | RepuTationBlockSlice
   | SimpleTwoColumnSlice
   | FaqSlice
-  | ColumnWithFaqSlice;
+  | ColumnWithFaqSlice
+  | RepresentativeColumnSlice
+  | BannerWithBackgroundImageSlice
+  | FaqWIthTitleSlice
+  | RichTextWithButtonSlice;
 
 /**
  * Content for page documents
@@ -170,6 +174,93 @@ export type SettingsDocument<Lang extends string = string> =
   >;
 
 export type AllDocumentTypes = PageDocument | SettingsDocument;
+
+/**
+ * Primary content in *BannerWithBackgroundImage → Primary*
+ */
+export interface BannerWithBackgroundImageSliceDefaultPrimary {
+  /**
+   * background imge field in *BannerWithBackgroundImage → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: banner_with_background_image.primary.bg_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  bg_image: prismic.ImageField<never>;
+
+  /**
+   * subtitle field in *BannerWithBackgroundImage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: banner_with_background_image.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitle: prismic.KeyTextField;
+
+  /**
+   * title field in *BannerWithBackgroundImage → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: banner_with_background_image.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * text field in *BannerWithBackgroundImage → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: banner_with_background_image.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+
+  /**
+   * image field in *BannerWithBackgroundImage → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: banner_with_background_image.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for BannerWithBackgroundImage Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BannerWithBackgroundImageSliceDefault =
+  prismic.SharedSliceVariation<
+    "default",
+    Simplify<BannerWithBackgroundImageSliceDefaultPrimary>,
+    never
+  >;
+
+/**
+ * Slice variation for *BannerWithBackgroundImage*
+ */
+type BannerWithBackgroundImageSliceVariation =
+  BannerWithBackgroundImageSliceDefault;
+
+/**
+ * BannerWithBackgroundImage Shared Slice
+ *
+ * - **API ID**: `banner_with_background_image`
+ * - **Description**: BannerWithBackgroundImage
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BannerWithBackgroundImageSlice = prismic.SharedSlice<
+  "banner_with_background_image",
+  BannerWithBackgroundImageSliceVariation
+>;
 
 /**
  * Primary content in *ClientsRepresent → Primary*
@@ -605,6 +696,86 @@ type FaqSliceVariation = FaqSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type FaqSlice = prismic.SharedSlice<"faq", FaqSliceVariation>;
+
+/**
+ * Primary content in *FaqWIthTitle → Primary*
+ */
+export interface FaqWIthTitleSliceDefaultPrimary {
+  /**
+   * title field in *FaqWIthTitle → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq_w_ith_title.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * text field in *FaqWIthTitle → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq_w_ith_title.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *FaqWIthTitle → Items*
+ */
+export interface FaqWIthTitleSliceDefaultItem {
+  /**
+   * title field in *FaqWIthTitle → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq_w_ith_title.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * text field in *FaqWIthTitle → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq_w_ith_title.items[].text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+}
+
+/**
+ * Default variation for FaqWIthTitle Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FaqWIthTitleSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FaqWIthTitleSliceDefaultPrimary>,
+  Simplify<FaqWIthTitleSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *FaqWIthTitle*
+ */
+type FaqWIthTitleSliceVariation = FaqWIthTitleSliceDefault;
+
+/**
+ * FaqWIthTitle Shared Slice
+ *
+ * - **API ID**: `faq_w_ith_title`
+ * - **Description**: FaqWIthTitle
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FaqWIthTitleSlice = prismic.SharedSlice<
+  "faq_w_ith_title",
+  FaqWIthTitleSliceVariation
+>;
 
 /**
  * Primary content in *HeaderWithButtons → Primary*
@@ -1208,6 +1379,106 @@ export type PreFooterSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *RepresentativeColumn → Primary*
+ */
+export interface RepresentativeColumnSliceDefaultPrimary {
+  /**
+   * title field in *RepresentativeColumn → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: representative_column.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * text field in *RepresentativeColumn → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: representative_column.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+
+  /**
+   * image field in *RepresentativeColumn → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: representative_column.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * bottom image title field in *RepresentativeColumn → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: representative_column.primary.image_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  image_title: prismic.KeyTextField;
+
+  /**
+   * Bottom image text field in *RepresentativeColumn → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: representative_column.primary.bottom_image_text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  bottom_image_text: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *RepresentativeColumn → Items*
+ */
+export interface RepresentativeColumnSliceDefaultItem {
+  /**
+   * state field in *RepresentativeColumn → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: representative_column.items[].state
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  state: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for RepresentativeColumn Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type RepresentativeColumnSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<RepresentativeColumnSliceDefaultPrimary>,
+  Simplify<RepresentativeColumnSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *RepresentativeColumn*
+ */
+type RepresentativeColumnSliceVariation = RepresentativeColumnSliceDefault;
+
+/**
+ * RepresentativeColumn Shared Slice
+ *
+ * - **API ID**: `representative_column`
+ * - **Description**: RepresentativeColumn
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type RepresentativeColumnSlice = prismic.SharedSlice<
+  "representative_column",
+  RepresentativeColumnSliceVariation
+>;
+
+/**
  * Primary content in *RepuTationBlock → Primary*
  */
 export interface RepuTationBlockSliceDefaultPrimary {
@@ -1355,6 +1626,192 @@ type RepuTationBlockSliceVariation = RepuTationBlockSliceDefault;
 export type RepuTationBlockSlice = prismic.SharedSlice<
   "repu_tation_block",
   RepuTationBlockSliceVariation
+>;
+
+/**
+ * Primary content in *Resources → Primary*
+ */
+export interface ResourcesSliceDefaultPrimary {
+  /**
+   * title field in *Resources → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: resources.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * column 1 title field in *Resources → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: resources.primary.column_1_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  column_1_title: prismic.KeyTextField;
+
+  /**
+   * column 2 title field in *Resources → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: resources.primary.column_2_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  column_2_title: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Resources → Items*
+ */
+export interface ResourcesSliceDefaultItem {
+  /**
+   * column field in *Resources → Items*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: resources.items[].column
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  column: prismic.SelectField<"coluimn_1" | "coluimn_2">;
+
+  /**
+   * title field in *Resources → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: resources.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * link field in *Resources → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: resources.items[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
+/**
+ * Default variation for Resources Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ResourcesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ResourcesSliceDefaultPrimary>,
+  Simplify<ResourcesSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Resources*
+ */
+type ResourcesSliceVariation = ResourcesSliceDefault;
+
+/**
+ * Resources Shared Slice
+ *
+ * - **API ID**: `resources`
+ * - **Description**: Resources
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ResourcesSlice = prismic.SharedSlice<
+  "resources",
+  ResourcesSliceVariation
+>;
+
+/**
+ * Primary content in *RichTextWithButton → Primary*
+ */
+export interface RichTextWithButtonSliceDefaultPrimary {
+  /**
+   * text align field in *RichTextWithButton → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: left
+   * - **API ID Path**: rich_text_with_button.primary.text_align
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  text_align: prismic.SelectField<"left" | "center", "filled">;
+
+  /**
+   * title field in *RichTextWithButton → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: rich_text_with_button.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * text field in *RichTextWithButton → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: rich_text_with_button.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+
+  /**
+   * button text field in *RichTextWithButton → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: rich_text_with_button.primary.button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
+   * button link field in *RichTextWithButton → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: rich_text_with_button.primary.button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_link: prismic.LinkField;
+}
+
+/**
+ * Default variation for RichTextWithButton Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type RichTextWithButtonSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<RichTextWithButtonSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *RichTextWithButton*
+ */
+type RichTextWithButtonSliceVariation = RichTextWithButtonSliceDefault;
+
+/**
+ * RichTextWithButton Shared Slice
+ *
+ * - **API ID**: `rich_text_with_button`
+ * - **Description**: RichTextWithButton
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type RichTextWithButtonSlice = prismic.SharedSlice<
+  "rich_text_with_button",
+  RichTextWithButtonSliceVariation
 >;
 
 /**
@@ -1592,6 +2049,9 @@ declare module "@prismicio/client" {
       SettingsDocument,
       SettingsDocumentData,
       AllDocumentTypes,
+      BannerWithBackgroundImageSlice,
+      BannerWithBackgroundImageSliceVariation,
+      BannerWithBackgroundImageSliceDefault,
       ClientsRepresentSlice,
       ClientsRepresentSliceVariation,
       ClientsRepresentSliceDefault,
@@ -1608,6 +2068,9 @@ declare module "@prismicio/client" {
       FaqSlice,
       FaqSliceVariation,
       FaqSliceDefault,
+      FaqWIthTitleSlice,
+      FaqWIthTitleSliceVariation,
+      FaqWIthTitleSliceDefault,
       HeaderWithButtonsSlice,
       HeaderWithButtonsSliceVariation,
       HeaderWithButtonsSliceDefault,
@@ -1623,9 +2086,18 @@ declare module "@prismicio/client" {
       PreFooterSlice,
       PreFooterSliceVariation,
       PreFooterSliceDefault,
+      RepresentativeColumnSlice,
+      RepresentativeColumnSliceVariation,
+      RepresentativeColumnSliceDefault,
       RepuTationBlockSlice,
       RepuTationBlockSliceVariation,
       RepuTationBlockSliceDefault,
+      ResourcesSlice,
+      ResourcesSliceVariation,
+      ResourcesSliceDefault,
+      RichTextWithButtonSlice,
+      RichTextWithButtonSliceVariation,
+      RichTextWithButtonSliceDefault,
       SimpleTwoColumnSlice,
       SimpleTwoColumnSliceVariation,
       SimpleTwoColumnSliceDefault,
