@@ -44,7 +44,8 @@
             "rich_text_with_button": { "type": "SharedSlice" },
             "appeal_section": { "type": "SharedSlice" },
             "icon_box": { "type": "SharedSlice" },
-            "results": { "type": "SharedSlice" }
+            "results": { "type": "SharedSlice" },
+            "team": { "type": "SharedSlice" }
           }
         }
       }
