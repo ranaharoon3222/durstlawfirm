@@ -1,0 +1,101 @@
+{
+  "id": "single_team_page",
+  "type": "SharedSlice",
+  "name": "SingleTeamPage",
+  "description": "SingleTeamPage",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "image": {
+          "type": "Image",
+          "config": { "label": "image", "constraint": {}, "thumbnails": [] }
+        },
+        "position": {
+          "type": "Text",
+          "config": { "label": "position", "placeholder": "" }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,heading1,strong,em"
+          }
+        },
+        "call_text": {
+          "type": "Text",
+          "config": { "label": "call text", "placeholder": "" }
+        },
+        "cal_link": {
+          "type": "Link",
+          "config": { "label": "cal link", "placeholder": "", "select": null }
+        },
+        "email_text": {
+          "type": "Text",
+          "config": { "label": "email text", "placeholder": "" }
+        },
+        "email_link": {
+          "type": "Link",
+          "config": { "label": "email link", "placeholder": "", "select": null }
+        },
+        "body_text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "body text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "education": {
+          "type": "StructuredText",
+          "config": {
+            "label": "education",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "admissions": {
+          "type": "StructuredText",
+          "config": {
+            "label": "admissions",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "leadership": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Leadership Professional",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      },
+      "items": {
+        "service_text": {
+          "type": "Text",
+          "config": { "label": "service text", "placeholder": "" }
+        },
+        "service_link": {
+          "type": "Link",
+          "config": {
+            "label": "service link",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      }
+    }
+  ]
+}

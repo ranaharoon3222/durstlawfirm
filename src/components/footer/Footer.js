@@ -7,20 +7,20 @@ const Footer = () => {
       title: 'Quick Links',
       links: [
         {
-          name: 'Transportation Accidents',
+          name: 'Commercial Litigation ',
+          link: '/commercial-litigation',
+        },
+        {
+          name: 'Appellate Practice ',
+          link: '/appeals',
+        },
+        {
+          name: 'Private Client Services ',
           link: '#',
         },
         {
-          name: 'Personal Injury',
-          link: '#',
-        },
-        {
-          name: 'Commercial Litigation',
-          link: '#',
-        },
-        {
-          name: 'Ohio Local Counsel',
-          link: '#',
+          name: 'Ohio Local Counsel Services',
+          link: '/ohio-local-counsel-services',
         },
       ],
     },
@@ -29,19 +29,19 @@ const Footer = () => {
       links: [
         {
           name: 'Attorneys',
-          link: '#',
+          link: '/team',
         },
         {
-          name: 'Contact',
-          link: '#',
+          name: 'Offices',
+          link: '/offices',
         },
         {
-          name: 'Appeals',
+          name: 'Careers',
           link: '#',
         },
         {
           name: 'Blog',
-          link: '#',
+          link: '/blog',
         },
       ],
     },
@@ -53,12 +53,15 @@ const Footer = () => {
           <div className='grid grid-cols-1 gap-8 lg:grid-cols-3'>
             <div>
               <div className='flex justify-center sm:justify-start'>
-                <img src='./images/footer-logo.svg' className='max-w-[190px]' />
+                <img
+                  src='./images/Durst-Main-white.svg'
+                  className='max-w-[190px]'
+                />
               </div>
               <div className='text-left'>
                 <ul className='mt-3 space-y-4 text-sm'>
                   <li>
-                    <a
+                    {/* <a
                       className='flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end'
                       href='/'
                     >
@@ -80,7 +83,7 @@ const Footer = () => {
                       <span className='flex-1 ml-3 text-lg not-italic'>
                         office@durstlawfirm.com
                       </span>
-                    </a>
+                    </a> */}
                   </li>
 
                   <li>
@@ -138,7 +141,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className='grid grid-cols-2 gap-8 md:grid-cols-2 '>
+            <div className='grid grid-cols-2 col-span-2 gap-8 md:grid-cols-2 '>
               {menus.map((item) => (
                 <div className='text-left ' key={item.title}>
                   <h2 className='text-xl font-medium text-white'>
@@ -160,33 +163,17 @@ const Footer = () => {
                 </div>
               ))}
             </div>
-
-            <div>
-              <h2 className='text-xl font-medium text-white'>
-                Legal Disclaimer
-              </h2>
-
-              <p className='text-sm leading-6 mt-9'>
-                The choice of a lawyer is an important decision and should not
-                be based solely upon advertisements. The information you obtain
-                from this site is not, nor is it intended to be, legal advice.
-                We invite you to contact us. However, we cannot and do not
-                represent you until our client intake process is completed.
-                Please do not send us confidential information until such time
-                as an attorney-client relationship has been established.
-              </p>
-            </div>
           </div>
 
           <div className='pt-6 mt-12 border-t border-gray-100'>
             <div className='text-center sm:flex sm:justify-between sm:text-left'>
-              <p className='text-sm '>
+              {/* <p className='text-sm '>
                 <span className='block sm:inline'>Site By </span>
 
                 <a className='inline-block underline transition ' href='/'>
                   Legal Back Office
                 </a>
-              </p>
+              </p> */}
 
               <p className='mt-4 text-sm sm:order-first sm:mt-0'>
                 &copy; The Durst Law Firm 2023 – All Rights Reserved

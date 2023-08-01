@@ -8,17 +8,17 @@ const Header = () => {
       link: '/',
       sub: [
         {
-          name: 'Commercial Litigation',
+          name: 'Litigation',
           link: '/commercial-litigation/',
         },
-        {
-          name: 'Transportation Accidents',
-          link: '/transportation/',
-        },
-        {
-          name: 'Personal Injury',
-          link: '/personal-injury/',
-        },
+        // {
+        //   name: 'Transportation Accidents',
+        //   link: '/transportation/',
+        // },
+        // {
+        //   name: 'Personal Injury',
+        //   link: '/personal-injury/',
+        // },
         {
           name: 'Ohio Local Counsel Services',
           link: '/ohio-local-counsel-services/',
@@ -35,11 +35,15 @@ const Header = () => {
       sub: [
         {
           name: 'Alex J Durst',
-          link: '/alex-j-durst/',
+          link: '/team/alex-j-durst/',
         },
         {
-          name: 'Logan J Durst',
-          link: '/logan-f-kline/',
+          name: 'Paul R. Kerridge',
+          link: '/team/paul-kerridge',
+        },
+        {
+          name: 'Edward A. Khatskin',
+          link: '/team/edward-a-khatskin',
         },
       ],
     },
@@ -48,16 +52,20 @@ const Header = () => {
       link: '/results/',
     },
     {
-      name: 'Testimonials',
-      link: '/testimonials/',
+      name: 'Offices',
+      link: '/offices/',
     },
+    {
+      name: 'Careers ',
+      link: '/careers/',
+    },
+    // {
+    //   name: 'Testimonials',
+    //   link: '/testimonials/',
+    // },
     {
       name: 'Blog',
       link: '/blog/',
-    },
-    {
-      name: 'Contact',
-      link: '/contact/',
     },
   ];
 

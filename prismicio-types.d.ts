@@ -88,7 +88,8 @@ type PageDocumentDataSlicesSlice =
   | AppealSectionSlice
   | IconBoxSlice
   | ResultsSlice
-  | TeamSlice;
+  | TeamSlice
+  | SingleTeamPageSlice;
 
 /**
  * Content for page documents
@@ -239,7 +240,84 @@ export type SettingsDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = BlogDocument | PageDocument | SettingsDocument;
+type TeamDocumentDataSlicesSlice = SingleTeamPageSlice;
+
+/**
+ * Content for team documents
+ */
+interface TeamDocumentData {
+  /**
+   * title field in *team*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Slice Zone field in *team*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<TeamDocumentDataSlicesSlice>
+  /**
+   * Meta Description field in *team*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: team.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *team*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+
+  /**
+   * Meta Title field in *team*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: team.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_title: prismic.KeyTextField;
+}
+
+/**
+ * team document from Prismic
+ *
+ * - **API ID**: `team`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type TeamDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<TeamDocumentData>, "team", Lang>;
+
+export type AllDocumentTypes =
+  | BlogDocument
+  | PageDocument
+  | SettingsDocument
+  | TeamDocument;
 
 /**
  * Primary content in *AppealSection → Primary*
@@ -2232,6 +2310,176 @@ export type SimpleTwoColumnSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *SingleTeamPage → Primary*
+ */
+export interface SingleTeamPageSliceDefaultPrimary {
+  /**
+   * image field in *SingleTeamPage → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: single_team_page.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * position field in *SingleTeamPage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: single_team_page.primary.position
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  position: prismic.KeyTextField;
+
+  /**
+   * title field in *SingleTeamPage → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: single_team_page.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * call text field in *SingleTeamPage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: single_team_page.primary.call_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  call_text: prismic.KeyTextField;
+
+  /**
+   * cal link field in *SingleTeamPage → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: single_team_page.primary.cal_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  cal_link: prismic.LinkField;
+
+  /**
+   * email text field in *SingleTeamPage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: single_team_page.primary.email_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  email_text: prismic.KeyTextField;
+
+  /**
+   * email link field in *SingleTeamPage → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: single_team_page.primary.email_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  email_link: prismic.LinkField;
+
+  /**
+   * body text field in *SingleTeamPage → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: single_team_page.primary.body_text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  body_text: prismic.RichTextField;
+
+  /**
+   * education field in *SingleTeamPage → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: single_team_page.primary.education
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  education: prismic.RichTextField;
+
+  /**
+   * admissions field in *SingleTeamPage → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: single_team_page.primary.admissions
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  admissions: prismic.RichTextField;
+
+  /**
+   * Leadership Professional field in *SingleTeamPage → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: single_team_page.primary.leadership
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  leadership: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *SingleTeamPage → Items*
+ */
+export interface SingleTeamPageSliceDefaultItem {
+  /**
+   * service text field in *SingleTeamPage → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: single_team_page.items[].service_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  service_text: prismic.KeyTextField;
+
+  /**
+   * service link field in *SingleTeamPage → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: single_team_page.items[].service_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  service_link: prismic.LinkField;
+}
+
+/**
+ * Default variation for SingleTeamPage Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SingleTeamPageSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SingleTeamPageSliceDefaultPrimary>,
+  Simplify<SingleTeamPageSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *SingleTeamPage*
+ */
+type SingleTeamPageSliceVariation = SingleTeamPageSliceDefault;
+
+/**
+ * SingleTeamPage Shared Slice
+ *
+ * - **API ID**: `single_team_page`
+ * - **Description**: SingleTeamPage
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SingleTeamPageSlice = prismic.SharedSlice<
+  "single_team_page",
+  SingleTeamPageSliceVariation
+>;
+
+/**
  * Primary content in *Team → Items*
  */
 export interface TeamSliceDefaultItem {
@@ -2505,6 +2753,8 @@ declare module "@prismicio/client" {
       PageDocumentData,
       SettingsDocument,
       SettingsDocumentData,
+      TeamDocument,
+      TeamDocumentData,
       AllDocumentTypes,
       AppealSectionSlice,
       AppealSectionSliceVariation,
@@ -2567,6 +2817,9 @@ declare module "@prismicio/client" {
       SimpleTwoColumnSlice,
       SimpleTwoColumnSliceVariation,
       SimpleTwoColumnSliceDefault,
+      SingleTeamPageSlice,
+      SingleTeamPageSliceVariation,
+      SingleTeamPageSliceDefault,
       TeamSlice,
       TeamSliceVariation,
       TeamSliceDefault,

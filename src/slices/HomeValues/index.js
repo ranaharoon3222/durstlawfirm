@@ -19,22 +19,20 @@ const HomeValues = ({ slice }) => {
         <div className='container'>
           <div className='grid md:grid-cols-2 mt-[100px] gap-12'>
             <div className='grid items-center gap-10 md:grid-cols-2 place-content-center'>
-              <div>
-                {slice.items.slice(0, 2).map((item, index) => {
-                  return (
-                    <Box
-                      key={index}
-                      title={item.title}
-                      name={item.name}
-                      position={item.position}
-                      icon={item.icon.url}
-                    >
-                      <Paragraph field={item.text} />
-                    </Box>
-                  );
-                })}{' '}
-              </div>
-              <div>
+              {slice.items.map((item, index) => {
+                return (
+                  <Box
+                    key={index}
+                    title={item.title}
+                    name={item.name}
+                    position={item.position}
+                    icon={item.icon.url}
+                  >
+                    <Paragraph field={item.text} />
+                  </Box>
+                );
+              })}{' '}
+              {/* <div>
                 {slice.items.slice(2, 4).map((item, index) => {
                   return (
                     <Box
@@ -48,7 +46,7 @@ const HomeValues = ({ slice }) => {
                     </Box>
                   );
                 })}{' '}
-              </div>
+              </div> */}
             </div>
 
             <div className=''>

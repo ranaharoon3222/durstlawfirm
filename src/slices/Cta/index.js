@@ -6,13 +6,14 @@ import RichText from '@/commons/RichText';
  * @typedef {import("@prismicio/react").SliceComponentProps<CtaSlice>} CtaProps
  * @param {CtaProps}
  */
-const Cta = ({ slice }) => {
+const Cta = ({ slice, context }) => {
+  console.log(context, 'c');
   return (
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <FooterCta image={slice.primary.image.url}>
+      <FooterCta image={slice.primary.image.url} logo={context.logo.url}>
         <RichText
           field={slice.primary.title}
           heading1={

@@ -1,0 +1,156 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1560762484-813fc97650a0",
+					"width": 3344,
+					"height": 2509
+				},
+				"url": "https://images.unsplash.com/photo-1560762484-813fc97650a0",
+				"width": 3344,
+				"height": 2509,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"position": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Principal Attorney"
+			},
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Alexander J. Durst, ESQ",
+							"spans": [
+								{
+									"type": "strong",
+									"start": 0,
+									"end": 23
+								}
+							]
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"call_text": {
+				"__TYPE__": "FieldContent",
+				"value": "eventually",
+				"type": "Text"
+			},
+			"cal_link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com"
+				}
+			},
+			"email_text": {
+				"__TYPE__": "FieldContent",
+				"value": "student",
+				"type": "Text"
+			},
+			"email_link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io"
+				}
+			},
+			"body_text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Alex J. Durst is a civil trial attorney with more than ten years of experience handling commercial litigation matters for corporate clients as well as complex transportation, products liability and catastrophic personal injury matters for individuals.",
+							"spans": [
+								{
+									"type": "strong",
+									"start": 0,
+									"end": 251
+								}
+							]
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"education": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Anim laboris eu ut elit exercitation proident id ut non laboris minim eiusmod minim adipisicing. Laboris Lorem officia fugiat sint officia enim aliqua qui aute est aute fugiat esse."
+						}
+					}
+				]
+			},
+			"admissions": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Sint velit ea excepteur in et deserunt proident quis enim enim est do occaecat. Qui nulla consequat proident fugiat consectetur incididunt sunt qui commodo exercitation. Do nisi amet in veniam reprehenderit dolore."
+						}
+					}
+				]
+			},
+			"leadership": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Eu et est in excepteur adipisicing id laborum consequat laboris. Consectetur eu enim proident ipsum dolor deserunt sunt sint dolore Lorem proident. Eiusmod culpa laborum do elit in et quis elit adipisicing veniam aute."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"service_text",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "rest",
+							"type": "Text"
+						}
+					],
+					[
+						"service_link",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "http://twitter.com"
+							}
+						}
+					]
+				]
+			}
+		]
+	}
+]

@@ -45,7 +45,8 @@
             "appeal_section": { "type": "SharedSlice" },
             "icon_box": { "type": "SharedSlice" },
             "results": { "type": "SharedSlice" },
-            "team": { "type": "SharedSlice" }
+            "team": { "type": "SharedSlice" },
+            "single_team_page": { "type": "SharedSlice" }
           }
         }
       }

@@ -25,6 +25,7 @@ export const components = {
   results: dynamic(() => import("./PageHeadings")),
   rich_text_with_button: dynamic(() => import("./RichTextWithButton")),
   simple_two_column: dynamic(() => import("./SimpleTwoColumn")),
+  single_team_page: dynamic(() => import("./SingleTeamPage")),
   team: dynamic(() => import("./Team")),
   tick_list: dynamic(() => import("./TickList")),
   two_col_with_image: dynamic(() => import("./TwoColWithImage")),

@@ -28,7 +28,7 @@ const HomeBaneer = ({ slice }) => {
               <h4 className='pb-5 italic font-semibold text-primary'>
                 {slice.primary.subtitle}
               </h4>
-              <h1 className='text-[2rem] font-medium md:leading-[4.5vw]  md:text-[4vw]'>
+              <h1 className='text-[2rem] font-medium md:leading-[1.3]  md:text-[3.5rem]'>
                 {slice.primary.title}
               </h1>
 
