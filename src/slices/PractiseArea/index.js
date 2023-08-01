@@ -38,7 +38,7 @@ const PractiseArea = ({ slice }) => {
           <div className='grid gap-10 pb-10 md:grid-cols-3'>
             {slice.items.map((item, i) => {
               return (
-                <Link key={i} href={'#'} className='block '>
+                <Link key={i} href={item.link.url} className='block '>
                   <div
                     className={`py-20  bg-center bg-cover hover:-translate-y-6 min-h-[17rem]  hover:after:four-box-hover transition-all   flex items-center`}
                     style={{
