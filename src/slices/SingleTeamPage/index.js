@@ -14,7 +14,10 @@ const SingleTeamPage = ({ slice }) => {
     >
       <BannerV2
         title={
-          <RichText field={slice.primary.title} heading1={'-mt-5 -mb-5'} />
+          <RichText
+            field={slice.primary.title}
+            heading1={'md:-mt-5 md:-mb-5'}
+          />
         }
         subTitle={slice.primary.position}
         img={slice.primary.image.url}
