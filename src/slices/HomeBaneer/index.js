@@ -32,7 +32,10 @@ const HomeBaneer = ({ slice }) => {
                 {slice.primary.title}
               </h1>
 
-              <Paragraph field={slice.primary.text}></Paragraph>
+              <Paragraph
+                field={slice.primary.text}
+                className={'text-left'}
+              ></Paragraph>
 
               <div className='flex flex-wrap justify-center mt-10 md:justify-normal md:flex-nowrap '>
                 <Button

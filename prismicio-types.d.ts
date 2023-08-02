@@ -4,7 +4,7 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type BlogDocumentDataSlicesSlice = never;
+type BlogDocumentDataSlicesSlice = BlogPostSlice;
 
 /**
  * Content for blog documents
@@ -89,7 +89,9 @@ type PageDocumentDataSlicesSlice =
   | IconBoxSlice
   | ResultsSlice
   | TeamSlice
-  | SingleTeamPageSlice;
+  | SingleTeamPageSlice
+  | PageHeadingBannerSlice
+  | OfficesSlice;
 
 /**
  * Content for page documents
@@ -479,6 +481,106 @@ type BannerWithBackgroundImageSliceVariation =
 export type BannerWithBackgroundImageSlice = prismic.SharedSlice<
   "banner_with_background_image",
   BannerWithBackgroundImageSliceVariation
+>;
+
+/**
+ * Primary content in *BlogPost → Primary*
+ */
+export interface BlogPostSliceDefaultPrimary {
+  /**
+   * title field in *BlogPost → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * published at field in *BlogPost → Primary*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.primary.published_at
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  published_at: prismic.DateField;
+
+  /**
+   * short text field in *BlogPost → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.primary.short_text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  short_text: prismic.RichTextField;
+
+  /**
+   * featured image field in *BlogPost → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.primary.featured_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  featured_image: prismic.ImageField<never>;
+
+  /**
+   * body text field in *BlogPost → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.primary.body_text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  body_text: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *BlogPost → Items*
+ */
+export interface BlogPostSliceDefaultItem {
+  /**
+   * tag field in *BlogPost → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.items[].tag
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  tag: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for BlogPost Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BlogPostSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<BlogPostSliceDefaultPrimary>,
+  Simplify<BlogPostSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *BlogPost*
+ */
+type BlogPostSliceVariation = BlogPostSliceDefault;
+
+/**
+ * BlogPost Shared Slice
+ *
+ * - **API ID**: `blog_post`
+ * - **Description**: BlogPost
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BlogPostSlice = prismic.SharedSlice<
+  "blog_post",
+  BlogPostSliceVariation
 >;
 
 /**
@@ -1496,6 +1598,156 @@ type IconBoxSliceVariation = IconBoxSliceDefault;
 export type IconBoxSlice = prismic.SharedSlice<
   "icon_box",
   IconBoxSliceVariation
+>;
+
+/**
+ * Primary content in *Offices → Items*
+ */
+export interface OfficesSliceDefaultItem {
+  /**
+   * link sub page field in *Offices → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: offices.items[].link_sub_page
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link_sub_page: prismic.LinkField;
+
+  /**
+   * image field in *Offices → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: offices.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * title field in *Offices → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: offices.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * short text field in *Offices → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: offices.items[].short_text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  short_text: prismic.RichTextField;
+
+  /**
+   * address field in *Offices → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: offices.items[].address
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  address: prismic.RichTextField;
+
+  /**
+   * phone field in *Offices → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: offices.items[].phone
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  phone: prismic.RichTextField;
+
+  /**
+   * Directions field in *Offices → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: offices.items[].directions
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  directions: prismic.LinkField;
+}
+
+/**
+ * Default variation for Offices Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type OfficesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  Simplify<OfficesSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Offices*
+ */
+type OfficesSliceVariation = OfficesSliceDefault;
+
+/**
+ * Offices Shared Slice
+ *
+ * - **API ID**: `offices`
+ * - **Description**: Offices
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type OfficesSlice = prismic.SharedSlice<
+  "offices",
+  OfficesSliceVariation
+>;
+
+/**
+ * Primary content in *PageHeadingBanner → Primary*
+ */
+export interface PageHeadingBannerSliceDefaultPrimary {
+  /**
+   * Title field in *PageHeadingBanner → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page_heading_banner.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+}
+
+/**
+ * Default variation for PageHeadingBanner Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PageHeadingBannerSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<PageHeadingBannerSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *PageHeadingBanner*
+ */
+type PageHeadingBannerSliceVariation = PageHeadingBannerSliceDefault;
+
+/**
+ * PageHeadingBanner Shared Slice
+ *
+ * - **API ID**: `page_heading_banner`
+ * - **Description**: PageHeadingBanner
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PageHeadingBannerSlice = prismic.SharedSlice<
+  "page_heading_banner",
+  PageHeadingBannerSliceVariation
 >;
 
 /**
@@ -2762,6 +3014,9 @@ declare module "@prismicio/client" {
       BannerWithBackgroundImageSlice,
       BannerWithBackgroundImageSliceVariation,
       BannerWithBackgroundImageSliceDefault,
+      BlogPostSlice,
+      BlogPostSliceVariation,
+      BlogPostSliceDefault,
       ClientsRepresentSlice,
       ClientsRepresentSliceVariation,
       ClientsRepresentSliceDefault,
@@ -2793,6 +3048,12 @@ declare module "@prismicio/client" {
       IconBoxSlice,
       IconBoxSliceVariation,
       IconBoxSliceDefault,
+      OfficesSlice,
+      OfficesSliceVariation,
+      OfficesSliceDefault,
+      PageHeadingBannerSlice,
+      PageHeadingBannerSliceVariation,
+      PageHeadingBannerSliceDefault,
       PractiseAreaSlice,
       PractiseAreaSliceVariation,
       PractiseAreaSliceDefault,

@@ -1,0 +1,71 @@
+{
+  "id": "offices",
+  "type": "SharedSlice",
+  "name": "Offices",
+  "description": "Offices",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "link_sub_page": {
+          "type": "Link",
+          "config": {
+            "label": "link sub page",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": { "label": "image", "constraint": {}, "thumbnails": [] }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading2,strong,em"
+          }
+        },
+        "short_text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "short text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em"
+          }
+        },
+        "address": {
+          "type": "StructuredText",
+          "config": {
+            "label": "address",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em"
+          }
+        },
+        "phone": {
+          "type": "StructuredText",
+          "config": {
+            "label": "phone",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "directions": {
+          "type": "Link",
+          "config": { "label": "Directions", "placeholder": "", "select": null }
+        }
+      }
+    }
+  ]
+}

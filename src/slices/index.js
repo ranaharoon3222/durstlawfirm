@@ -7,6 +7,7 @@ export const components = {
   banner_with_background_image: dynamic(() =>
     import("./BannerWithBackgroundImage")
   ),
+  blog_post: dynamic(() => import("./BlogPost")),
   clients_represent: dynamic(() => import("./ClientsRepresent")),
   column_with_faq: dynamic(() => import("./ColumnWithFaq")),
   commercial_banner: dynamic(() => import("./CommercialBanner")),
@@ -17,6 +18,8 @@ export const components = {
   home_baneer: dynamic(() => import("./HomeBaneer")),
   home_values: dynamic(() => import("./HomeValues")),
   icon_box: dynamic(() => import("./IconBox")),
+  offices: dynamic(() => import("./Offices")),
+  page_heading_banner: dynamic(() => import("./PageHeadingBanner")),
   practise_area: dynamic(() => import("./PractiseArea")),
   pre_footer: dynamic(() => import("./PreFooter")),
   representative_column: dynamic(() => import("./RepresentativeColumn")),
