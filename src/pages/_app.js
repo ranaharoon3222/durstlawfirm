@@ -1,7 +1,7 @@
 ('use client;');
 
 import React, { useEffect } from 'react';
-import Footer from '@/components/footer/Footer';
+import Footer from '@/commons/Footer';
 import '@/styles/globals.css';
 import localFont from 'next/font/local';
 import Header from '@/commons/Header';

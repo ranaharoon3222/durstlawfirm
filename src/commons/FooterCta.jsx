@@ -25,6 +25,7 @@ const FooterCta = ({
           <div className=''>
             <div>
               <Button
+                link='tel:513-621-4999'
                 variant='primary-bg'
                 text='Call Us'
                 className='mx-auto mb-8 bg-primary hover:bg-secondry'
@@ -34,6 +35,7 @@ const FooterCta = ({
             </div>
 
             <Button
+              link='/offices'
               variant='primary-bg'
               text='Email Us'
               className='bg-white !text-secondry mx-auto hover:!text-white'

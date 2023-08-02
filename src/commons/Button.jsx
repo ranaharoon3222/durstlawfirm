@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Button = ({
   variant = 'primary-btn',
-  link = '#',
+  link = 'tel:513-621-4999',
   text,
   children,
   className,

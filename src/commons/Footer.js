@@ -37,7 +37,7 @@ const Footer = () => {
         },
         {
           name: 'Careers',
-          link: '#',
+          link: '/careers',
         },
         {
           name: 'Blog',
@@ -89,7 +89,7 @@ const Footer = () => {
                   <li>
                     <a
                       className='flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end'
-                      href='/'
+                      href='tel:513-621-4999'
                     >
                       <svg
                         xmlns='http://www.w3.org/2000/svg'

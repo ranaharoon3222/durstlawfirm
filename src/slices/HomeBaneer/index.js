@@ -39,6 +39,7 @@ const HomeBaneer = ({ slice }) => {
 
               <div className='flex flex-wrap justify-center mt-10 md:justify-normal md:flex-nowrap '>
                 <Button
+                  link='#PractiseArea'
                   text='Practice Areas'
                   variant='outline'
                   color={'black'}
