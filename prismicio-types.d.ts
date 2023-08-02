@@ -91,7 +91,8 @@ type PageDocumentDataSlicesSlice =
   | TeamSlice
   | SingleTeamPageSlice
   | PageHeadingBannerSlice
-  | OfficesSlice;
+  | OfficesSlice
+  | SingleOfficePageSlice;
 
 /**
  * Content for page documents
@@ -2562,6 +2563,101 @@ export type SimpleTwoColumnSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *SingleOfficePage → Primary*
+ */
+export interface SingleOfficePageSliceDefaultPrimary {
+  /**
+   * image field in *SingleOfficePage → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: single_office_page.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * title field in *SingleOfficePage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: single_office_page.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * address field in *SingleOfficePage → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: single_office_page.primary.address
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  address: prismic.RichTextField;
+
+  /**
+   * phone field in *SingleOfficePage → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: single_office_page.primary.phone
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  phone: prismic.RichTextField;
+
+  /**
+   * direction field in *SingleOfficePage → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: single_office_page.primary.direction
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  direction: prismic.LinkField;
+
+  /**
+   * body text field in *SingleOfficePage → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: single_office_page.primary.body_text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  body_text: prismic.RichTextField;
+}
+
+/**
+ * Default variation for SingleOfficePage Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SingleOfficePageSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SingleOfficePageSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *SingleOfficePage*
+ */
+type SingleOfficePageSliceVariation = SingleOfficePageSliceDefault;
+
+/**
+ * SingleOfficePage Shared Slice
+ *
+ * - **API ID**: `single_office_page`
+ * - **Description**: SingleOfficePage
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SingleOfficePageSlice = prismic.SharedSlice<
+  "single_office_page",
+  SingleOfficePageSliceVariation
+>;
+
+/**
  * Primary content in *SingleTeamPage → Primary*
  */
 export interface SingleTeamPageSliceDefaultPrimary {
@@ -3078,6 +3174,9 @@ declare module "@prismicio/client" {
       SimpleTwoColumnSlice,
       SimpleTwoColumnSliceVariation,
       SimpleTwoColumnSliceDefault,
+      SingleOfficePageSlice,
+      SingleOfficePageSliceVariation,
+      SingleOfficePageSliceDefault,
       SingleTeamPageSlice,
       SingleTeamPageSliceVariation,
       SingleTeamPageSliceDefault,

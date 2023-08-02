@@ -28,6 +28,7 @@ export const components = {
   results: dynamic(() => import("./PageHeadings")),
   rich_text_with_button: dynamic(() => import("./RichTextWithButton")),
   simple_two_column: dynamic(() => import("./SimpleTwoColumn")),
+  single_office_page: dynamic(() => import("./SingleOfficePage")),
   single_team_page: dynamic(() => import("./SingleTeamPage")),
   team: dynamic(() => import("./Team")),
   tick_list: dynamic(() => import("./TickList")),

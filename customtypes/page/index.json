@@ -48,7 +48,8 @@
             "team": { "type": "SharedSlice" },
             "single_team_page": { "type": "SharedSlice" },
             "page_heading_banner": { "type": "SharedSlice" },
-            "offices": { "type": "SharedSlice" }
+            "offices": { "type": "SharedSlice" },
+            "single_office_page": { "type": "SharedSlice" }
           }
         }
       }

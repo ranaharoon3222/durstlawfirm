@@ -1,0 +1,81 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"image": {
+				"origin": {
+					"id": "5JQH9Iqnm9o",
+					"url": "https://images.unsplash.com/photo-1619566636858-adf3ef46400b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw2fHxmcnVpdHxlbnwwfHx8fDE2OTA5ODA3MzZ8MA&ixlib=rb-4.0.3&q=85",
+					"width": 4608,
+					"height": 3072
+				},
+				"url": "https://images.unsplash.com/photo-1619566636858-adf3ef46400b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw2fHxmcnVpdHxlbnwwfHx8fDE2OTA5ODA3MzZ8MA&ixlib=rb-4.0.3&q=85",
+				"width": 4608,
+				"height": 3072,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Chicago"
+			},
+			"address": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "330 North Wabash Avenue, Suite 2800\nChicago, IL 60611\nUnited States",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"phone": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "+1.312.876.7700",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"direction": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com"
+				}
+			},
+			"body_text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Nisi cupidatat pariatur cillum cupidatat non non officia esse adipisicing ut amet nostrud. Voluptate pariatur nulla aliquip nisi eiusmod reprehenderit duis eu. Pariatur culpa laborum nostrud ut non."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
