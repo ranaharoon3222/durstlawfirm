@@ -13,7 +13,7 @@ const Offices = ({ slice }) => {
       data-slice-variation={slice.variation}
     >
       <div className='container'>
-        <div className='grid grid-cols-3 gap-10 py-16'>
+        <div className='grid gap-10 py-16 md:grid-cols-3'>
           {slice.items.map((item, i) => (
             <div key={i}>
               <Link href={item.link_sub_page?.url || ''} className='block'>

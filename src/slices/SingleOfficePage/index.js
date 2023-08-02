@@ -11,13 +11,13 @@ const SingleOfficePage = ({ slice }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <div className='mt-24'>
-        <div className='grid items-center grid-cols-2 gap-10 md:gap-20'>
+      <div className='md:mt-24'>
+        <div className='grid items-center gap-10 md:grid-cols-2 md:gap-20'>
           <div>
             <img src={slice.primary.image.url} alt='' />
           </div>
 
-          <div className='py-10'>
+          <div className='px-5 py-5'>
             <h1>{slice.primary.title}</h1>
             <RichText field={slice.primary.address} />
             <RichText field={slice.primary.phone} />
