@@ -12,6 +12,8 @@ const RichTextWithButton = ({ slice }) => {
       className='my-5'
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      style={{ padding: slice.primary.padding }}
+      id={slice.primary.ids}
     >
       <div
         className={`container ${
@@ -19,7 +21,7 @@ const RichTextWithButton = ({ slice }) => {
         } `}
       >
         <RichText field={slice.primary.title} strong={'text-primary'} />
-        <RichText field={slice.primary.text} />
+        <RichText field={slice.primary.text} hyperlink={'text-primary'} />
 
         {slice.primary.button_text && (
           <Button

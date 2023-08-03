@@ -92,7 +92,8 @@ type PageDocumentDataSlicesSlice =
   | SingleTeamPageSlice
   | PageHeadingBannerSlice
   | OfficesSlice
-  | SingleOfficePageSlice;
+  | SingleOfficePageSlice
+  | GallerySlice;
 
 /**
  * Content for page documents
@@ -1097,6 +1098,66 @@ type FaqWIthTitleSliceVariation = FaqWIthTitleSliceDefault;
 export type FaqWIthTitleSlice = prismic.SharedSlice<
   "faq_w_ith_title",
   FaqWIthTitleSliceVariation
+>;
+
+/**
+ * Primary content in *Gallery → Primary*
+ */
+export interface GallerySliceDefaultPrimary {
+  /**
+   * padding field in *Gallery → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery.primary.padding
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  padding: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Gallery → Items*
+ */
+export interface GallerySliceDefaultItem {
+  /**
+   * image field in *Gallery → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Gallery Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type GallerySliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<GallerySliceDefaultPrimary>,
+  Simplify<GallerySliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Gallery*
+ */
+type GallerySliceVariation = GallerySliceDefault;
+
+/**
+ * Gallery Shared Slice
+ *
+ * - **API ID**: `gallery`
+ * - **Description**: Gallery
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type GallerySlice = prismic.SharedSlice<
+  "gallery",
+  GallerySliceVariation
 >;
 
 /**
@@ -2416,6 +2477,26 @@ export type ResultsSlice = prismic.SharedSlice<
  */
 export interface RichTextWithButtonSliceDefaultPrimary {
   /**
+   * id field in *RichTextWithButton → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: rich_text_with_button.primary.ids
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  ids: prismic.KeyTextField;
+
+  /**
+   * padding field in *RichTextWithButton → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: rich_text_with_button.primary.padding
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  padding: prismic.KeyTextField;
+
+  /**
    * text align field in *RichTextWithButton → Primary*
    *
    * - **Field Type**: Select
@@ -3132,6 +3213,9 @@ declare module "@prismicio/client" {
       FaqWIthTitleSlice,
       FaqWIthTitleSliceVariation,
       FaqWIthTitleSliceDefault,
+      GallerySlice,
+      GallerySliceVariation,
+      GallerySliceDefault,
       HeaderWithButtonsSlice,
       HeaderWithButtonsSliceVariation,
       HeaderWithButtonsSliceDefault,

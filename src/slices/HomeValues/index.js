@@ -14,6 +14,7 @@ const HomeValues = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      id='Our_Purpose'
     >
       <div>
         <div className='container'>

@@ -41,6 +41,16 @@
 				"__TYPE__": "FieldContent",
 				"value": "left",
 				"type": "Select"
+			},
+			"ids": {
+				"__TYPE__": "FieldContent",
+				"value": "man",
+				"type": "Text"
+			},
+			"padding": {
+				"__TYPE__": "FieldContent",
+				"value": "egg",
+				"type": "Text"
 			}
 		},
 		"items": []

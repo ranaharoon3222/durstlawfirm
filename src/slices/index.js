@@ -14,6 +14,7 @@ export const components = {
   cta: dynamic(() => import("./Cta")),
   faq: dynamic(() => import("./Faq")),
   faq_w_ith_title: dynamic(() => import("./FaqWIthTitle")),
+  gallery: dynamic(() => import("./Gallery")),
   header_with_buttons: dynamic(() => import("./HeaderWithButtons")),
   home_baneer: dynamic(() => import("./HomeBaneer")),
   home_values: dynamic(() => import("./HomeValues")),

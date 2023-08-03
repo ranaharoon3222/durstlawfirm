@@ -12,6 +12,14 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
+        "ids": {
+          "type": "Text",
+          "config": { "label": "id", "placeholder": "" }
+        },
+        "padding": {
+          "type": "Text",
+          "config": { "label": "padding", "placeholder": "" }
+        },
         "text_align": {
           "type": "Select",
           "config": {
