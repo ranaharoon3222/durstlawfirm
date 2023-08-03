@@ -27,7 +27,7 @@ const PractiseArea = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      id='PractiseArea'
+      id='PracticeAreas'
     >
       <div className='md:max-w-[1500px] md:mx-auto'>
         <div className='container '>

@@ -25,7 +25,7 @@ const Footer = () => {
       ],
     },
     {
-      title: 'Company Links',
+      title: '',
       links: [
         {
           name: 'Attorneys',
@@ -144,7 +144,7 @@ const Footer = () => {
             <div className='grid grid-cols-2 col-span-2 gap-8 md:grid-cols-2 '>
               {menus.map((item) => (
                 <div className='text-left ' key={item.title}>
-                  <h2 className='text-xl font-medium text-white'>
+                  <h2 className='text-xl font-medium text-white min-h-[30px]'>
                     {item.title}
                   </h2>
 
