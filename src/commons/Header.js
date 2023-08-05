@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 
 const Header = () => {
@@ -69,8 +69,20 @@ const Header = () => {
     },
   ];
 
+  const [open, setOpen] = useState('');
+  const [btn, setBtn] = useState('');
+
+  const handleItemClick = (e) => {
+    if (open === 'hidden') {
+      setOpen('');
+    } else {
+      setOpen('hidden');
+      setBtn('');
+    }
+  };
+
   return (
-    <header className='absolute left-0 z-50 flex flex-wrap w-full py-3 text-sm bg-white md:justify-start md:flex-nowrap md:bg-transparent md:top-4 md:py-0'>
+    <header className='fixed top-0 left-0 z-50 flex flex-wrap w-full py-3 text-sm bg-white md:absolute md:justify-start md:flex-nowrap md:bg-transparent md:top-4 md:py-0'>
       <nav
         className='relative mx-auto wrapper md:flex md:items-center md:justify-between '
         aria-label='Global'
@@ -95,7 +107,7 @@ const Header = () => {
               aria-label='Toggle navigation'
             >
               <svg
-                className='w-4 h-4 hs-collapse-open:hidden'
+                className='w-4 h-4 '
                 width='16'
                 height='16'
                 fill='currentColor'
@@ -106,21 +118,21 @@ const Header = () => {
                   d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z'
                 />
               </svg>
-              <svg
-                className='hidden w-4 h-4 hs-collapse-open:block'
+              {/* <svg
+                className={`hidden w-4 h-4 hs-collapse-open:block ${open}`}
                 width='16'
                 height='16'
                 fill='currentColor'
                 viewBox='0 0 16 16'
               >
                 <path d='M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z' />
-              </svg>
+              </svg> */}
             </button>
           </div>
         </div>
         <div
           id='navbar-collapse-with-animation'
-          className='hidden overflow-hidden transition-all duration-300 hs-collapse basis-full grow md:block'
+          className={`hidden overflow-hidden transition-all duration-300 hs-collapse basis-full grow md:block ${open}`}
         >
           <div className='flex flex-col mt-5 gap-y-4 gap-x-0 md:flex-row md:items-center md:justify-center md:gap-y-0 md:gap-x-2 md:mt-0 md:pl-7'>
             {menuLinks.map((item, i) => {
@@ -128,28 +140,32 @@ const Header = () => {
                 <div key={item.link + i} className='md:px-4 first-of-type:pl-0'>
                   {item?.sub?.length ? (
                     <div className='hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] md:[--trigger:hover] md:py-4'>
-                      <Link
-                        href={item.link}
-                        className='flex items-center w-full text-base text-[#000] hover:text-gray-400 font-medium  '
-                      >
-                        {item.name}
-
-                        <svg
-                          className='ml-2 w-2.5 h-2.5 text-gray-600'
-                          width='16'
-                          height='16'
-                          viewBox='0 0 16 16'
-                          fill='none'
-                          xmlns='http://www.w3.org/2000/svg'
+                      <div className='flex'>
+                        <Link
+                          href={item.link}
+                          className={`flex items-center w-full text-base text-[#000] hover:text-gray-400 font-medium  `}
+                          onClick={handleItemClick}
                         >
-                          <path
-                            d='M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5'
-                            stroke='currentColor'
-                            strokeWidth='2'
-                            strokeLinecap='round'
-                          ></path>
-                        </svg>
-                      </Link>
+                          {item.name}
+                        </Link>
+                        <div className='flex items-center justify-center w-8 md:w-auto '>
+                          <svg
+                            className='ml-2 w-2.5 h-2.5 text-gray-600'
+                            width='16'
+                            height='16'
+                            viewBox='0 0 16 16'
+                            fill='none'
+                            xmlns='http://www.w3.org/2000/svg'
+                          >
+                            <path
+                              d='M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5'
+                              stroke='currentColor'
+                              strokeWidth='2'
+                              strokeLinecap='round'
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
 
                       <div className='hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 bg-white md:shadow-md rounded-lg p-2  before:absolute top-full md:border before:-top-5 before:left-0 before:w-full before:h-5'>
                         {item.sub.map((sub, i) => {
@@ -158,6 +174,7 @@ const Header = () => {
                               key={item.link + i}
                               className='flex items-center  gap-x-3.5 py-2 md:px-3 rounded-md  text-black hover:bg-gray-100   '
                               href={sub.link}
+                              onClick={handleItemClick}
                             >
                               {sub.name}
                             </Link>
@@ -169,6 +186,7 @@ const Header = () => {
                     <Link
                       href={item.link}
                       className='flex items-center w-full text-base font-medium text-black hover:text-gray-400 '
+                      onClick={handleItemClick}
                     >
                       {item.name}
                     </Link>
