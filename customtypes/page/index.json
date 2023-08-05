@@ -50,7 +50,8 @@
             "page_heading_banner": { "type": "SharedSlice" },
             "offices": { "type": "SharedSlice" },
             "single_office_page": { "type": "SharedSlice" },
-            "gallery": { "type": "SharedSlice" }
+            "gallery": { "type": "SharedSlice" },
+            "badges": { "type": "SharedSlice" }
           }
         }
       }

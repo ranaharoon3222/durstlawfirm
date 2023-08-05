@@ -93,7 +93,8 @@ type PageDocumentDataSlicesSlice =
   | PageHeadingBannerSlice
   | OfficesSlice
   | SingleOfficePageSlice
-  | GallerySlice;
+  | GallerySlice
+  | BadgesSlice;
 
 /**
  * Content for page documents
@@ -397,6 +398,48 @@ export type AppealSectionSlice = prismic.SharedSlice<
   "appeal_section",
   AppealSectionSliceVariation
 >;
+
+/**
+ * Primary content in *Badges → Items*
+ */
+export interface BadgesSliceDefaultItem {
+  /**
+   * image field in *Badges → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: badges.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Badges Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BadgesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  Simplify<BadgesSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Badges*
+ */
+type BadgesSliceVariation = BadgesSliceDefault;
+
+/**
+ * Badges Shared Slice
+ *
+ * - **API ID**: `badges`
+ * - **Description**: Badges
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BadgesSlice = prismic.SharedSlice<"badges", BadgesSliceVariation>;
 
 /**
  * Primary content in *BannerWithBackgroundImage → Primary*
@@ -3188,6 +3231,9 @@ declare module "@prismicio/client" {
       AppealSectionSlice,
       AppealSectionSliceVariation,
       AppealSectionSliceDefault,
+      BadgesSlice,
+      BadgesSliceVariation,
+      BadgesSliceDefault,
       BannerWithBackgroundImageSlice,
       BannerWithBackgroundImageSliceVariation,
       BannerWithBackgroundImageSliceDefault,

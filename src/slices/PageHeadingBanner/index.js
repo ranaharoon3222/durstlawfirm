@@ -13,10 +13,10 @@ const PageHeadingBanner = ({ slice }) => {
     >
       <div
         className='pt-20 text-center bg-center bg-no-repeat bg-cover md:pt-0 md:mt-28'
-        style={{ backgroundImage: 'url(./images/gray-pattern-trans.png) ' }}
+        // style={{ backgroundImage: 'url(./images/gray-pattern-trans.png) ' }}
       >
-        <div className='py-16'>
-          <RichText field={slice.primary.title} heading1={'text-white '} />
+        <div className='py-0 pt-4 '>
+          <RichText field={slice.primary.title} heading1={'text-black '} />
         </div>
       </div>
     </section>
