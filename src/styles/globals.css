@@ -47,7 +47,11 @@ html {
   scroll-behavior: smooth;
   font-size: 120%;
 }
-
+@media all and (max-width: 1400px) and (min-width: 980px) {
+  html {
+    font-size: 85%;
+  }
+}
 .container {
   max-width: 1800px;
   width: 85%;
