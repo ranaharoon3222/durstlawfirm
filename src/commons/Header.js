@@ -167,7 +167,9 @@ const Header = () => {
                         </div>
                       </div>
 
-                      <div className='hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 bg-white md:shadow-md rounded-lg p-2  before:absolute top-full md:border before:-top-5 before:left-0 before:w-full before:h-5'>
+                      <div
+                        className={`hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 bg-white md:shadow-md rounded-lg p-2  before:absolute top-full md:border before:-top-5 before:left-0 before:w-full before:h-5 ${open}`}
+                      >
                         {item.sub.map((sub, i) => {
                           return (
                             <Link
