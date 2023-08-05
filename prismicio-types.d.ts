@@ -94,7 +94,8 @@ type PageDocumentDataSlicesSlice =
   | OfficesSlice
   | SingleOfficePageSlice
   | GallerySlice
-  | BadgesSlice;
+  | BadgesSlice
+  | AppealColumnSlice;
 
 /**
  * Content for page documents
@@ -323,6 +324,81 @@ export type AllDocumentTypes =
   | PageDocument
   | SettingsDocument
   | TeamDocument;
+
+/**
+ * Primary content in *AppealColumn → Primary*
+ */
+export interface AppealColumnSliceDefaultPrimary {
+  /**
+   * title field in *AppealColumn → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: appeal_column.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * text field in *AppealColumn → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: appeal_column.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+
+  /**
+   * column 2 title field in *AppealColumn → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: appeal_column.primary.column_2_title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  column_2_title: prismic.RichTextField;
+
+  /**
+   * column 2 text field in *AppealColumn → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: appeal_column.primary.column_2_text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  column_2_text: prismic.RichTextField;
+}
+
+/**
+ * Default variation for AppealColumn Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AppealColumnSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<AppealColumnSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *AppealColumn*
+ */
+type AppealColumnSliceVariation = AppealColumnSliceDefault;
+
+/**
+ * AppealColumn Shared Slice
+ *
+ * - **API ID**: `appeal_column`
+ * - **Description**: AppealColumn
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AppealColumnSlice = prismic.SharedSlice<
+  "appeal_column",
+  AppealColumnSliceVariation
+>;
 
 /**
  * Primary content in *AppealSection → Primary*
@@ -3228,6 +3304,9 @@ declare module "@prismicio/client" {
       TeamDocument,
       TeamDocumentData,
       AllDocumentTypes,
+      AppealColumnSlice,
+      AppealColumnSliceVariation,
+      AppealColumnSliceDefault,
       AppealSectionSlice,
       AppealSectionSliceVariation,
       AppealSectionSliceDefault,

@@ -51,7 +51,8 @@
             "offices": { "type": "SharedSlice" },
             "single_office_page": { "type": "SharedSlice" },
             "gallery": { "type": "SharedSlice" },
-            "badges": { "type": "SharedSlice" }
+            "badges": { "type": "SharedSlice" },
+            "appeal_column": { "type": "SharedSlice" }
           }
         }
       }

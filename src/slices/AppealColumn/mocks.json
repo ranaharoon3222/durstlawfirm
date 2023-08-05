@@ -1,0 +1,53 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Parallel"
+						}
+					}
+				]
+			},
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ad deserunt irure ut adipisicing aliquip ad in. Ut dolore ea dolore cupidatat. Irure nisi cupidatat exercitation sit."
+						}
+					}
+				]
+			},
+			"column_2_text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Et reprehenderit aliqua eu velit incididunt ipsum Lorem excepteur ex non. Non nulla sint laboris voluptate duis nostrud veniam anim. Magna aliqua est cillum minim sunt veniam cupidatat est veniam nulla ipsum."
+						}
+					}
+				]
+			},
+			"column_2_title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Aboard"
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

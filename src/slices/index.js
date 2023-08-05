@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 
 export const components = {
+  appeal_column: dynamic(() => import("./AppealColumn")),
   appeal_section: dynamic(() => import("./AppealSection")),
   badges: dynamic(() => import("./Badges")),
   banner_with_background_image: dynamic(() =>
