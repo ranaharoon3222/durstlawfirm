@@ -1,11 +1,12 @@
 import React from 'react';
 import Button from '../Button';
 import RichText from '../RichText';
+import Link from 'next/link';
 
 const BlogCard = ({ data, uid }) => {
   return (
     <div className='group flex flex-col h-full border border-gray-200 hover:border-transparent hover:shadow-lg transition-all duration-300 rounded-xl p-5 dark:border-gray-700 dark:hover:border-transparent dark:hover:shadow-black/[.4]'>
-      <a className='' href='#'>
+      <Link className='' href={`/blog/${uid}`}>
         {data.featured_image && (
           <div className='aspect-w-16 aspect-h-11'>
             <img
@@ -23,7 +24,7 @@ const BlogCard = ({ data, uid }) => {
 
           <RichText field={data.short_text} />
         </div>
-      </a>
+      </Link>
 
       <Button
         link={`/blog/${uid}`}
