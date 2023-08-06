@@ -33,6 +33,7 @@ export const components = {
   simple_two_column: dynamic(() => import("./SimpleTwoColumn")),
   single_office_page: dynamic(() => import("./SingleOfficePage")),
   single_team_page: dynamic(() => import("./SingleTeamPage")),
+  tags: dynamic(() => import("./Tags")),
   team: dynamic(() => import("./Team")),
   tick_list: dynamic(() => import("./TickList")),
   two_col_with_image: dynamic(() => import("./TwoColWithImage")),

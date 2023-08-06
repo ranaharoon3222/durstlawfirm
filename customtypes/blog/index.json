@@ -7,10 +7,52 @@
   "json": {
     "Main": {
       "uid": { "config": { "label": "UID" }, "type": "UID" },
+      "title": {
+        "type": "Text",
+        "config": { "label": "title", "placeholder": "" }
+      },
+      "published_at": {
+        "type": "Date",
+        "config": { "label": "published at", "placeholder": "" }
+      },
+      "category": {
+        "type": "Link",
+        "config": {
+          "label": "category",
+          "select": "document",
+          "customtypes": ["categories"]
+        }
+      },
+      "short_text": {
+        "type": "StructuredText",
+        "config": {
+          "label": "short text",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "featured_image": {
+        "type": "Image",
+        "config": {
+          "label": "featured image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "body_text": {
+        "type": "StructuredText",
+        "config": {
+          "label": "body text",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
-        "config": { "choices": { "blog_post": { "type": "SharedSlice" } } }
+        "config": { "choices": { "tags": { "type": "SharedSlice" } } }
       }
     },
     "SEO & Metadata": {

@@ -4,12 +4,78 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type BlogDocumentDataSlicesSlice = BlogPostSlice;
+type BlogDocumentDataSlicesSlice = TagsSlice;
 
 /**
  * Content for blog documents
  */
 interface BlogDocumentData {
+  /**
+   * title field in *blog*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * published at field in *blog*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog.published_at
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  published_at: prismic.DateField;
+
+  /**
+   * category field in *blog*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog.category
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  category: prismic.ContentRelationshipField<"categories">;
+
+  /**
+   * short text field in *blog*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog.short_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  short_text: prismic.RichTextField;
+
+  /**
+   * featured image field in *blog*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog.featured_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  featured_image: prismic.ImageField<never>;
+
+  /**
+   * body text field in *blog*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog.body_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  body_text: prismic.RichTextField;
+
   /**
    * Slice Zone field in *blog*
    *
@@ -65,6 +131,62 @@ interface BlogDocumentData {
  */
 export type BlogDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<BlogDocumentData>, "blog", Lang>;
+
+type CategoriesDocumentDataSlicesSlice = never;
+
+/**
+ * Content for categories documents
+ */
+interface CategoriesDocumentData {
+  /**
+   * title field in *categories*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: categories.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * description field in *categories*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: categories.description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Slice Zone field in *categories*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: categories.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<CategoriesDocumentDataSlicesSlice>;
+}
+
+/**
+ * categories document from Prismic
+ *
+ * - **API ID**: `categories`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type CategoriesDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<CategoriesDocumentData>,
+    "categories",
+    Lang
+  >;
 
 type PageDocumentDataSlicesSlice =
   | HomeBaneerSlice
@@ -321,6 +443,7 @@ export type TeamDocument<Lang extends string = string> =
 
 export type AllDocumentTypes =
   | BlogDocument
+  | CategoriesDocument
   | PageDocument
   | SettingsDocument
   | TeamDocument;
@@ -627,6 +750,16 @@ export interface BlogPostSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#date
    */
   published_at: prismic.DateField;
+
+  /**
+   * categories field in *BlogPost → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.primary.categories
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  categories: prismic.ContentRelationshipField<"categories">;
 
   /**
    * short text field in *BlogPost → Primary*
@@ -3028,6 +3161,48 @@ export type SingleTeamPageSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *Tags → Items*
+ */
+export interface TagsSliceDefaultItem {
+  /**
+   * tag field in *Tags → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: tags.items[].tag
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  tag: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Tags Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TagsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  Simplify<TagsSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Tags*
+ */
+type TagsSliceVariation = TagsSliceDefault;
+
+/**
+ * Tags Shared Slice
+ *
+ * - **API ID**: `tags`
+ * - **Description**: Tags
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TagsSlice = prismic.SharedSlice<"tags", TagsSliceVariation>;
+
+/**
  * Primary content in *Team → Items*
  */
 export interface TeamSliceDefaultItem {
@@ -3297,6 +3472,8 @@ declare module "@prismicio/client" {
     export type {
       BlogDocument,
       BlogDocumentData,
+      CategoriesDocument,
+      CategoriesDocumentData,
       PageDocument,
       PageDocumentData,
       SettingsDocument,
@@ -3389,6 +3566,9 @@ declare module "@prismicio/client" {
       SingleTeamPageSlice,
       SingleTeamPageSliceVariation,
       SingleTeamPageSliceDefault,
+      TagsSlice,
+      TagsSliceVariation,
+      TagsSliceDefault,
       TeamSlice,
       TeamSliceVariation,
       TeamSliceDefault,

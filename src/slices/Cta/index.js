@@ -23,7 +23,7 @@ const Cta = ({ slice, context }) => {
           strong={'text-primary'}
           paragraphClassName='text-white'
         />
-      </FooterCta>{' '}
+      </FooterCta>
     </section>
   );
 };

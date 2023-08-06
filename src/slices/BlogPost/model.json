@@ -20,6 +20,14 @@
           "type": "Date",
           "config": { "label": "published at", "placeholder": "" }
         },
+        "categories": {
+          "type": "Link",
+          "config": {
+            "label": "categories",
+            "select": "document",
+            "customtypes": ["categories"]
+          }
+        },
         "short_text": {
           "type": "StructuredText",
           "config": {
