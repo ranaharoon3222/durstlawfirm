@@ -63,7 +63,7 @@ const blog = ({ blog, settings, blogPage }) => {
                     clipRule='evenodd'
                   />
                 </svg>
-                <p className='ml-2'>Prev</p>
+                <p className='ml-2 '>PREV</p>
               </div>
             </button>
             <button
@@ -73,7 +73,7 @@ const blog = ({ blog, settings, blogPage }) => {
               className='px-3 py-2 text-white bg-gray-800 border-l border-gray-200 disabled:cursor-not-allowed disabled:opacity-50 rounded-r-md hover:bg-red-700 hover:text-white'
             >
               <div className='flex flex-row align-middle'>
-                <span className='mr-2'>Next</span>
+                <span className='mr-2'>NEXT</span>
                 <svg
                   className='w-5 ml-2'
                   fill='currentColor'

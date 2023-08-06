@@ -54,7 +54,7 @@ const Footer = () => {
             <div>
               <div className='flex justify-center sm:justify-start'>
                 <img
-                  src='./images/Durst-Main-white.svg'
+                  src='/images/Durst-Main-white.svg'
                   className='max-w-[190px]'
                 />
               </div>
