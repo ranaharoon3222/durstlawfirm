@@ -4,8 +4,6 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type BlogDocumentDataSlicesSlice = TagsSlice;
-
 /**
  * Content for blog documents
  */
@@ -74,18 +72,7 @@ interface BlogDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  body_text: prismic.RichTextField;
-
-  /**
-   * Slice Zone field in *blog*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: blog.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<BlogDocumentDataSlicesSlice>
+  body_text: prismic.RichTextField
   /**
    * Meta Description field in *blog*
    *
