@@ -52,6 +52,13 @@ html {
     font-size: 85%;
   }
 }
+
+@media all and (max-width: 1200px) and (min-width: 768px) {
+  html {
+    zoom: 0.8;
+  }
+}
+
 .container {
   max-width: 1800px;
   width: 85%;
