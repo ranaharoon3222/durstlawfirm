@@ -8,7 +8,7 @@ const ThreeBoxes = () => {
       <div className='items-center grid-cols-8 gap-8 my-16 md:grid '>
         <div className='col-span-4'>
           <Box
-            icon='./images/comma.png'
+            icon='/images/comma.png'
             title='“Top-Shelf Results.”'
             name='- Ben W.'
             position='CEO, WHAM Properties'
@@ -33,7 +33,7 @@ const ThreeBoxes = () => {
         </div>
         <div className='col-span-2'>
           <Box
-            icon='./images/comma2.png'
+            icon='/images/comma2.png'
             title='Defense Victory'
             name='Elec. Merch. Sys. LLC v. Gaal, et al.'
             position='No. 20-CV-1898, 2022 WL 2176537 (N.D. Ohio June 16, 2022).'

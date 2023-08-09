@@ -1,9 +1,9 @@
-import React from 'react'
-import style from './several.module.css'
+import React from 'react';
+import style from './several.module.css';
 const Several = () => {
   return (
     <>
-      <div className="container">
+      <div className='container'>
         <div className={style.headBoy}>
           <div className={style.headText}>
             <h2>Always Looking Several Steps Ahead</h2>
@@ -20,12 +20,12 @@ const Several = () => {
             </p>
           </div>
           <div className={style.headimg}>
-            <img src="./images/New.png" alt="" />
+            <img src='/images/New.png' alt='' />
           </div>
         </div>
       </div>
     </>
   );
-}
+};
 
-export default Several
+export default Several;

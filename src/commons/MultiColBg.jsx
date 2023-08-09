@@ -6,10 +6,10 @@ const MultiColBg = () => {
   return (
     <section className='bg-[#eeecec] py-16'>
       <div className='container'>
-        <div className='grid md:grid-cols-2 gap-10 items-center'>
+        <div className='grid items-center gap-10 md:grid-cols-2'>
           <div>
             <Img
-              src={'./images/orang-shado-pic.svg'}
+              src={'/images/orang-shado-pic.svg'}
               className={'mb-5 max-w-[120px]'}
             />
 
@@ -37,7 +37,7 @@ const MultiColBg = () => {
           </div>
 
           <div>
-            <div className='bg-white/60 md:p-10 p-5'>
+            <div className='p-5 bg-white/60 md:p-10'>
               <h2>Leadership in Ohio Appellate Practice</h2>
               <span className='bg-primary h-[3px] w-24 block'> </span>
 

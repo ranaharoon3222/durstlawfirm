@@ -44,7 +44,7 @@ const TwoColReverse = () => {
       <div className='grid md:grid-cols-2 gap-10 container'>
         <div>
           <Img
-            src={'./images/orang-shado-pic.svg'}
+            src={'/images/orang-shado-pic.svg'}
             className={'max-w-[500px] mx-auto'}
           />
         </div>

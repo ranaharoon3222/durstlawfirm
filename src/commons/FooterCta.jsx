@@ -3,9 +3,9 @@ import ArrowDown from '@/icons/arrow-down';
 import Phone from '@/icons/phone';
 
 const FooterCta = ({
-  image = './images/last-back-img.jpg',
+  image = '/images/last-back-img.jpg',
   children,
-  logo = './images/logo_11zon.jpg',
+  logo = '/images/logo_11zon.jpg',
 }) => {
   return (
     <div

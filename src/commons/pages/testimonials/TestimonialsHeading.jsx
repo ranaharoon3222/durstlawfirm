@@ -7,7 +7,7 @@ const TestimonialsHeading = () => {
     <section className=' pt-32 max-w-[800px] mx-auto'>
       <div className='container text-center'>
         <Img
-          src={'./images/quote-orange.svg'}
+          src={'/images/quote-orange.svg'}
           className={'max-w-[60px] mx-auto'}
         />
         <h1 className='text-primary italic font-semibold'>Testimonials</h1>

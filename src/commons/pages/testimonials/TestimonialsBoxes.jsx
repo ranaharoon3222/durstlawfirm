@@ -67,7 +67,7 @@ const TestimonialsBoxes = () => {
                   title={box.title}
                   name={box.name}
                   position={box.position}
-                  icon='./images/icons.png'
+                  icon='/images/icons.png'
                 >
                   <div dangerouslySetInnerHTML={{ __html: box.content }}></div>
                 </Box>

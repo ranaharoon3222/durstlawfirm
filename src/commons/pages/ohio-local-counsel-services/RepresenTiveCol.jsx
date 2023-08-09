@@ -44,7 +44,7 @@ const RepresenTiveCol = () => {
           </div>
 
           <div>
-            <CustomImg img='./images/representativeimg.jpg' />
+            <CustomImg img='/images/representativeimg.jpg' />
             <div className='grid grid-cols-1 gap-10 my-10 md:grid-cols-2'>
               <div>
                 <h1>Ohio State & Federal Courts</h1>

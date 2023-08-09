@@ -4,8 +4,8 @@ import React from 'react';
 
 const TwoCol = () => {
   return (
-    <section className='md:my-20 my-10'>
-      <div className='grid md:grid-cols-2 gap-10 container'>
+    <section className='my-10 md:my-20'>
+      <div className='container grid gap-10 md:grid-cols-2'>
         <div>
           <h1>How Personal Injury Law Works</h1>
           <Paragraph>
@@ -52,7 +52,7 @@ const TwoCol = () => {
         </div>
         <div>
           <Img
-            src={'./images/orang-shado-pic.svg'}
+            src={'/images/orang-shado-pic.svg'}
             className={'max-w-[500px] mx-auto'}
           />
         </div>

@@ -17,7 +17,7 @@ const AppealColumn = ({ slice }) => {
           <div className='grid items-center gap-10 md:grid-cols-2'>
             <div>
               <Img
-                src={'./images/orang-shado-pic.svg'}
+                src={'/images/orang-shado-pic.svg'}
                 className={'mb-5 max-w-[120px]'}
               />
 

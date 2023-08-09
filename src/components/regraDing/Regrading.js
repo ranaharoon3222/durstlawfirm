@@ -1,13 +1,13 @@
-import React from 'react'
-import style from './regrad.module.css'
+import React from 'react';
+import style from './regrad.module.css';
 const Regrading = () => {
   return (
     <>
       <div className={style.backColor}>
-        <div className="container">
+        <div className='container'>
           <div className={style.appeals2}>
             <div className={style.aInnterText}>
-              <img src="./images/orang-shado-pic.svg" alt="" />
+              <img src='/images/orang-shado-pic.svg' alt='' />
               <h1>Adept at Navigating Procedural Issues on Appeal</h1>
               <p>
                 Procedural issues that present in the course of an appeal can be
@@ -34,19 +34,19 @@ const Regrading = () => {
                   courts and the Sixth Circuit Court of Appeals
                 </li>
                 <li>
-                  <span>General motion practice</span>{" "}
+                  <span>General motion practice</span>{' '}
                 </li>
                 <li>
-                  Seeking (or challenging) a <span> stay pending appeal,</span>{" "}
+                  Seeking (or challenging) a <span> stay pending appeal,</span>{' '}
                   including on an emergency, ex-parte basis
                 </li>
                 <li>
-                  {" "}
-                  Litigation of nuanced <span>“final and appealable”</span>{" "}
+                  {' '}
+                  Litigation of nuanced <span>“final and appealable”</span>{' '}
                   order issues
                 </li>
                 <li>
-                  {" "}
+                  {' '}
                   <span> Ohio Supreme Court practice, </span> including seeking
                   the Court’s acceptance of a jurisdictional appeal, seeking a
                   stay of an intermediate appellate court’s decision, motion
@@ -59,6 +59,6 @@ const Regrading = () => {
       </div>
     </>
   );
-}
+};
 
-export default Regrading
+export default Regrading;

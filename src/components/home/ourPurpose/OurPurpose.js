@@ -15,7 +15,7 @@ const OurPurpose = () => {
                 title='“Top-Shelf Results.”'
                 name='- Ben W.'
                 position='CEO, WHAM Properties'
-                icon='./images/icons.png'
+                icon='/images/icons.png'
               >
                 <p>
                   With our portfolio of over 200 rental units across multiple
@@ -34,7 +34,7 @@ const OurPurpose = () => {
                   outstanding advisors.
                 </p>
               </Box>
-              <Box title='Defense Victory”' icon='./images/icon2.png'>
+              <Box title='Defense Victory”' icon='/images/icon2.png'>
                 <p>
                   Successful 12(b)(6) dismissal of lawsuit seeking $10,499,166
                   in damages, obtaining victory on behalf of European business
@@ -53,7 +53,7 @@ const OurPurpose = () => {
               <Box
                 title='“Justice was done.”'
                 name='- Gaby M.'
-                icon='./images/icons.png'
+                icon='/images/icons.png'
               >
                 <p>
                   The trucking company fought [my] case hard and tried to blame
@@ -66,7 +66,7 @@ const OurPurpose = () => {
                   I got a GREAT settlement.
                 </p>
               </Box>
-              <Box title='$1,000,000 Settlement”' icon='./images/icon2.png'>
+              <Box title='$1,000,000 Settlement”' icon='/images/icon2.png'>
                 <p>
                   Personal injury settlement in case where, due to landlord’s
                   grossly negligent maintenance of property, woman and children
@@ -97,7 +97,7 @@ const OurPurpose = () => {
           <div className=''>
             <div className='flex items-center '>
               <img
-                src='./images/logo_11zon.jpg'
+                src='/images/logo_11zon.jpg'
                 alt=''
                 className='max-w-[80px]'
               />

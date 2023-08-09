@@ -1,16 +1,16 @@
-import React from 'react'
-import style from './End.module.css'
+import React from 'react';
+import style from './End.module.css';
 const ResEnd = () => {
   return (
     <>
-      <div className="container">
+      <div className='container'>
         <div className={style.um}>
           <p>#appellate</p>
         </div>
         <div className={style.result4}>
           <div className={style.Amain}>
             <div className={style.box3}>
-              <img src="./images/icon2.png" alt="" />
+              <img src='/images/icon2.png' alt='' />
               <h1>Precedent-Setting Ohio Supreme Court Win</h1>
             </div>
             <p className={style.p3}>
@@ -25,7 +25,7 @@ const ResEnd = () => {
           </div>
           <div className={style.Amain2}>
             <div className={style.box3}>
-              <img src="./images/icon2.png" alt="" />
+              <img src='/images/icon2.png' alt='' />
               <h1>Reversal of Child Custody Decision</h1>
             </div>
             <p className={style.p3}>
@@ -39,7 +39,7 @@ const ResEnd = () => {
           </div>
           <div className={style.Amain3}>
             <div className={style.box3}>
-              <img src="./images/icon2.png" alt="" />
+              <img src='/images/icon2.png' alt='' />
               <h1>Argued in the Massachusetts Appeals Court</h1>
             </div>
             <p className={style.p3}>
@@ -55,7 +55,7 @@ const ResEnd = () => {
         <div className={style.newclass}>
           <div className={style.Amain4}>
             <div className={style.box3}>
-              <img src="./images/icon2.png" alt="" />
+              <img src='/images/icon2.png' alt='' />
               <h1>Reversal of Summary Judgment</h1>
             </div>
             <p className={style.p3}>
@@ -68,6 +68,6 @@ const ResEnd = () => {
       </div>
     </>
   );
-}
+};
 
-export default ResEnd
+export default ResEnd;

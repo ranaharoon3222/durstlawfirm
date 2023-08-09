@@ -33,7 +33,7 @@ const TickList = () => {
     <div className='my-10'>
       <div className='container'>
         <div className='flex flex-wrap justify-center md:text-left text-center md:flex-nowrap items-center max-w-[1000px] mb-10'>
-          <img src='./images/logo3.svg' className='max-w-[130px]' alt='' />
+          <img src='/images/logo3.svg' className='max-w-[130px]' alt='' />
           <h1 className=''>
             Once you hire us to represent you, you can expect that we will:
           </h1>

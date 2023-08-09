@@ -1,13 +1,13 @@
-import React from 'react'
-import style from './leader.module.css'
+import React from 'react';
+import style from './leader.module.css';
 const Leadership = () => {
   return (
     <>
       <div className={style.backColor}>
-        <div className="container">
+        <div className='container'>
           <div className={style.appeals2}>
             <div className={style.aInnterText}>
-              <img src="./images/orang-shado-pic.svg" alt="" />
+              <img src='/images/orang-shado-pic.svg' alt='' />
               <h1>
                 <span> Exceptionally Qualified</span> to Handle an Ohio or
                 Federal Appeal
@@ -30,7 +30,7 @@ const Leadership = () => {
                 wrong arguments.
               </p>
               <div className={style.im}>
-                <img src="./images/shadooo-img.svg" alt="" />
+                <img src='/images/shadooo-img.svg' alt='' />
               </div>
             </div>
             <div className={style.apealText}>
@@ -59,6 +59,6 @@ const Leadership = () => {
       </div>
     </>
   );
-}
+};
 
-export default Leadership
+export default Leadership;

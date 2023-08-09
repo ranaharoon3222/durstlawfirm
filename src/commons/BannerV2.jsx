@@ -10,7 +10,7 @@ const BannerV2 = ({
   children,
   title,
   subTitle,
-  img = './images/back-boy-img.jpg',
+  img = '/images/back-boy-img.jpg',
 }) => {
   return (
     <section className='pt-32 text-center bg-center bg-cover md:pb-12 md:pt-40 md:text-left '>

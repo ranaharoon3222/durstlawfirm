@@ -9,7 +9,7 @@ const Repu = () => {
             <div>
               <div className={style.main}>
                 <div className={style.box3}>
-                  <img src='./images/icons.png' alt='' />
+                  <img src='/images/icons.png' alt='' />
                   <h1>“The Absolute Best”</h1>
                 </div>
                 <p className={style.p3}>
@@ -25,7 +25,7 @@ const Repu = () => {
               </div>
               <div className={style.main}>
                 <div className={style.box3}>
-                  <img src='./images/icon2.png' alt='' />
+                  <img src='/images/icon2.png' alt='' />
                   <h1>$1,000,000</h1>
                 </div>
                 <p className={style.p3}>Settlement</p>
@@ -42,7 +42,7 @@ const Repu = () => {
             <div>
               <div className={style.main2}>
                 <div className={style.box3}>
-                  <img src='./images/icons.png' alt='' />
+                  <img src='/images/icons.png' alt='' />
                   <h1>“Aggressive and tough. Proven winner.”</h1>
                 </div>
                 <p className={style.p4}>
@@ -54,7 +54,7 @@ const Repu = () => {
               </div>
               <div className={style.main2}>
                 <div className={style.box3}>
-                  <img src='./images/icon2.png' alt='' />
+                  <img src='/images/icon2.png' alt='' />
                   <h1>$480,000</h1>
                 </div>
                 <p className={style.p6}>Settlement</p>
@@ -69,7 +69,7 @@ const Repu = () => {
 
           <div className={style.sec2}>
             <div className={style.innerImg}>
-              <img src='./images/icons.png' alt='' />
+              <img src='/images/icons.png' alt='' />
               <h1>
                 Our reputation is built on a long track record of{' '}
                 <span>positive outcomes.</span>

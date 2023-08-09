@@ -13,7 +13,7 @@ const PreFooter = () => {
               <Box
                 title='“The Absolute Best”'
                 name='- Gaby M'
-                icon='./images/icons.png'
+                icon='/images/icons.png'
               >
                 <p>
                   I hired Alex Durst to represent me in a truck accident case
@@ -25,7 +25,7 @@ const PreFooter = () => {
                   In the end, I got a GREAT settlement. It's a huge relief...
                 </p>
               </Box>
-              <Box title='$1,000,000' icon='./images/icon2.png'>
+              <Box title='$1,000,000' icon='/images/icon2.png'>
                 <p>Settlement</p>
                 <p className='pt-5 '>
                   Personal injury case where landlord negligence led to a woman
@@ -41,7 +41,7 @@ const PreFooter = () => {
               <Box
                 title='“Aggressive and tough. Proven winner.”'
                 name='- Anne'
-                icon='./images/icons.png'
+                icon='/images/icons.png'
               >
                 <p>
                   Alex proved to be a very tough lawyer - he didn’t take the
@@ -49,7 +49,7 @@ const PreFooter = () => {
                   the necessary steps to really set the case up right.
                 </p>
               </Box>
-              <Box title='$480,000' icon='./images/icon2.png'>
+              <Box title='$480,000' icon='/images/icon2.png'>
                 <p>Settlement</p>
                 <p className='pt-5 '>
                   Personal injury settlement for mother and son who were injured

@@ -1,9 +1,9 @@
-import React from 'react'
-import style from './box2.module.css'
+import React from 'react';
+import style from './box2.module.css';
 const Box2Res = () => {
   return (
     <>
-      <div className="container">
+      <div className='container'>
         <div className={style.um}>
           <p>#commerciallitigation</p>
         </div>
@@ -11,7 +11,7 @@ const Box2Res = () => {
           <div className={style.Amain}>
             <div className={style.fer}>
               <div className={style.box3}>
-                <img src="./images/icon2.png" alt="" />
+                <img src='/images/icon2.png' alt='' />
                 <h1>Defense Victory</h1>
               </div>
               <p className={style.p3}>
@@ -27,7 +27,7 @@ const Box2Res = () => {
             </div>
             <div className={style.main6}>
               <div className={style.box3}>
-                <img src="./images/icon2.png" alt="" />
+                <img src='/images/icon2.png' alt='' />
                 <h1>Settlement Exceeding $100,000</h1>
               </div>
               <p className={style.p3}>
@@ -37,7 +37,7 @@ const Box2Res = () => {
 
             <div className={style.main4}>
               <div className={style.box3}>
-                <img src="./images/icon2.png" alt="" />
+                <img src='/images/icon2.png' alt='' />
                 <h1>$189,000 Jury Verdict, Plus Attorney Fees</h1>
               </div>
               <p className={style.p3}>
@@ -51,7 +51,7 @@ const Box2Res = () => {
           <div className={style.Amain2}>
             <div className={style.fer}>
               <div className={style.box3}>
-                <img src="./images/icon2.png" alt="" />
+                <img src='/images/icon2.png' alt='' />
                 <h1>$174,500</h1>
               </div>
               <p className={style.p3}>
@@ -60,7 +60,7 @@ const Box2Res = () => {
             </div>
             <div className={style.fer}>
               <div className={style.box3}>
-                <img src="./images/icon2.png" alt="" />
+                <img src='/images/icon2.png' alt='' />
                 <h1>Majority Dismissal</h1>
               </div>
               <p className={style.p3}>
@@ -76,7 +76,7 @@ const Box2Res = () => {
             </div>
             <div className={style.fer}>
               <div className={style.box3}>
-                <img src="./images/icon2.png" alt="" />
+                <img src='/images/icon2.png' alt='' />
                 <h1>Preliminary Injuction</h1>
               </div>
               <p className={style.p3}>
@@ -93,7 +93,7 @@ const Box2Res = () => {
           <div className={style.Amain4}>
             <div className={style.fer}>
               <div className={style.box3}>
-                <img src="./images/icon2.png" alt="" />
+                <img src='/images/icon2.png' alt='' />
                 <h1>Defense Victory</h1>
               </div>
               <p className={style.p3}>
@@ -112,7 +112,7 @@ const Box2Res = () => {
 
             <div className={style.lmao}>
               <div className={style.box3}>
-                <img src="./images/icon2.png" alt="" />
+                <img src='/images/icon2.png' alt='' />
                 <h1>$47,000</h1>
               </div>
               <p className={style.p3}>
@@ -123,11 +123,11 @@ const Box2Res = () => {
           </div>
         </div>
         <div className={style.line}>
-          <img src="./images/line-image.svg" alt="" />
+          <img src='/images/line-image.svg' alt='' />
         </div>
       </div>
     </>
   );
-}
+};
 
-export default Box2Res
+export default Box2Res;

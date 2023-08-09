@@ -35,7 +35,7 @@ const TransportBanner = () => {
         className='pt-32 text-center bg-center bg-cover md:pb-32 md:pt-40 md:text-left '
         style={{
           backgroundImage:
-            'linear-gradient(64deg, #ffffff 31%, rgba(255, 255, 255, 0) 80% ),url(./images/herobg.jpg)',
+            'linear-gradient(64deg, #ffffff 31%, rgba(255, 255, 255, 0) 80% ),url(/images/herobg.jpg)',
         }}
       >
         <div className='container'>

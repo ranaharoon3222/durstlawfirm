@@ -22,7 +22,7 @@ const CommercialBanner = ({ slice }) => {
           className='pt-32 pb-32 bg-center bg-cover md:pt-40 '
           style={{
             backgroundImage:
-              'linear-gradient(64deg,#fff 31%,hsla(0,0%,100%,.55) 80%),url(./images/Commercialbg.jpg) ',
+              'linear-gradient(64deg,#fff 31%,hsla(0,0%,100%,.55) 80%),url(/images/Commercialbg.jpg) ',
           }}
         >
           <div className='container'>

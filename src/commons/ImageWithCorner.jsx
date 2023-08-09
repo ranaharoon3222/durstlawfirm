@@ -5,7 +5,7 @@ const ImageWithCorner = ({ img }) => {
   return (
     <div className='relative'>
       <img
-        src='./images/corner-black.svg'
+        src='/images/corner-black.svg'
         className='absolute top-0 left-0'
         alt=''
       />

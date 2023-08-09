@@ -1,9 +1,9 @@
-import React from 'react'
-import style from './tBox.module.css'
+import React from 'react';
+import style from './tBox.module.css';
 const TestiBox = () => {
   return (
     <>
-      <div className="container">
+      <div className='container'>
         <div className={style.um}>
           <p>#personalinjury</p>
         </div>
@@ -11,7 +11,7 @@ const TestiBox = () => {
           <div className={style.Amain}>
             <div className={style.testi}>
               <div className={style.box3}>
-                <img src="./images/icons.png" alt="" />
+                <img src='/images/icons.png' alt='' />
                 <h1>“The absolute best!”</h1>
               </div>
               <p className={style.p3}>
@@ -44,7 +44,7 @@ const TestiBox = () => {
             </div>
             <div className={style.testi}>
               <div className={style.box3}>
-                <img src="./images/icons.png" alt="" />
+                <img src='/images/icons.png' alt='' />
                 <h1>“Excellent attorney for a car accident case.”</h1>
               </div>
               <p className={style.p3}>
@@ -93,7 +93,7 @@ const TestiBox = () => {
           <div className={style.testimonial2}>
             <div className={style.monials2}>
               <div className={style.box3}>
-                <img src="./images/icons.png" alt="" />
+                <img src='/images/icons.png' alt='' />
                 <h1>
                   “I am very grateful and strongly recommend him as an
                   attorney.”
@@ -135,7 +135,7 @@ const TestiBox = () => {
             </div>
             <div className={style.monials2}>
               <div className={style.box3}>
-                <img src="./images/icons.png" alt="" />
+                <img src='/images/icons.png' alt='' />
                 <h1>“Absolutely Recommend Durst”</h1>
               </div>
               <p>
@@ -156,7 +156,7 @@ const TestiBox = () => {
             </div>
             <div className={style.monials2}>
               <div className={style.box3}>
-                <img src="./images/icons.png" alt="" />
+                <img src='/images/icons.png' alt='' />
                 <h1>“Negotiated our settlement to 20x”</h1>
               </div>
               <p>
@@ -185,6 +185,6 @@ const TestiBox = () => {
       </div>
     </>
   );
-}
+};
 
-export default TestiBox
+export default TestiBox;

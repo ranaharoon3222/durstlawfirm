@@ -7,7 +7,7 @@ const ResultPageHeading = () => {
     <section className=' pt-32 max-w-[800px] mx-auto'>
       <div className='container text-center'>
         <Img
-          src={'./images/scales-orange.png'}
+          src={'/images/scales-orange.png'}
           className={'max-w-[60px] mx-auto'}
         />
         <h1 className='text-primary italic font-semibold'>Case Results</h1>

@@ -1,12 +1,12 @@
-import React from 'react'
-import style from './drop.module.css'
+import React from 'react';
+import style from './drop.module.css';
 const DropDouwn = () => {
   return (
     <>
-      <div className="container">
+      <div className='container'>
         <div className={style.shado2}>
           <div className={style.image}>
-            <img src="./images/orang-shado-pic.svg" alt="" />
+            <img src='/images/orang-shado-pic.svg' alt='' />
           </div>
           <div className={style.sText}>
             <h2>Damages Available in Personal Injury Cases</h2>
@@ -20,6 +20,6 @@ const DropDouwn = () => {
       </div>
     </>
   );
-}
+};
 
-export default DropDouwn
+export default DropDouwn;

@@ -27,7 +27,7 @@ const IconBox = ({ slice }) => {
                         name={item.name}
                         position={item.position}
                         title={item.title}
-                        icon='./images/icon2.png'
+                        icon='/images/icon2.png'
                       >
                         <RichText field={item.text} />
                       </Box>
@@ -46,7 +46,7 @@ const IconBox = ({ slice }) => {
                         name={item.name}
                         position={item.position}
                         title={item.title}
-                        icon='./images/icon2.png'
+                        icon='/images/icon2.png'
                       >
                         <RichText field={item.text} />
                       </Box>
@@ -65,7 +65,7 @@ const IconBox = ({ slice }) => {
                         name={item.name}
                         position={item.position}
                         title={item.title}
-                        icon='./images/icon2.png'
+                        icon='/images/icon2.png'
                       >
                         <RichText field={item.text} />
                       </Box>

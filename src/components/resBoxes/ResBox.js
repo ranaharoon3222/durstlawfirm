@@ -1,16 +1,16 @@
-import React from "react";
-import style from './box.module.css'
+import React from 'react';
+import style from './box.module.css';
 const ResBox = () => {
   return (
     <>
-      <div className="container">
+      <div className='container'>
         <div className={style.um}>
           <p>#personalinjury</p>
         </div>
         <div className={style.result1}>
           <div className={style.Amain}>
             <div className={style.box3}>
-              <img src="./images/icon2.png" alt="" />
+              <img src='/images/icon2.png' alt='' />
               <h1>$1,000,000</h1>
             </div>
             <p className={style.p3}>
@@ -27,7 +27,7 @@ const ResBox = () => {
           </div>
           <div className={style.Amain2}>
             <div className={style.box3}>
-              <img src="./images/icon2.png" alt="" />
+              <img src='/images/icon2.png' alt='' />
               <h1>$175,000</h1>
             </div>
             <p className={style.p3}>
@@ -41,7 +41,7 @@ const ResBox = () => {
           </div>
           <div className={style.Amain3}>
             <div className={style.box3}>
-              <img src="./images/icon2.png" alt="" />
+              <img src='/images/icon2.png' alt='' />
               <h1>$100,000</h1>
             </div>
             <p className={style.p3}>
@@ -51,7 +51,7 @@ const ResBox = () => {
 
           <div className={style.main4}>
             <div className={style.box3}>
-              <img src="./images/icon2.png" alt="" />
+              <img src='/images/icon2.png' alt='' />
               <h1>$480,000</h1>
             </div>
             <p className={style.p3}>
@@ -61,7 +61,7 @@ const ResBox = () => {
 
           <div className={style.Amain4}>
             <div className={style.box3}>
-              <img src="./images/icon2.png" alt="" />
+              <img src='/images/icon2.png' alt='' />
               <h1>$100,000</h1>
             </div>
             <p className={style.p3}>
@@ -73,7 +73,7 @@ const ResBox = () => {
           <div className={style.main7}>
             <div className={style.lmao}>
               <div className={style.box3}>
-                <img src="./images/icon2.png" alt="" />
+                <img src='/images/icon2.png' alt='' />
                 <h1>$257,835</h1>
               </div>
               <p className={style.p3}>
@@ -86,7 +86,7 @@ const ResBox = () => {
 
             <div className={style.main6}>
               <div className={style.box3}>
-                <img src="./images/icon2.png" alt="" />
+                <img src='/images/icon2.png' alt='' />
                 <h1>$260,000</h1>
               </div>
               <p className={style.p3}>Insurance bad faith settlement</p>
@@ -94,7 +94,7 @@ const ResBox = () => {
           </div>
         </div>
         <div className={style.line}>
-          <img src="./images/line-image.svg" alt="" />
+          <img src='/images/line-image.svg' alt='' />
         </div>
       </div>
     </>

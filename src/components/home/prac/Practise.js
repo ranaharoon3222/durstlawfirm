@@ -11,7 +11,7 @@ const Practise = () => {
           className='pt-32 text-center bg-center bg-cover md:pb-32 md:pt-40 md:text-left '
           style={{
             backgroundImage:
-              'linear-gradient(64deg,#ffffff 39%,rgba(255, 255, 255, 0) 65%),url(./images/backim.jpg)',
+              'linear-gradient(64deg,#ffffff 39%,rgba(255, 255, 255, 0) 65%),url(/images/backim.jpg)',
           }}
         >
           <div className='container'>
@@ -71,7 +71,7 @@ const Practise = () => {
         <div
           className='bg-center bg-fixed  bg-contain h-[300px] bg-no-repeat  md:hidden'
           style={{
-            backgroundImage: 'url(./images/head-boy-pic.jpg)',
+            backgroundImage: 'url(/images/head-boy-pic.jpg)',
           }}
         ></div>
         <div className='mb-divider md:hidden'> </div>

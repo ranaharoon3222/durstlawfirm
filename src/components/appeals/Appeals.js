@@ -1,9 +1,9 @@
-import React from "react";
-import style from "./appeals.module.css";
+import React from 'react';
+import style from './appeals.module.css';
 const Appeals = () => {
   return (
     <>
-      <div className="container">
+      <div className='container'>
         <div className={style.backGrid}>
           <div className={style.clintText}>
             <h4>Cincinnati, Ohio Appellate Lawyer</h4>
@@ -27,18 +27,18 @@ const Appeals = () => {
             <div className={style.newclass1}>
               <div className={style.btn1}>
                 <button className={style.BTN}>
-                  <i className="fa fa-phone i" aria-hidden="true"></i> Call Us
+                  <i className='fa fa-phone i' aria-hidden='true'></i> Call Us
                   Today
                 </button>
                 <button className={style.BTN2}>
-                  <i className="fa fa-caret-down i" aria-hidden="true"></i> Send
+                  <i className='fa fa-caret-down i' aria-hidden='true'></i> Send
                   A Message
                 </button>
               </div>
             </div>
           </div>
           <div className={style.appeal}>
-            <img src="./images/appeals-canvapic.png" alt="" />
+            <img src='/images/appeals-canvapic.png' alt='' />
           </div>
         </div>
       </div>

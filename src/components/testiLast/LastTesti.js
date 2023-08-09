@@ -1,16 +1,16 @@
-import React from 'react'
-import style from './Last.module.css'
+import React from 'react';
+import style from './Last.module.css';
 const LastTesti = () => {
   return (
     <>
-      <div className="container">
+      <div className='container'>
         <div className={style.um}>
           <p>#personalinjury</p>
         </div>
         <div className={style.result6}>
           <div className={style.testi}>
             <div className={style.box3}>
-              <img src="./images/icons.png" alt="" />
+              <img src='/images/icons.png' alt='' />
               <h1>“Durst Delivers Top-Shelf Results.”</h1>
             </div>
             <p className={style.p3}>
@@ -37,7 +37,7 @@ const LastTesti = () => {
           </div>
           <div className={style.testi2}>
             <div className={style.box3}>
-              <img src="./images/icons.png" alt="" />
+              <img src='/images/icons.png' alt='' />
               <h1>Defense Victory</h1>
             </div>
             <p className={style.p3}>
@@ -56,6 +56,6 @@ const LastTesti = () => {
       </div>
     </>
   );
-}
+};
 
-export default LastTesti
+export default LastTesti;
