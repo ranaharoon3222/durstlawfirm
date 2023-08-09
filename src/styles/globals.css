@@ -47,7 +47,7 @@ html {
   scroll-behavior: smooth;
   font-size: 120%;
 }
-@media all and (max-width: 1400px) and (min-width: 980px) {
+@media all and (max-width: 1400px) and (min-width: 768px) {
   html {
     font-size: 85%;
   }
