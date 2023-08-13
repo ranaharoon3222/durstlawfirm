@@ -8,8 +8,11 @@ import Button from '@/commons/Button';
 import ArrowDown from '@/icons/arrow-down';
 import Phone from '@/icons/phone';
 import Paragraph from '@/commons/Paragraph';
+import { useParallax } from 'react-scroll-parallax';
 
 const HomeBaneer = ({ slice }) => {
+  const { ref } = useParallax({ speed: -8 });
+
   return (
     <section
       data-slice-type={slice.slice_type}
@@ -17,7 +20,7 @@ const HomeBaneer = ({ slice }) => {
       className='relative'
     >
       <div
-        className='pt-32 text-center bg-center bg-cover md:pb-32 md:pt-40 md:text-left '
+        className='pt-24 text-center bg-center bg-cover mb-hide-bg md:pb-32 md:pt-40 md:text-left '
         style={{
           backgroundImage: `linear-gradient(64deg,#ffffff 39%,rgba(255, 255, 255, 0) 65%),url(${slice.primary.image.url})`,
         }}
@@ -34,7 +37,7 @@ const HomeBaneer = ({ slice }) => {
 
               <Paragraph
                 field={slice.primary.text}
-                className={'text-left'}
+                className={'md:text-left text-center '}
               ></Paragraph>
 
               <div className='flex flex-wrap justify-center mt-10 md:justify-normal md:flex-nowrap '>
@@ -61,15 +64,19 @@ const HomeBaneer = ({ slice }) => {
           </div>
         </div>
       </div>
-      <div className='mb-divider-top md:hidden'> </div>
-      <div
-        className='bg-center bg-fixed  bg-contain h-[300px] bg-no-repeat  md:hidden'
-        style={{
-          backgroundImage: `url(${slice.primary.mbimage.url})`,
-        }}
-      ></div>
-      <div className='mb-divider md:hidden'> </div>
-      <div className='bt_divider'></div>
+
+      <div ref={ref} className=' md:hidden'>
+        <div className='mb-divider-top md:hidden !top-[50px]'> </div>
+        <div
+          className='bg-top  bg-cover h-[350px] bg-no-repeat  md:hidden'
+          style={{
+            backgroundImage: `url(${slice.primary.mbimage.url})`,
+          }}
+        ></div>
+        <div className='mb-divider md:hidden !top-[-50px]'> </div>
+        <div className='bt_divider'></div>
+      </div>
+      <div className='hidden bt_divider md:block'></div>
     </section>
   );
 };

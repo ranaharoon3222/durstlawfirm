@@ -8,21 +8,6 @@ import RichText from '@/commons/RichText';
 import Link from 'next/link';
 
 const PractiseArea = ({ slice }) => {
-  const data = [
-    {
-      title: 'Commercial Litigation',
-      img: '/images/box-image1.jpg',
-    },
-    {
-      title: 'Transportation Accidents',
-      img: '/images/box-image2.jpg',
-    },
-    {
-      title: 'Personal Injury Cases',
-      img: '/images/inj.jpg',
-    },
-  ];
-
   return (
     <section
       data-slice-type={slice.slice_type}
@@ -31,7 +16,7 @@ const PractiseArea = ({ slice }) => {
     >
       <div className='md:max-w-[1500px] md:mx-auto'>
         <div className='container '>
-          <div className='py-10 text-center'>
+          <div className='py-4 text-center md:py-10'>
             <RichText field={slice.primary.topbar} paragraphClassName='mt-0'>
               {' '}
             </RichText>
@@ -41,7 +26,7 @@ const PractiseArea = ({ slice }) => {
               return (
                 <Link key={i} href={item.link.url} className='block '>
                   <div
-                    className={`py-20  bg-center bg-cover hover:-translate-y-6 min-h-[17rem]  hover:after:four-box-hover transition-all   flex items-center`}
+                    className={`py-12 md:py-20   bg-center bg-cover hover:-translate-y-6 md:min-h-[17rem]  hover:after:four-box-hover transition-all   flex items-center`}
                     style={{
                       backgroundImage: `radial-gradient(circle at center, rgba(8, 27, 51, 0.7) 0%,  rgba(8, 27, 51, 0.84) 100% ), url(${item.image.url})`,
                     }}

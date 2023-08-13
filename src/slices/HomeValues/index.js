@@ -18,8 +18,8 @@ const HomeValues = ({ slice }) => {
     >
       <div>
         <div className='container'>
-          <div className='grid md:grid-cols-2 mt-[100px] gap-12'>
-            <div className='grid items-center gap-10 md:grid-cols-2 place-content-center'>
+          <div className='grid md:grid-cols-2 mt-[30px] md:mt-[100px] md:gap-12 gap-6'>
+            <div className='grid items-center gap-6 md:gap-10 md:grid-cols-2 place-content-center'>
               {slice.items.map((item, index) => {
                 return (
                   <Box

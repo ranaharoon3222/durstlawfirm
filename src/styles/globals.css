@@ -169,4 +169,7 @@ img {
   p {
     font-size: 1rem;
   }
+  .mb-hide-bg {
+    background-image: none !important;
+  }
 }
