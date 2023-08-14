@@ -140,15 +140,14 @@ const Header = () => {
         >
           <div className='flex flex-col mt-5 gap-y-4 gap-x-0 md:flex-row md:items-center md:justify-center md:gap-y-0 md:gap-x-2 md:mt-0 md:pl-7'>
             {menuLinks.map((item, i) => {
-              console.log(item.link);
               return (
                 <div key={item.link + i} className='md:px-4 first-of-type:pl-0'>
                   {item?.sub?.length ? (
-                    <div className='hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] md:[--trigger:hover] md:py-4'>
+                    <div className='  hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] md:[--trigger:hover] md:py-4'>
                       <div className='flex'>
                         <Link
                           href={item.link}
-                          className={`flex items-center w-full text-base text-[#000] hover:text-gray-400 font-medium  `}
+                          className={`flex items-center w-full text-[1vw]  text-[#000] hover:text-gray-400 font-medium  `}
                           onClick={handleItemClick}
                         >
                           {item.name}
@@ -173,13 +172,13 @@ const Header = () => {
                       </div>
 
                       <div
-                        className={`hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 bg-white md:shadow-md rounded-lg p-2  before:absolute top-full md:border before:-top-5 before:left-0 before:w-full before:h-5 ${open}`}
+                        className={`hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-54 hidden z-10 bg-white md:shadow-md  p-2  before:absolute top-full  before:-top-5 before:left-0 before:w-full before:h-5 ${open} border-t-[3px] border-primary`}
                       >
                         {item.sub.map((sub, i) => {
                           return (
                             <Link
                               key={item.link + i}
-                              className={`flex items-center  gap-x-3.5 py-2 md:px-3 rounded-md  text-black hover:bg-gray-100 ${
+                              className={`flex items-center font-medium   gap-x-3.5 py-2 md:px-3 rounded-md text-[1vw]  text-black hover:bg-gray-100 ${
                                 currentRoute == sub.link
                                   ? 'text-primary'
                                   : 'text-black'
@@ -196,11 +195,11 @@ const Header = () => {
                   ) : (
                     <Link
                       href={item.link}
-                      className={`'flex items-center w-full text-base font-medium  hover:text-gray-400 ${
+                      className={`flex items-center w-full text-[1vw] font-medium  hover:text-gray-400 ${
                         currentRoute == item.link
                           ? 'text-primary'
                           : 'text-black'
-                      }'`}
+                      }`}
                       onClick={handleItemClick}
                     >
                       {item.name}

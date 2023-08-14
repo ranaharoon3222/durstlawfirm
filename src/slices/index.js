@@ -21,6 +21,7 @@ export const components = {
   home_baneer: dynamic(() => import("./HomeBaneer")),
   home_values: dynamic(() => import("./HomeValues")),
   icon_box: dynamic(() => import("./IconBox")),
+  image: dynamic(() => import("./Image")),
   offices: dynamic(() => import("./Offices")),
   page_heading_banner: dynamic(() => import("./PageHeadingBanner")),
   practise_area: dynamic(() => import("./PractiseArea")),

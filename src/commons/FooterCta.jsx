@@ -28,7 +28,7 @@ const FooterCta = ({
                 link='tel:513-621-4999'
                 variant='primary-bg'
                 text='Call Us'
-                className='mx-auto mb-8 bg-primary hover:bg-secondry'
+                className='mx-auto !capitalize mb-8 bg-primary hover:bg-secondry'
               >
                 <Phone fill='' />
               </Button>
@@ -38,7 +38,7 @@ const FooterCta = ({
               link='/offices'
               variant='primary-bg'
               text='Email Us'
-              className='bg-white !text-secondry mx-auto hover:!text-white'
+              className='bg-white !capitalize !text-secondry mx-auto hover:!text-white'
             >
               <ArrowDown />
             </Button>

@@ -7,7 +7,6 @@ import RichText from '@/commons/RichText';
  * @param {CtaProps}
  */
 const Cta = ({ slice, context }) => {
-  console.log(context, 'c');
   return (
     <section
       data-slice-type={slice.slice_type}

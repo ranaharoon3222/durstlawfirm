@@ -52,7 +52,8 @@
             "single_office_page": { "type": "SharedSlice" },
             "gallery": { "type": "SharedSlice" },
             "badges": { "type": "SharedSlice" },
-            "appeal_column": { "type": "SharedSlice" }
+            "appeal_column": { "type": "SharedSlice" },
+            "image": { "type": "SharedSlice" }
           }
         }
       }

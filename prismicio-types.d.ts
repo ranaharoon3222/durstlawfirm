@@ -204,7 +204,8 @@ type PageDocumentDataSlicesSlice =
   | SingleOfficePageSlice
   | GallerySlice
   | BadgesSlice
-  | AppealColumnSlice;
+  | AppealColumnSlice
+  | ImageSlice;
 
 /**
  * Content for page documents
@@ -1902,6 +1903,48 @@ export type IconBoxSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *Image → Primary*
+ */
+export interface ImageSliceDefaultPrimary {
+  /**
+   * image field in *Image → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Image Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImageSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ImageSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Image*
+ */
+type ImageSliceVariation = ImageSliceDefault;
+
+/**
+ * Image Shared Slice
+ *
+ * - **API ID**: `image`
+ * - **Description**: Image
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImageSlice = prismic.SharedSlice<"image", ImageSliceVariation>;
+
+/**
  * Primary content in *Offices → Items*
  */
 export interface OfficesSliceDefaultItem {
@@ -3517,6 +3560,9 @@ declare module "@prismicio/client" {
       IconBoxSlice,
       IconBoxSliceVariation,
       IconBoxSliceDefault,
+      ImageSlice,
+      ImageSliceVariation,
+      ImageSliceDefault,
       OfficesSlice,
       OfficesSliceVariation,
       OfficesSliceDefault,

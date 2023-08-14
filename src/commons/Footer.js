@@ -48,6 +48,13 @@ const Footer = () => {
   ];
   return (
     <>
+      <div
+        className='footer-gradient h-[4px]'
+        style={{
+          backgroundImage:
+            'linear-gradient(90deg,#081b33 0%,#e54a35 100%)!important',
+        }}
+      ></div>
       <footer className='text-white bg-secondry'>
         <div className='max-w-screen-xl px-4 pt-16 pb-6 mx-auto sm:px-6 lg:px-8 lg:pt-24'>
           <div className='grid grid-cols-1 gap-8 lg:grid-cols-3'>

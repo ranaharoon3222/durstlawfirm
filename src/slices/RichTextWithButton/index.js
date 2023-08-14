@@ -16,7 +16,7 @@ const RichTextWithButton = ({ slice }) => {
       id={slice.primary.ids}
     >
       <div
-        className={`container ${
+        className={`container !max-w-[900px] ${
           slice.primary.text_align === 'center' ? 'text-center' : 'text-left'
         } `}
       >
