@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const Header = () => {
   const menuLinks = [
@@ -9,7 +10,7 @@ const Header = () => {
       sub: [
         {
           name: 'Litigation',
-          link: '/commercial-litigation/',
+          link: '/commercial-litigation',
         },
         // {
         //   name: 'Transportation Accidents',
@@ -21,11 +22,11 @@ const Header = () => {
         // },
         {
           name: 'Ohio Local Counsel Services',
-          link: '/ohio-local-counsel-services/',
+          link: '/ohio-local-counsel-services',
         },
         {
           name: 'Appeals',
-          link: '/appeals/',
+          link: '/appeals',
         },
       ],
     },
@@ -35,7 +36,7 @@ const Header = () => {
       sub: [
         {
           name: 'Alex J Durst',
-          link: '/team/alex-j-durst/',
+          link: '/team/alex-j-durst',
         },
         {
           name: 'Paul R. Kerridge',
@@ -49,15 +50,15 @@ const Header = () => {
     },
     {
       name: 'Results',
-      link: '/results/',
+      link: '/results',
     },
     {
       name: 'Offices',
-      link: '/offices/',
+      link: '/offices',
     },
     {
       name: 'Careers ',
-      link: '/careers/',
+      link: '/careers',
     },
     // {
     //   name: 'Testimonials',
@@ -65,9 +66,12 @@ const Header = () => {
     // },
     {
       name: 'Blog',
-      link: '/blog/',
+      link: '/blog',
     },
   ];
+
+  const router = useRouter();
+  const currentRoute = router.asPath;
 
   const [open, setOpen] = useState('');
   const [btn, setBtn] = useState('');
@@ -136,6 +140,7 @@ const Header = () => {
         >
           <div className='flex flex-col mt-5 gap-y-4 gap-x-0 md:flex-row md:items-center md:justify-center md:gap-y-0 md:gap-x-2 md:mt-0 md:pl-7'>
             {menuLinks.map((item, i) => {
+              console.log(item.link);
               return (
                 <div key={item.link + i} className='md:px-4 first-of-type:pl-0'>
                   {item?.sub?.length ? (
@@ -174,7 +179,11 @@ const Header = () => {
                           return (
                             <Link
                               key={item.link + i}
-                              className='flex items-center  gap-x-3.5 py-2 md:px-3 rounded-md  text-black hover:bg-gray-100   '
+                              className={`flex items-center  gap-x-3.5 py-2 md:px-3 rounded-md  text-black hover:bg-gray-100 ${
+                                currentRoute == sub.link
+                                  ? 'text-primary'
+                                  : 'text-black'
+                              } `}
                               href={sub.link}
                               onClick={handleItemClick}
                             >
@@ -187,7 +196,11 @@ const Header = () => {
                   ) : (
                     <Link
                       href={item.link}
-                      className='flex items-center w-full text-base font-medium text-black hover:text-gray-400 '
+                      className={`'flex items-center w-full text-base font-medium  hover:text-gray-400 ${
+                        currentRoute == item.link
+                          ? 'text-primary'
+                          : 'text-black'
+                      }'`}
                       onClick={handleItemClick}
                     >
                       {item.name}

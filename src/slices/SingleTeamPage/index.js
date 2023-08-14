@@ -52,7 +52,7 @@ const SingleTeamPage = ({ slice }) => {
           <div
             className='grid mt-5 gap-7 '
             style={{
-              'grid-template-columns':
+              gridTemplateColumns:
                 'repeat(auto-fit, minmax(max(130px, 310px), 1fr))',
             }}
           >
