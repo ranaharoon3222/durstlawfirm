@@ -8,11 +8,9 @@ import Button from '@/commons/Button';
 import ArrowDown from '@/icons/arrow-down';
 import Phone from '@/icons/phone';
 import Paragraph from '@/commons/Paragraph';
-import { useParallax } from 'react-scroll-parallax';
+import { ParallaxBanner } from 'react-scroll-parallax';
 
 const HomeBaneer = ({ slice }) => {
-  const { ref } = useParallax({ speed: -8 });
-
   return (
     <section
       data-slice-type={slice.slice_type}
@@ -65,17 +63,19 @@ const HomeBaneer = ({ slice }) => {
         </div>
       </div>
 
-      <div ref={ref} className=' md:hidden'>
-        <div className='mb-divider-top md:hidden !top-[50px]'> </div>
-        <div
-          className='bg-top  bg-cover h-[350px] bg-no-repeat  md:hidden'
-          style={{
-            backgroundImage: `url(${slice.primary.mbimage.url})`,
-          }}
-        ></div>
-        <div className='mb-divider md:hidden !top-[-50px]'> </div>
-        <div className='bt_divider'></div>
-      </div>
+      <div className='mb-divider-top md:hidden !top-[50px]'> </div>
+      <ParallaxBanner
+        layers={[
+          {
+            image: slice.primary.mbimage.url,
+            speed: -10,
+            translateY: [10, 50],
+          },
+        ]}
+        className='h-[400px] md:hidden'
+      />
+      <div className='mb-divider md:hidden !top-[-50px]'> </div>
+
       <div className='hidden bt_divider md:block'></div>
     </section>
   );
