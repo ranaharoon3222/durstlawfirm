@@ -16,7 +16,7 @@ const PractiseArea = ({ slice }) => {
     >
       <div className='md:max-w-[1500px] md:mx-auto'>
         <div className='container '>
-          <div className='py-4 pt-0 text-center md:pt-10 md:py-10'>
+          <div className='py-4 pt-0 text-center md:pt-0 md:py-10 '>
             <RichText field={slice.primary.topbar} paragraphClassName='mt-0'>
               {' '}
             </RichText>
