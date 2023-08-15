@@ -147,7 +147,7 @@ const Header = () => {
                       <div className='flex'>
                         <Link
                           href={item.link}
-                          className={`flex items-center w-full text-[1vw]  text-[#000] hover:text-gray-400 font-medium  `}
+                          className={`flex items-center w-full md:text-[1vw]  text-[#000] hover:text-gray-400 font-medium  `}
                           onClick={handleItemClick}
                         >
                           {item.name}
@@ -178,7 +178,7 @@ const Header = () => {
                           return (
                             <Link
                               key={item.link + i}
-                              className={`flex items-center font-medium   gap-x-3.5 py-2 md:px-3 rounded-md text-[1vw]  text-black hover:bg-gray-100 ${
+                              className={`flex items-center font-medium   gap-x-3.5 py-2 md:px-3 rounded-md md:text-[1vw]  text-black hover:bg-gray-100 ${
                                 currentRoute == sub.link
                                   ? 'text-primary'
                                   : 'text-black'
@@ -195,7 +195,7 @@ const Header = () => {
                   ) : (
                     <Link
                       href={item.link}
-                      className={`flex items-center w-full text-[1vw] font-medium  hover:text-gray-400 ${
+                      className={`flex items-center w-full md:text-[1vw] font-medium  hover:text-gray-400 ${
                         currentRoute == item.link
                           ? 'text-primary'
                           : 'text-black'
