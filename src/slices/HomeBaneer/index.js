@@ -9,6 +9,7 @@ import ArrowDown from '@/icons/arrow-down';
 import Phone from '@/icons/phone';
 import Paragraph from '@/commons/Paragraph';
 import { ParallaxBanner } from 'react-scroll-parallax';
+import RichText from '@/commons/RichText';
 
 const HomeBaneer = ({ slice }) => {
   return (
@@ -18,24 +19,27 @@ const HomeBaneer = ({ slice }) => {
       className='relative'
     >
       <div
-        className='pt-24 text-center bg-center bg-cover mb-hide-bg md:pb-32 md:pt-40 md:text-left '
+        className='pt-24 text-center bg-top bg-cover mb-hide-bg md:pb-32 md:pt-40 md:text-left '
         style={{
           backgroundImage: `linear-gradient(64deg,#ffffff 39%,rgba(255, 255, 255, 0) 65%),url(${slice.primary.image.url})`,
         }}
       >
         <div className='container'>
           <div className=''>
-            <div className=' max-w-[700px]'>
-              <h4 className='pb-5 italic font-semibold text-primary'>
+            <div className=' max-w-[1000px]'>
+              <h4 className='pb-5 !text-[20px] italic font-semibold text-primary'>
                 {slice.primary.subtitle}
               </h4>
-              <h1 className='text-[2rem] font-medium md:leading-[1.3]  md:text-[3.5rem]'>
-                {slice.primary.title}
-              </h1>
+              <RichText
+                field={slice.primary.title}
+                heading1='text-[1.7rem] font-[600]  !leading-[1.2] md:!leading-[1.1]   md:leading-[1.2]  md:text-[4vw]'
+              />
 
               <Paragraph
                 field={slice.primary.text}
-                className={'md:text-left text-center '}
+                className={
+                  'md:text-left text-center max-w-[600px]  lg:max-w-[600px] 2xl:max-w-[800px] '
+                }
               ></Paragraph>
 
               <div className='flex flex-wrap justify-center mt-10 md:justify-normal md:flex-nowrap '>

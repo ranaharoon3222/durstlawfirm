@@ -88,7 +88,7 @@ const Header = () => {
   return (
     <header className='fixed top-0 left-0 z-50 flex flex-wrap w-full py-3 text-sm bg-white md:absolute md:justify-start md:flex-nowrap md:bg-transparent md:top-4 md:py-0'>
       <nav
-        className='relative mx-auto wrapper md:flex md:items-center md:justify-between '
+        className='container relative md:flex md:items-center md:justify-between '
         aria-label='Global'
       >
         <div className='flex items-center justify-between'>

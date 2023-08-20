@@ -1623,12 +1623,12 @@ export interface HomeBaneerSliceDefaultPrimary {
   /**
    * title field in *HomeBaneer → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: home_baneer.primary.title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  title: prismic.KeyTextField;
+  title: prismic.RichTextField;
 
   /**
    * text field in *HomeBaneer → Primary*

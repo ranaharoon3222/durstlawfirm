@@ -32,9 +32,15 @@
 				"value": "roof"
 			},
 			"title": {
-				"__TYPE__": "FieldContent",
-				"value": "powerful",
-				"type": "Text"
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Supper"
+						}
+					}
+				]
 			},
 			"text": {
 				"__TYPE__": "StructuredTextContent",
@@ -58,7 +64,6 @@
 				]
 			},
 			"mbimage": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
@@ -76,6 +81,9 @@
 					},
 					"background": "transparent"
 				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			}
 		},
