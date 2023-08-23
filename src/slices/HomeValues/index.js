@@ -18,8 +18,8 @@ const HomeValues = ({ slice, context }) => {
     >
       <div>
         <div className='container'>
-          <div className='grid md:grid-cols-2 mt-[30px] md:mt-[60px] md:gap-12 gap-6'>
-            <div className='grid items-center gap-6 md:gap-10 md:grid-cols-2 place-content-center'>
+          <div className='grid md:grid-cols-2 mt-[30px] md:mt-[50px] md:gap-12 gap-6'>
+            <div className='grid gap-6 md:gap-10 md:grid-cols-2 '>
               {slice.items.map((item, index) => {
                 return (
                   <Box
@@ -28,8 +28,14 @@ const HomeValues = ({ slice, context }) => {
                     name={item.name}
                     position={item.position}
                     icon={item.icon.url}
+                    titleClass={'md:text-[1.8vw]'}
+                    positionClass={'md:text-[1vw]'}
+                    nameClass={'md:text-[1vw] mb-0'}
                   >
-                    <Paragraph field={item.text} />
+                    <Paragraph
+                      field={item.text}
+                      className={'!mt-0 md:text-[1vw]'}
+                    />
                   </Box>
                 );
               })}{' '}
@@ -51,7 +57,7 @@ const HomeValues = ({ slice, context }) => {
             </div>
 
             <div className=''>
-              <div className='flex items-center '>
+              <div className='flex items-center mb-5 '>
                 <img src={context.logo.url} alt='' className='max-w-[80px]' />
                 <h1 className='text-[32px] font-semibold'>
                   {slice.primary.title}
@@ -59,7 +65,8 @@ const HomeValues = ({ slice, context }) => {
               </div>
               <div className=''>
                 <RichText
-                  heading4={'text-[#e54a35]'}
+                  heading4={'text-[#e54a35] !my-0 !mt-3'}
+                  paragraphClassName='md:text-[1.2vw] !mt-0'
                   field={slice.primary.text}
                 />
               </div>
