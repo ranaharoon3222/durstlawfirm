@@ -9,7 +9,7 @@ import Button from '@/commons/Button';
 import Paragraph from '@/commons/Paragraph';
 import RichText from '@/commons/RichText';
 
-const HomeValues = ({ slice }) => {
+const HomeValues = ({ slice, context }) => {
   return (
     <section
       data-slice-type={slice.slice_type}
@@ -18,7 +18,7 @@ const HomeValues = ({ slice }) => {
     >
       <div>
         <div className='container'>
-          <div className='grid md:grid-cols-2 mt-[30px] md:mt-[100px] md:gap-12 gap-6'>
+          <div className='grid md:grid-cols-2 mt-[30px] md:mt-[60px] md:gap-12 gap-6'>
             <div className='grid items-center gap-6 md:gap-10 md:grid-cols-2 place-content-center'>
               {slice.items.map((item, index) => {
                 return (
@@ -52,11 +52,7 @@ const HomeValues = ({ slice }) => {
 
             <div className=''>
               <div className='flex items-center '>
-                <img
-                  src={slice.primary.logo.url}
-                  alt=''
-                  className='max-w-[80px]'
-                />
+                <img src={context.logo.url} alt='' className='max-w-[80px]' />
                 <h1 className='text-[32px] font-semibold'>
                   {slice.primary.title}
                 </h1>

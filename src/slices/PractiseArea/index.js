@@ -17,7 +17,7 @@ const PractiseArea = ({ slice }) => {
       <div className='md:max-w-[1500px] md:mx-auto'>
         <div className='container '>
           <div className='py-4 pt-0 text-center md:pt-0 md:py-10 '>
-            <RichText field={slice.primary.topbar} paragraphClassName='mt-0'>
+            <RichText field={slice.primary.topbar} paragraphClassName='!mt-0'>
               {' '}
             </RichText>
           </div>
@@ -26,13 +26,13 @@ const PractiseArea = ({ slice }) => {
               return (
                 <Link key={i} href={item.link.url} className='block '>
                   <div
-                    className={`py-12 md:py-20   bg-center bg-cover hover:-translate-y-6 md:min-h-[17rem]  hover:after:four-box-hover transition-all   flex items-center`}
+                    className={`py-12 md:py-0   bg-center bg-cover hover:-translate-y-6 md:min-h-[250px]  hover:after:four-box-hover transition-all   flex items-center`}
                     style={{
                       backgroundImage: `radial-gradient(circle at center, rgba(8, 27, 51, 0.7) 0%,  rgba(8, 27, 51, 0.84) 100% ), url(${item.image.url})`,
                     }}
                   >
-                    <div className='max-w-[200px] mx-auto'>
-                      <h4 className='text-center text-white '>
+                    <div className='max-w-[400px] mx-auto'>
+                      <h4 className='text-center text-white leading-[1] '>
                         {' '}
                         {item.title}{' '}
                       </h4>
