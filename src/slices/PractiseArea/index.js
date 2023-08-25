@@ -39,7 +39,7 @@ const PractiseArea = ({ slice }) => {
                       <span className='bg-white w-[140px] mx-auto block py-[1px] my-4'>
                         {' '}
                       </span>
-                      <span className='block text-xs text-center text-primary '>
+                      <span className='block text-[14px] text-center text-primary '>
                         Click for more
                       </span>
                     </div>

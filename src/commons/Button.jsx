@@ -32,7 +32,7 @@ const Button = ({
   return (
     <Link
       href={link}
-      className={`group h-[60px] flex items-center justify-center ${checkVariant()} ${checkColor()} ${className} `}
+      className={`group h-[57px] flex items-center justify-center ${checkVariant()} ${checkColor()} ${className} `}
     >
       {children}
       <span> {text} </span>

@@ -14,6 +14,7 @@ export const components = {
   column_with_faq: dynamic(() => import("./ColumnWithFaq")),
   commercial_banner: dynamic(() => import("./CommercialBanner")),
   cta: dynamic(() => import("./Cta")),
+  divider: dynamic(() => import("./Divider")),
   faq: dynamic(() => import("./Faq")),
   faq_w_ith_title: dynamic(() => import("./FaqWIthTitle")),
   gallery: dynamic(() => import("./Gallery")),

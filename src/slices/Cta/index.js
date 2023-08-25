@@ -16,7 +16,7 @@ const Cta = ({ slice, context }) => {
         <RichText
           field={slice.primary.title}
           heading1={
-            'font-medium text-center md:text-left text-white md:text-[3vw]'
+            'font-[600] text-center md:text-left text-white md:text-[3vw]'
           }
           heading2={`${'text-left md:text-left font-normal text-white md:text-[2vw] '}   `}
           strong={'text-primary'}

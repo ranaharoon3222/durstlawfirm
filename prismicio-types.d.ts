@@ -205,7 +205,8 @@ type PageDocumentDataSlicesSlice =
   | GallerySlice
   | BadgesSlice
   | AppealColumnSlice
-  | ImageSlice;
+  | ImageSlice
+  | DividerSlice;
 
 /**
  * Content for page documents
@@ -1182,6 +1183,61 @@ type CtaSliceVariation = CtaSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type CtaSlice = prismic.SharedSlice<"cta", CtaSliceVariation>;
+
+/**
+ * Primary content in *Divider → Primary*
+ */
+export interface DividerSliceDefaultPrimary {
+  /**
+   * image field in *Divider → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: divider.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * padding field in *Divider → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: divider.primary.padding
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  padding: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Divider Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type DividerSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<DividerSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Divider*
+ */
+type DividerSliceVariation = DividerSliceDefault;
+
+/**
+ * Divider Shared Slice
+ *
+ * - **API ID**: `divider`
+ * - **Description**: Divider
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type DividerSlice = prismic.SharedSlice<
+  "divider",
+  DividerSliceVariation
+>;
 
 /**
  * Primary content in *Faq → Primary*
@@ -3504,12 +3560,16 @@ declare module "@prismicio/client" {
       BlogDocumentData,
       CategoriesDocument,
       CategoriesDocumentData,
+      CategoriesDocumentDataSlicesSlice,
       PageDocument,
       PageDocumentData,
+      PageDocumentDataSlicesSlice,
       SettingsDocument,
       SettingsDocumentData,
+      SettingsDocumentDataSlicesSlice,
       TeamDocument,
       TeamDocumentData,
+      TeamDocumentDataSlicesSlice,
       AllDocumentTypes,
       AppealColumnSlice,
       AppealColumnSliceVariation,
@@ -3539,6 +3599,9 @@ declare module "@prismicio/client" {
       CtaSlice,
       CtaSliceVariation,
       CtaSliceDefault,
+      DividerSlice,
+      DividerSliceVariation,
+      DividerSliceDefault,
       FaqSlice,
       FaqSliceVariation,
       FaqSliceDefault,
