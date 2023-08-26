@@ -19,7 +19,7 @@ const HomeBaneer = ({ slice }) => {
       className='relative'
     >
       <div
-        className='pt-24 text-center bg-top bg-cover mb-hide-bg md:pb-32 md:pt-40 md:text-left '
+        className='pt-32 text-center bg-top bg-cover mb-hide-bg md:pb-32 md:pt-40 md:text-left '
         style={{
           backgroundImage: `linear-gradient(64deg,#ffffff 39%,rgba(255, 255, 255, 0) 65%),url(${slice.primary.image.url})`,
         }}
@@ -27,7 +27,7 @@ const HomeBaneer = ({ slice }) => {
         <div className='container'>
           <div className=''>
             <div className=' max-w-[1000px]'>
-              <h4 className='pb-5 !text-[20px] italic font-semibold text-primary'>
+              <h4 className='md:pb-5 pb-2 !text-[20px] italic font-semibold text-primary'>
                 {slice.primary.subtitle}
               </h4>
               <RichText
@@ -38,7 +38,7 @@ const HomeBaneer = ({ slice }) => {
               <Paragraph
                 field={slice.primary.text}
                 className={
-                  'md:text-left text-center max-w-[600px]  lg:max-w-[600px] 2xl:max-w-[800px] '
+                  'md:text-left text-center max-w-[600px] text-[16px] md:text-[1rem]  lg:max-w-[600px] 2xl:max-w-[800px] '
                 }
               ></Paragraph>
 

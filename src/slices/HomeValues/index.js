@@ -57,13 +57,13 @@ const HomeValues = ({ slice, context }) => {
             </div>
 
             <div className=''>
-              <div className='flex items-center mb-5 '>
+              <div className='flex items-center px-2 mb-5 md:px-0 '>
                 <img src={context.logo.url} alt='' className='max-w-[80px]' />
-                <h1 className='text-[32px] font-semibold'>
+                <h1 className='text-[30px] md:text-[32px] font-semibold'>
                   {slice.primary.title}
                 </h1>
               </div>
-              <div className=''>
+              <div className='px-4 md:px-0'>
                 <RichText
                   heading4={'text-[#e54a35] !my-0 !mt-3'}
                   paragraphClassName='md:text-[1.2vw] !mt-0'

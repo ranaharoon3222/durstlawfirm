@@ -98,20 +98,20 @@ const Header = () => {
             aria-label='Brand'
           >
             <img
-              className='w-full md:max-w-[190px] max-w-[130px] '
+              className='w-full md:max-w-[190px] max-w-[200px] '
               src='https://durstlawfirm.com/wp-content/uploads/2022/06/durst-main.svg'
             />
           </Link>
           <div className='md:hidden'>
             <button
               type='button'
-              className='inline-flex items-center justify-center gap-2 p-2 text-sm font-medium text-gray-700 align-middle transition-all bg-white border rounded-md shadow-sm hs-collapse-toggle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 '
+              className='inline-flex items-center justify-center gap-2 p-2 text-sm font-medium text-gray-700 align-middle transition-all bg-white rounded-md shadow-sm hs-collapse-toggle hover:bg-gray-50 focus:outline-none focus:ring-offset-white focus:shadow-none'
               data-hs-collapse='#navbar-collapse-with-animation'
               aria-controls='navbar-collapse-with-animation'
               aria-label='Toggle navigation'
             >
               <svg
-                className='w-4 h-4 '
+                className='w-8 h-8 '
                 width='16'
                 height='16'
                 fill='currentColor'

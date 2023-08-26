@@ -10,7 +10,7 @@ const Badges = ({ slice }) => {
       data-slice-variation={slice.variation}
     >
       <div className='container'>
-        <div className='grid items-center justify-center gap-10 md:gap-5 my-10 grid-cols-2 mb-24 mt-32 text-center md:grid-cols-3 max-w-[1000px] mx-auto'>
+        <div className='grid items-center justify-center gap-10 md:gap-5 my-10 grid-cols-2 mb-24 mt-20 md:mt-32 text-center md:grid-cols-3 max-w-[1000px] mx-auto'>
           {slice.items.map((item, i) => (
             <div key={i}>
               <img

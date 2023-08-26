@@ -16,12 +16,12 @@ const PractiseArea = ({ slice }) => {
     >
       <div className='md:max-w-[1500px] md:mx-auto'>
         <div className='container '>
-          <div className='py-4 pt-0 text-center md:pt-0 md:py-10 '>
+          <div className='py-4 pt-0 text-center pb-7 md:pt-0 md:py-10 '>
             <RichText field={slice.primary.topbar} paragraphClassName='!mt-0'>
               {' '}
             </RichText>
           </div>
-          <div className='grid gap-10 pb-10 md:grid-cols-3'>
+          <div className='grid gap-5 pb-10 md:gap-10 md:grid-cols-3'>
             {slice.items.map((item, i) => {
               return (
                 <Link key={i} href={item.link.url} className='block '>
@@ -32,7 +32,7 @@ const PractiseArea = ({ slice }) => {
                     }}
                   >
                     <div className='max-w-[400px] mx-auto'>
-                      <h4 className='text-center text-white leading-[1] '>
+                      <h4 className='text-center text-white leading-[1] font-[600] '>
                         {' '}
                         {item.title}{' '}
                       </h4>
