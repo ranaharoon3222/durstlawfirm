@@ -56,13 +56,13 @@ const Footer = () => {
         }}
       ></div>
       <footer className='text-white bg-secondry'>
-        <div className='container px-4 pt-16 pb-6 mx-auto sm:px-6 lg:px-8 lg:pt-24'>
+        <div className='container px-4 pt-16 pb-6 mx-auto sm:px-6 lg:px-8 lg:pt-16'>
           <div className='grid grid-cols-1 gap-8 lg:grid-cols-3'>
             <div>
               <div className='flex justify-center sm:justify-start'>
                 <img
                   src='/images/Durst-Main-white.svg'
-                  className='max-w-[190px]'
+                  className='max-w-[120px]'
                 />
               </div>
               <div className='text-left'>

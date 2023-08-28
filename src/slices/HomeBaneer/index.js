@@ -42,24 +42,32 @@ const HomeBaneer = ({ slice }) => {
                 }
               ></Paragraph>
 
-              <div className='flex flex-wrap justify-center mt-10 md:justify-normal md:flex-nowrap '>
+              <div className='flex flex-wrap justify-center mt-10 md:justify-normal md:flex-nowrap max-w-[300px] md:max-w-none md:mx-0 mx-auto'>
                 <Button
                   link='#PracticeAreas'
                   text='Practice Areas'
                   variant='outline'
                   color={'black'}
-                  className='mb-4 md:mr-6 '
+                  className='relative w-auto mb-3 md:mr-6 pl-[40px] md:pl-[4%] text-[14px] md:text-base '
                 >
-                  <ArrowDown fill='black' />
+                  <ArrowDown
+                    fill='black'
+                    className={
+                      'absolute left-2 top-1/2 -translate-y-1/2 rotate-[360deg]'
+                    }
+                  />
                 </Button>
 
                 <Button
                   text='Call Us Today'
-                  className='mb-4 '
                   variant='outline'
                   color={'red'}
+                  className='relative w-auto mb-3 md:mr-6 pl-[40px] md:pl-[4%] text-[14px] md:text-base '
                 >
-                  <Phone fill='red' />
+                  <Phone
+                    fill='red'
+                    className={'absolute left-2 top-1/2 -translate-y-1/2'}
+                  />
                 </Button>
               </div>
             </div>
